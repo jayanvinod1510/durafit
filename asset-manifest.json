@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.46b8326f.css",
+    "main.js": "/static/js/main.d8ae45e2.js",
+    "static/media/img_section_4.png": "/static/media/img_section_4.717bd5963541f717d31f.png",
+    "static/media/img_section_5.png": "/static/media/img_section_5.b419a063004d8d321f3d.png",
+    "static/media/img_section_9.png": "/static/media/img_section_9.1eec6ab41dedd7960339.png",
+    "static/media/InterMedium.ttf": "/static/media/InterMedium.3f7acfe50aad7ad68548.ttf",
+    "static/media/img_section_6.png": "/static/media/img_section_6.ebd029754ea24b0c27d0.png",
+    "static/media/PoppinsLight.ttf": "/static/media/PoppinsLight.7641a0f76ca9ef6c252c.ttf",
+    "static/media/PoppinsRegular.ttf": "/static/media/PoppinsRegular.35d26b781dc5fda684cc.ttf",
+    "static/media/PoppinsMedium.ttf": "/static/media/PoppinsMedium.673ed42382ab264e0bf5.ttf",
+    "static/media/PoppinsSemiBold.ttf": "/static/media/PoppinsSemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/ArchivoRomanSemiBold.ttf": "/static/media/ArchivoRomanSemiBold.41aecbef9bf69716a939.ttf",
+    "static/media/img_frame_63.png": "/static/media/img_frame_63.1b8f7b9e64f61a486dc0.png",
+    "index.html": "/index.html",
+    "main.46b8326f.css.map": "/static/css/main.46b8326f.css.map",
+    "main.d8ae45e2.js.map": "/static/js/main.d8ae45e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46b8326f.css",
+    "static/js/main.d8ae45e2.js"
+  ]
+}
