@@ -1,0 +1,40 @@
+module.exports = {
+  mode: "jit",
+  content: ["./src/**/**/*.{js,ts,jsx,tsx,html,mdx}", "./src/**/*.{js,ts,jsx,tsx,html,mdx}"],
+  darkMode: "class",
+  theme: {
+    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
+    extend: {
+      colors: {
+        gray: {
+          50: "#f3f8ff",
+          100: "#f6f7f8",
+          500: "#9f9f9f",
+          700: "#606060",
+          800: "#3a3a3a",
+          900: "#1e1e1e",
+          "100_cc": "#f6f7f8cc",
+          "900_90": "#1e1e1e90",
+        },
+        blue_gray: {
+          100: "#d9d9d9",
+          400: "#6d84a5",
+          800: "#1a3f59",
+          900: "#292f36",
+          "800_a2": "#1a3f59a2",
+          "100_a2": "#d9d9d9a2",
+        },
+        blue: { 50: "#e8f2ff" },
+        deep_orange: { 300: "#ff9a63", 400: "#ff814c", "400_01": "#fe804b" },
+        white: { A700_a2: "#ffffffa2", A700: "#ffffff" },
+        indigo: { 400: "#5266a5", 900: "#183282", "400_a2": "#5266a5a2" },
+        yellow: { A700: "#fdd20d" },
+        black: { 900: "#000000" },
+      },
+      boxShadow: { xs: "0px 10px  20px 0px #c0c0c03f", sm: "5px 7px  12px 0px #0000000c" },
+      fontFamily: { archivo: "Archivo", poppins: "Poppins", inter: "Inter" },
+      opacity: { 0.8: 0.8, 0.6: 0.6 },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
