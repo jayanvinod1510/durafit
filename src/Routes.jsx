@@ -10,26 +10,26 @@ import Naturapedic from "pages/Naturapedic";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "dhiwise-dashboard", element: <Home /> },
+    { path: "durafit/dhiwise-dashboard", element: <Home /> },
     { path: "*", element: <NotFound /> },
     {
-      path: "/",
+      path: "durafit/",
       element: <Landingpage />,
     },
     {
-      path: "aboutus",
+      path: "durafit/aboutus",
       element: <AboutUs />,
     },
     {
-      path: "contactus",
+      path: "durafit/contactus",
       element: <ContactUs />,
     },
     {
-      path: "listingpage",
+      path: "durafit/listingpage",
       element: <Listingpage />,
     },
     {
-      path: "naturapedic",
+      path: "durafit/naturapedic",
       element: <Naturapedic />,
     },
   ]);
