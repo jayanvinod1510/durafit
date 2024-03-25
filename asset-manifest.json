@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/durafit/static/css/main.4d51b359.css",
-    "main.js": "/durafit/static/js/main.d8ae45e2.js",
+    "main.js": "/durafit/static/js/main.dfae6335.js",
     "static/media/img_section_4.png": "/durafit/static/media/img_section_4.717bd5963541f717d31f.png",
     "static/media/img_section_5.png": "/durafit/static/media/img_section_5.b419a063004d8d321f3d.png",
     "static/media/img_section_9.png": "/durafit/static/media/img_section_9.1eec6ab41dedd7960339.png",
@@ -15,10 +15,10 @@
     "static/media/img_frame_63.png": "/durafit/static/media/img_frame_63.1b8f7b9e64f61a486dc0.png",
     "index.html": "/durafit/index.html",
     "main.4d51b359.css.map": "/durafit/static/css/main.4d51b359.css.map",
-    "main.d8ae45e2.js.map": "/durafit/static/js/main.d8ae45e2.js.map"
+    "main.dfae6335.js.map": "/durafit/static/js/main.dfae6335.js.map"
   },
   "entrypoints": [
     "static/css/main.4d51b359.css",
-    "static/js/main.d8ae45e2.js"
+    "static/js/main.dfae6335.js"
   ]
 }
