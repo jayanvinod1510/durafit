@@ -44,21 +44,21 @@ export default function Footer({ ...props }) {
               <div className="flex flex-col self-start">
                 <ul className="flex flex-col self-start items-start gap-3.5">
                   <li>
-                    <a href="Home" target="_blank" rel="noreferrer" className="opacity-0.6">
+                    <a href="/" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Home
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="opacity-0.6">
+                    <a href="aboutus" className="opacity-0.6">
                       <Text size="md" as="p">
                         About us
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="Contact" target="_blank" rel="noreferrer" className="opacity-0.6">
+                    <a href="contactus" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Contact
                       </Text>
@@ -69,21 +69,21 @@ export default function Footer({ ...props }) {
               <div className="flex flex-col">
                 <ul className="flex flex-col self-start items-start gap-[15px]">
                   <li>
-                    <a href="#" className="opacity-0.6">
+                    <a href="listingpage" className="opacity-0.6">
                       <Text size="md" as="p">
                         Black Edition
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="Mattress" target="_blank" rel="noreferrer" className="opacity-0.6">
+                    <a href="Mattress" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Mattress
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="Pillow" target="_blank" rel="noreferrer" className="opacity-0.6">
+                    <a href="Pillow" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Pillow
                       </Text>

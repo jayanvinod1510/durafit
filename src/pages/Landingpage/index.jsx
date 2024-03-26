@@ -97,11 +97,12 @@ export default function LandingpagePage() {
                   these premium mattresses redefine your sleep experience
                 </>
               </Text>
-            </div>
-          </div>
-          <Button shape="round" className="mb-[149px] mr-[344px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
+              <Button shape="round" className="mb-[149px] mr-[420px] mt-[15px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
             Explore more
           </Button>
+            </div>
+          </div>
+          
         </div>
         <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_5.png)] bg-cover bg-no-repeat">
           <div className="flex w-[34%] md:w-full mt-[137px]">
@@ -127,7 +128,7 @@ export default function LandingpagePage() {
             Explore more
           </Button>
         </div>
-        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px] md:p-5 rotate-[180deg] bg-[url(/public/images/img_section_4.png)] bg-cover bg-no-repeat">
+        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px] md:p-5 rotate-[0deg] bg-[url(/public/images/img_section_4.png)] bg-cover bg-no-repeat">
           <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px]">
             <div className="self-stretch">
               <div className="flex flex-col gap-2.5">

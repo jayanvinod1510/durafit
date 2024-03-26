@@ -9,7 +9,7 @@ export default function Header({ ...props }) {
         <div className="flex md:flex-col justify-between items-center w-[60%] md:w-full gap-5">
           <ul className="flex gap-10 flex-wrap">
             <li>
-              <a href="#" className="self-start opacity-0.8">
+              <a href="listingpage" className="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Black Edition
                 </Text>
@@ -37,6 +37,7 @@ export default function Header({ ...props }) {
               </a>
             </li>
           </ul>
+          <a href="contactus" className="self-start opacity-0.8">
           <Button
             size="xs"
             variant="outline"
@@ -46,6 +47,8 @@ export default function Header({ ...props }) {
           >
             Contact us
           </Button>
+          </a>
+          
         </div>
       </div>
     </header>
