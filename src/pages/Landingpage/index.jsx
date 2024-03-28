@@ -1,6 +1,5 @@
 import React from "react";
 import {Animated} from "react-animated-css";
-import { useRef, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Helmet } from "react-helmet";
 import { Heading, Text, RatingBar, Img, Button } from "../../components";
@@ -25,6 +24,9 @@ export default function LandingpagePage() {
             <div>
               <div className="self-end">
                 <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
+                <br></br>
+                <br></br>
+                <br></br>
                 <div className="h-[674px] md:h-auto relative">
                   <Img
                     src="images/img_up_in_the_clouds_1024x1024.png"

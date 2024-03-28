@@ -3,7 +3,7 @@ import { Button, Text, Img } from "./..";
 
 export default function Header({ ...props }) {
   return (
-    <header {...props}>
+    <header {...props} style ={{"position":"fixed","width":"100%","zIndex":"1"}}>
       <div className="flex md:flex-col justify-between items-center w-full gap-5 mx-auto max-w-[1180px]">
         <Img src="images/img_image_55.png" alt="imagefiftyfive" className="w-[15%] md:w-full object-cover" />
         <div className="flex md:flex-col justify-between items-center w-[60%] md:w-full gap-5">
