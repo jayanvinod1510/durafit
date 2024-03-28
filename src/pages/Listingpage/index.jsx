@@ -191,7 +191,7 @@ export default function ListingpagePage() {
             </Accordion>
           </div>
         </div>
-        <div className="flex flex-col items-end justify-center h-[400px] md:h-auto pl-14 pr-[98px] gap-[30px] py-[98px] md:p-5 bg-[url(/public/images/img_frame_63.png)] bg-cover bg-no-repeat">
+        <div className="flex flex-col items-end justify-center h-[400px] md:h-auto pl-14 pr-[98px] gap-[30px] py-[98px] md:p-5 bg-[url(/public/images/img_frame_64.png)] bg-cover bg-no-repeat">
           <div className="flex justify-end w-[29%] md:w-full mr-8 md:mr-0">
             <div className="w-full">
               <Text size="6xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px]">

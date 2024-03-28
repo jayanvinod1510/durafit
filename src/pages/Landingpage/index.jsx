@@ -1,10 +1,18 @@
 import React from "react";
+import {Animated} from "react-animated-css";
+import { useRef, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { Helmet } from "react-helmet";
 import { Heading, Text, RatingBar, Img, Button } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 export default function LandingpagePage() {
+  
+  const { ref: sofaRef, inView: sofaIsVisible } = useInView();
+  const { ref: eleganceRef, inView: eleganceIsVisible } = useInView();
+  const { ref: mattressRef, inView: mattressIsVisible } = useInView();
+  const { ref: pillowRef, inView: pillowIsVisible } = useInView();
   return (
     <>
       <Helmet>
@@ -79,100 +87,116 @@ export default function LandingpagePage() {
             </div>
           </div>
         </div>
+
+        {/* Section 1 */}
         <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_9.png)] bg-cover bg-no-repeat">
-          <div className="flex justify-end w-[43%] md:w-full mt-[149px]">
-            <div className="flex flex-col w-full gap-2.5">
-              <Text size="6xl" as="p" className="!text-blue_gray-100 leading-[60px]">
-                <>
-                  Elegance in Every
-                  <br />
-                  Thread of Black Edition
-                </>
-              </Text>
-              <Text as="p" className="w-[98%] md:w-full !text-blue_gray-100">
-                <>
-                  Experience the epitome of comfort and style with our exclusive <br />
-                  Black Edition collection. Crafted with precision and sophistication,
-                  <br />
-                  these premium mattresses redefine your sleep experience
-                </>
-              </Text>
-              <Button shape="round" className="mb-[149px] mr-[420px] mt-[15px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
-            Explore more
-          </Button>
-            </div>
-          </div>
-          
-        </div>
-        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_5.png)] bg-cover bg-no-repeat">
-          <div className="flex w-[34%] md:w-full mt-[137px]">
-            <div className="flex flex-col w-full gap-2.5">
-              <Text size="6xl" as="p" className="w-[93%] md:w-full !text-blue_gray-800 leading-[60px]">
-                <>
-                  Selling Sleep,
-                  <br />
-                  not just Mattress
-                </>
-              </Text>
-              <Text as="p" className="!text-blue_gray-800">
-                <>
-                  Discover a world of tranquility and restful nights with <br />
-                  our exceptional mattress collection. Engineered for <br />
-                  supreme comfort, our mattresses ensure you wake <br />
-                  up rejuvenated every morning
-                </>
-              </Text>
-            </div>
-          </div>
-          <Button shape="round" className="mb-[137px] sm:px-5 font-medium min-w-[191px]">
-            Explore more
-          </Button>
-        </div>
-        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px] md:p-5 rotate-[0deg] bg-[url(/public/images/img_section_4.png)] bg-cover bg-no-repeat">
-          <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px]">
-            <div className="self-stretch">
-              <div className="flex flex-col gap-2.5">
-                <Text size="6xl" as="p" className="w-[66%] md:w-full !text-blue_gray-800 leading-[60px]">
+          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
+            <div className="flex justify-end w-[43%] md:w-full mt-[149px]" style={{"float":"right"}}>
+              <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
+                <Text size="6xl" as="p" className="!text-blue_gray-100 leading-[60px]">
                   <>
-                    Pillows that <br />
-                    Hug You Back
+                    Elegance in Every
+                    <br />
+                    Thread of Black Edition
+                  </>
+                </Text>
+                <Text as="p" className="w-[98%] md:w-full !text-blue_gray-100">
+                  <>
+                    Experience the epitome of comfort and style with our exclusive <br />
+                    Black Edition collection. Crafted with precision and sophistication,
+                    <br />
+                    these premium mattresses redefine your sleep experience
+                  </>
+                </Text>
+                <Button shape="round" className="mb-[149px] mr-[420px] mt-[15px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
+              Explore more
+            </Button>
+              </div>
+            </div>
+          </Animated>
+        </div>
+
+        {/* Section 2 */}
+        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_12.png)] bg-cover bg-no-repeat">
+          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
+            <div className="flex w-[34%] md:w-full mt-[137px]" style={{"margin-bottom": "20px"}}>
+              <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
+                <Text size="6xl" as="p" className="w-[93%] md:w-full !text-blue_gray-800 leading-[60px]">
+                  <>
+                    Selling Sleep,
+                    <br />
+                    not just Mattress
                   </>
                 </Text>
                 <Text as="p" className="!text-blue_gray-800">
                   <>
-                    Experience the softest embrace for your head and neck with <br />
-                    our pillow collection. Designed for ultimate relaxation, our <br />
-                    pillow provide the perfect support for a heavenly night&#39;s sleep
+                    Discover a world of tranquility and restful nights with <br />
+                    our exceptional mattress collection. Engineered for <br />
+                    supreme comfort, our mattresses ensure you wake <br />
+                    up rejuvenated every morning
                   </>
                 </Text>
               </div>
             </div>
-            <Button shape="round" className="sm:px-5 font-medium min-w-[191px]">
+            <Button shape="round" className="mb-[137px] sm:px-5 font-medium min-w-[191px]">
               Explore more
             </Button>
-          </div>
+          </Animated>
         </div>
-        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_6.png)] bg-cover bg-no-repeat">
-          <div className="flex w-[42%] md:w-full mt-[149px]">
-            <div className="flex flex-col w-full gap-2.5">
-              <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
-                <>
-                  Sofas and Chairs, <br />
-                  Reimagined Comfort
-                </>
-              </Text>
-              <Text as="p" className="!text-blue_gray-800">
-                <>
-                  Upgrade your lounging experience with our furniture cushionings <br />
-                  collection. Transform your sofas and chairs into cozy havens of <br />
-                  comfort, enhancing your relaxation time at home
-                </>
-              </Text>
+
+        {/* Section 3 */}
+        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px] md:p-5 rotate-[0deg] bg-[url(/public/images/img_section_11.png)] bg-cover bg-no-repeat">
+          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
+            <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px]" style={{"float":"right"}}>
+              <div className="self-stretch">
+                <div ref = {pillowRef} className="flex flex-col gap-2.5">
+                  <Text size="6xl" as="p" className="w-[66%] md:w-full !text-blue_gray-800 leading-[60px]">
+                    <>
+                      Pillows that <br />
+                      Hug You Back
+                    </>
+                  </Text>
+                  <Text as="p" className="!text-blue_gray-800">
+                    <>
+                      Experience the softest embrace for your head and neck with <br />
+                      our pillow collection. Designed for ultimate relaxation, our <br />
+                      pillow provide the perfect support for a heavenly night&#39;s sleep
+                    </>
+                  </Text>
+                </div>
+              </div>
+              <Button shape="round" className="sm:px-5 font-medium min-w-[191px]">
+                Explore more
+              </Button>
             </div>
-          </div>
-          <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px]">
-            Explore more
-          </Button>
+          </Animated>
+        </div>
+              
+        {/* Section 4 */}
+        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_13.png)] bg-cover bg-no-repeat">
+          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
+            <div className="flex w-[42%] md:w-full mt-[149px]" style={{"margin-bottom": "20px"}}>
+                <div ref = {sofaRef} className="flex flex-col w-full gap-2.5">
+                  <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
+                    <>
+                      Sofas and Chairs, <br />
+                      Reimagined Comfort
+                    </>
+                  </Text>
+                  <Text as="p" className="!text-blue_gray-800">
+                    <>
+                      Upgrade your lounging experience with our furniture cushionings <br />
+                      collection. Transform your sofas and chairs into cozy havens of <br />
+                      comfort, enhancing your relaxation time at home
+                    </>
+                  </Text>
+                </div>
+              
+            </div>
+            <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px]">
+              Explore more
+            </Button>
+          </Animated>
         </div>
         <div className="flex md:flex-col justify-between gap-5 p-[70px] md:p-5 bg-blue_gray-800">
           <div className="flex md:flex-col w-[76%] md:w-full ml-[273px] gap-[70px] md:ml-0">
