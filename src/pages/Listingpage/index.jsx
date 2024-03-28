@@ -3,6 +3,10 @@ import { Helmet } from "react-helmet";
 import { Button, Text, Img } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { productList } from "data/mockData";
+import { useNavigate } from "react-router-dom";
+
+
 import {
   AccordionItemHeading,
   AccordionItemButton,
@@ -11,7 +15,15 @@ import {
   AccordionItem,
 } from "react-accessible-accordion";
 
-export default function ListingpagePage() {
+export default function ListingpagePage({ productType }) {
+  const data = productList[productType]
+  let navigate = useNavigate();
+  const handleClick = (item) => {
+    console.group("Handle Click data", item)
+    // Navigate to a different screen when the component is clicked
+    let path = `/details`;
+    navigate(path, { state: { data: item } });
+  };
   return (
     <>
       <Helmet>
@@ -24,7 +36,7 @@ export default function ListingpagePage() {
             <div>
               <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
               <Img
-                src="images/img_up_in_the_clouds_1024x1024_703x1440.png"
+                src={"images/" + data.image}
                 alt="upinthe_one"
                 className="h-[703px] w-full md:h-auto object-cover"
               />
@@ -38,54 +50,33 @@ export default function ListingpagePage() {
             className="w-[64%] md:w-full mt-[70px] ml-[190px] md:ml-0 !text-blue_gray-800 leading-[60px]"
           >
             <>
-              Elegance in Every
+              {data.headerLine1}
               <br />
-              Thread of Black Edition
+              {data.headerLine2}
             </>
           </Text>
           <Text as="p" className="w-[64%] md:w-full ml-[190px] md:ml-0 !text-blue_gray-800">
-            Experience the epitome of sophistication and refinement with our exclusive collection. We believe that your
-            sleep environment should reflect your unique taste. Our Black Edition is meticulously crafted to provide you
-            with the ultimate in luxury, comfort and style. Each mattress in this exquisite collection is a true work of
-            art, designed to seamlessly blend aesthetics and functionality.
+            {data.description}
           </Text>
         </div>
-        <div className="justify-center w-full mt-[50px] gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px]">
-          <div className="flex w-full bg-white-A700 shadow-sm rounded-[5px]">
-            <Img
-              src="images/img_orthopeadic_mat.png"
-              alt="orthopeadicmat"
-              className="h-[465px] w-full md:h-auto object-cover rounded-[5px]"
-            />
-          </div>
-          <div className="flex justify-end w-full bg-white-A700 shadow-sm rounded-[5px]">
-            <Img
-              src="images/img_orthopeadic_mat_465x504.png"
-              alt="orthopeadicmat"
-              className="h-[465px] w-full md:h-auto object-cover rounded-[5px]"
-            />
-          </div>
-          <div className="flex w-full bg-white-A700 shadow-sm rounded-[5px]">
-            <Img
-              src="images/img_orthopeadic_mat_1.png"
-              alt="orthopeadicmat"
-              className="h-[465px] w-full md:h-auto object-cover rounded-[5px]"
-            />
-          </div>
-          <div className="flex justify-end w-full bg-white-A700 shadow-sm rounded-[5px]">
-            <Img
-              src="images/img_orthopeadic_mat_2.png"
-              alt="orthopeadicmat"
-              className="h-[465px] w-full md:h-auto object-cover rounded-[5px]"
-            />
-          </div>
+        <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px]">
+          {data.products.map((item, index) => (
+            <div className="flex w-full bg-white-A700 shadow-sm rounded-[5px]" onClick={()=>handleClick(item)}>
+              <Img
+                src={"images/" + item.image}
+                alt="orthopeadicmat"
+                className="h-[465px] w-full md:h-auto object-cover rounded-[5px]"
+              />
+
+            </div>
+          ))}
         </div>
         <div className="mt-[50px] px-[130px] md:px-5">
           <div className="flex flex-col items-center w-full gap-[31px] py-[78px] mx-auto md:p-5 md:py-5 bg-blue_gray-800 max-w-[1180px] rounded-[5px]">
             <div className="flex self-stretch justify-center px-[100px] md:px-5">
               <div className="flex">
                 <Text size="6xl" as="p" className="!text-deep_orange-400 capitalize !font-medium">
-                  Why Choose Durafit Black Edition?
+                  Why Choose Durafit {data.productType}
                 </Text>
               </div>
             </div>
@@ -96,18 +87,16 @@ export default function ListingpagePage() {
                     <div className="w-full">
                       <div className="flex flex-col gap-1">
                         <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
-                          Ageless Orthopedic Support for good posture control
+                          {data.reasons[0].title}
                         </Text>
                         <Text as="p" className="!text-gray-100 !font-light">
-                          Experience unparalleled support and comfort with our mattresses, designed to provide superior
-                          orthopedic backing and posture control for all ages. Wake up refreshed and pain-free, every
-                          day
+                          {data.reasons[0].reason}
                         </Text>
                       </div>
                     </div>
                   </div>
                   <Img
-                    src="images/img_fcf037cde48a756f_upscale.png"
+                    src={"images/" + data.reasons[0].image}
                     alt="fcf037cde48a756"
                     className="w-[311px] md:w-full object-cover rounded-[5px]"
                   />
@@ -115,7 +104,7 @@ export default function ListingpagePage() {
               </div>
               <div className="flex md:flex-col justify-between items-center gap-5">
                 <Img
-                  src="images/img_fcf037cde48a756f_upscale_312x391.png"
+                  src={"images/" + data.reasons[1].image}
                   alt="fcf037cde48a756"
                   className="w-[40%] md:w-full object-cover rounded-[5px]"
                 />
@@ -123,12 +112,10 @@ export default function ListingpagePage() {
                   <div className="w-full">
                     <div className="flex flex-col gap-2.5">
                       <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
-                        Sustainable and Hypoallergenic Fabric
+                        {data.reasons[1].title}
                       </Text>
                       <Text as="p" className="!text-gray-100 !font-light">
-                        Sustainable and hypoallergenic fabrics combine eco-friendliness with year-round comfort. They
-                        offer breathability and allergy relief, ensuring a cool, airy feel while being gentle on both
-                        skin and the environment.
+                        {data.reasons[1].reason}
                       </Text>
                     </div>
                   </div>
@@ -139,17 +126,16 @@ export default function ListingpagePage() {
                   <div className="w-full">
                     <div className="flex flex-col gap-2.5">
                       <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
-                        Special Pressure Relief Technology Mattress
+                        {data.reasons[2].title}
                       </Text>
                       <Text as="p" className="!text-gray-100 !font-light">
-                        Experience unparalleled comfort with our cutting-edge mattress, designed to distribute weight
-                        evenly and alleviate pressure points for a restful sleep.
+                        {data.reasons[2].reason}
                       </Text>
                     </div>
                   </div>
                 </div>
                 <Img
-                  src="images/img_fcf037cde48a756f_upscale_278x422.png"
+                  src={"images/" + data.reasons[2].image}
                   alt="fcf037cde48a756"
                   className="w-[43%] md:w-full object-cover rounded-[5px]"
                 />
@@ -167,7 +153,7 @@ export default function ListingpagePage() {
               Frequently asked questions
             </Text>
             <Accordion preExpanded={[0]} className="flex flex-col w-[49%] md:w-full gap-[30px]">
-              {[...Array(4)].map((_, i) => (
+              {data.faqs.map((_, i) => (
                 <AccordionItem uuid={i} key={`expandablelistw${i}`}>
                   <AccordionItemHeading className="w-full">
                     <AccordionItemButton>
@@ -177,7 +163,7 @@ export default function ListingpagePage() {
                             <div className="border-indigo-400 border-b-[0.5px] border-solid flex-1">
                               <div className="flex justify-between items-center gap-5 py-1">
                                 <Text size="xl" as="p" className="self-start !text-blue_gray-800 tracking-[-0.50px]">
-                                  What is Black Edition?
+                                  {_.question}
                                 </Text>
                               </div>
                             </div>

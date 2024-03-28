@@ -9,21 +9,21 @@ export default function Header({ ...props }) {
         <div className="flex md:flex-col justify-between items-center w-[60%] md:w-full gap-5">
           <ul className="flex gap-10 flex-wrap">
             <li>
-              <a href="listingpage" className="self-start opacity-0.8">
+              <a href="blackedition" className="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Black Edition
                 </Text>
               </a>
             </li>
             <li>
-              <a href="Mattress" target="_blank" rel="noreferrer" className="self-start opacity-0.8">
+              <a href="mattress" className="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Mattress
                 </Text>
               </a>
             </li>
             <li>
-              <a href="Pillows" target="_blank" rel="noreferrer" className="self-start opacity-0.8">
+              <a href="pillows" lassName="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Pillows
                 </Text>

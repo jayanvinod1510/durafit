@@ -6,7 +6,7 @@ import Landingpage from "pages/Landingpage";
 import AboutUs from "pages/AboutUs";
 import ContactUs from "pages/ContactUs";
 import Listingpage from "pages/Listingpage";
-import Naturapedic from "pages/Naturapedic";
+import Details from "pages/Details";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -26,11 +26,23 @@ const ProjectRoutes = () => {
     },
     {
       path: "listingpage",
-      element: <Listingpage />,
+      element: <Listingpage/>,
     },
     {
-      path: "naturapedic",
-      element: <Naturapedic />,
+      path: "mattress",
+      element: <Listingpage productType={"Mattress"}/>,
+    },
+    {
+      path: "pillows",
+      element: <Listingpage productType={"Pillows"}/>,
+    },
+    {
+      path: "blackedition",
+      element: <Listingpage productType={"Black Edition"}/>,
+    },
+    {
+      path: "details",
+      element: <Details />,
     },
   ]);
 
