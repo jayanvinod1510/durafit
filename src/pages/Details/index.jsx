@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import ReactPlayer from 'react-player'
+import { useInView } from "react-intersection-observer";
 import { Img, Text, Button } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -13,6 +15,7 @@ export default function DetailPage() {
   const handleClick = (image) => {
     setSelectedImage(image);
   };
+  const { ref: videoRef, inView: videoIsVisible } = useInView();
   return (
     <>
       <Helmet>
@@ -179,6 +182,10 @@ export default function DetailPage() {
               // </div>
             ))},
           </div>
+          <div ref = {videoRef}>
+          <ReactPlayer url = "videos/demo-video.mp4" playing={videoIsVisible} width='100%'></ReactPlayer>
+          </div>
+          
           <div className="flex bg-blue_gray-800">
             <Img src="images/img_Detail_1.png" alt="Detailone" className="w-[70%] object-cover" />
           </div>

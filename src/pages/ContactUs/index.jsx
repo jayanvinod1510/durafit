@@ -1,9 +1,96 @@
 import React from "react";
+import { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
+import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 import { Text, Img, Button, TextArea, Input } from "../../components";
 import Header from "../../components/Header";
 
 export default function ContactUsPage() {
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
+  var message = ""
+  const [contactErrorMessage, setContactErrorMessage] = useState("");
+  const [nameErrorMessage, setNameErrorMessage] = useState("");
+  const [isLoading, setisLoading] = useState(false);
+  if (params.get('product')){
+    console.log(params.get('product'))
+    message = "I am interested to know more about " + params.get('product')
+  }
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    setisLoading(true)
+    var error = false
+    e.preventDefault();
+    console.log("name",form.current.name.value)
+    console.log("contact",form.current.contact.value)
+
+    if (!form.current.name.value){
+      setNameErrorMessage("Please Enter Name")
+      console.log("entered name not",nameErrorMessage)
+      error = true
+    }else{
+      setNameErrorMessage("")
+      error = false
+    }
+
+    if(!form.current.contact.value){
+      setContactErrorMessage("Please Enter Contact Number")
+      console.log("entered contact not",contactErrorMessage)
+      error = true
+    }else{
+      if(form.current.contact.value.length != 10){
+        setContactErrorMessage("Please Enter Valid Contact Number")
+        error = true
+      }else{
+        setContactErrorMessage("")
+        error = false
+      }
+    }
+
+    if (error){
+      setisLoading(false)
+      return
+    }
+
+    emailjs
+      .sendForm('service_ttaemon', 'template_4k1wr0b', form.current, {
+        publicKey: 'oJEkbcCZqa8ux2je1',
+      })
+      .then(
+        () => {
+          toast.success("Enquiry sent successfully !",{
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            theme: "light"
+            });
+          form.current.reset()
+          message = ""
+          setisLoading(false)
+        },
+        (error) => {
+          toast.error("Error in sending enquiry !",{
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            theme: "light"
+            });
+          setisLoading(false)
+        },
+      );
+  };
+
   return (
     <>
       <Helmet>
@@ -13,6 +100,9 @@ export default function ContactUsPage() {
       <div className="w-full bg-gray-100">
         <div className="flex flex-col pb-[100px] gap-[91px] md:gap-[68px] md:pb-5 sm:gap-[45px] bg-white-A700">
           <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
+          <br></br>
+          <br></br>
+          <br></br>
           <div className="flex flex-col items-center w-full gap-[30px] mx-auto md:p-5 max-w-[1180px]">
             <div className="self-stretch px-60 md:px-5">
               <div className="flex flex-col items-center gap-[5px]">
@@ -72,62 +162,73 @@ export default function ContactUsPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-start w-[60%] md:w-full mt-[50px] gap-[34px]">
-                <div className="flex flex-col self-stretch items-start gap-[9px]">
-                  <div className="flex">
-                    <Text as="p" className="!text-black-900 !font-medium">
-                      Your name
-                    </Text>
+                <form ref = {form} onSubmit={sendEmail} className="flex flex-col items-start w-[60%] md:w-full mt-[50px] gap-[34px]">
+                  <div className="flex flex-col self-stretch items-start gap-[9px]">
+                    <div className="flex">
+                      <Text as="p" className="!text-black-900 !font-medium">
+                        Your name*
+                      </Text>
+                    </div>
+                    <Input
+                      style = {{"color":"#434343"}}
+                      shape="round"
+                      type="text"
+                      name="name"
+                      placeholder={`Enter your full name`}
+                      className="sm:px-5"
+                    />
+                    <Text as="p" className="!text-red-900 !font-medium">
+                    {nameErrorMessage}
+                      </Text>
                   </div>
-                  <Input
-                    shape="round"
-                    type="text"
-                    name="name"
-                    placeholder={`Enter your full name`}
-                    className="sm:px-5"
-                  />
-                </div>
-                <div className="flex flex-col self-stretch items-start gap-2.5">
-                  <div className="flex">
-                    <Text as="p" className="!text-black-900 !font-medium">
-                      Email address
-                    </Text>
+                  <div className="flex flex-col self-stretch items-start gap-2.5">
+                    <div className="flex">
+                      <Text as="p" className="!text-black-900 !font-medium">
+                        Email address
+                      </Text>
+                    </div>
+                    <Input type="email" shape="round" style = {{"color":"#434343"}} name="email" placeholder={`Eg: sample@sample.com`} className="sm:px-5" />
                   </div>
-                  <Input shape="round" name="email" placeholder={`Eg: sample@sample.com`} className="sm:px-5" />
-                </div>
-                <div className="flex flex-col self-stretch items-start gap-[9px]">
-                  <div className="flex">
-                    <Text as="p" className="!text-black-900 !font-medium">
-                      Contact number
-                    </Text>
+                  <div className="flex flex-col self-stretch items-start gap-[9px]">
+                    <div className="flex">
+                      <Text as="p" className="!text-black-900 !font-medium">
+                        Contact number*
+                      </Text>
+                    </div>
+                    <Input type = "number" shape="round" style = {{"color":"#434343"}} name="contact" placeholder={`Eg: 0000000000`} className="sm:px-5" />
+                    <Text as="p" className="!text-red-900 !font-medium">
+                    {contactErrorMessage}
+                      </Text>
+                    
                   </div>
-                  <Input shape="round" name="eg00_0000000000" placeholder={`Eg: +00 0000000000`} className="sm:px-5" />
-                </div>
-                <div className="flex flex-col self-stretch items-start gap-2">
-                  <div className="flex">
-                    <Text as="p" className="!text-black-900 !font-medium">
-                      Subject
-                    </Text>
+                  <div className="flex flex-col self-stretch items-start gap-2">
+                    <div className="flex">
+                      <Text as="p" className="!text-black-900 !font-medium">
+                        Subject
+                      </Text>
+                    </div>
+                    <Input shape="round" style = {{"color":"#434343"}} name="subject" placeholder={`Enter your Enquiry subject`} className="sm:px-5" />
                   </div>
-                  <Input shape="round" name="frame183" placeholder={`Enter your Enquiry subject`} className="sm:px-5" />
-                </div>
-                <div className="flex flex-col self-stretch items-start gap-[7px]">
-                  <div className="flex">
-                    <Text as="p" className="!text-black-900 !font-medium">
-                      Message
-                    </Text>
+                  <div className="flex flex-col self-stretch items-start gap-[7px]">
+                    <div className="flex">
+                      <Text as="p" className="!text-black-900 !font-medium">
+                        Message
+                      </Text>
+                    </div>
+                    <TextArea
+                      style = {{"color":"#434343"}}
+                      shape="round"
+                      defaultValue = {message}
+                      name="message"
+                      placeholder={`Enter your Enquiry here..`}
+                      className="self-stretch sm:p-5 text-gray-500"
+                    />
                   </div>
-                  <TextArea
-                    shape="round"
-                    name="frame183_one"
-                    placeholder={`Enter your Enquiry here..`}
-                    className="self-stretch sm:p-5 text-gray-500"
-                  />
-                </div>
-                <Button shape="round" className="sm:px-5 !text-indigo-900 font-medium min-w-[133px]">
-                  Submit
-                </Button>
-              </div>
+                  <Button disabled={isLoading} style = {{"background":isLoading?"#bbbbbb":"","color":isLoading?"#ffffff !important":""}} shape="round" className="sm:px-5 !text-indigo-900 font-medium min-w-[133px]">
+                    {isLoading?'Submitting...':'Submit'}
+                  </Button>
+                  <ToastContainer/>
+                </form>
             </div>
           </div>
         </div>
@@ -238,21 +339,21 @@ export default function ContactUsPage() {
                   <div className="flex flex-col self-start">
                     <ul className="flex flex-col self-start items-start gap-3.5">
                       <li>
-                        <a href="#" className="opacity-0.6">
+                        <a href="/" className="opacity-0.6">
                           <Text size="md" as="p">
                             Home
                           </Text>
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="opacity-0.6">
+                        <a href="aboutus" className="opacity-0.6">
                           <Text size="md" as="p">
                             About us
                           </Text>
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="opacity-0.6">
+                        <a href="contactus" className="opacity-0.6">
                           <Text size="md" as="p">
                             Contact
                           </Text>
@@ -263,7 +364,7 @@ export default function ContactUsPage() {
                   <div className="flex flex-col">
                     <ul className="flex flex-col self-start items-start gap-[15px]">
                       <li>
-                        <a href="#" className="opacity-0.6">
+                        <a href="listingpage" className="opacity-0.6">
                           <Text size="md" as="p">
                             Black Edition
                           </Text>
