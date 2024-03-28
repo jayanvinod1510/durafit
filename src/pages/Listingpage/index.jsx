@@ -5,8 +5,6 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { productList } from "data/mockData";
 import { useNavigate } from "react-router-dom";
-
-
 import {
   AccordionItemHeading,
   AccordionItemButton,
@@ -19,7 +17,6 @@ export default function ListingpagePage({ productType }) {
   const data = productList[productType]
   let navigate = useNavigate();
   const handleClick = (item) => {
-    console.group("Handle Click data", item)
     // Navigate to a different screen when the component is clicked
     let path = `/details`;
     navigate(path, { state: { data: item } });
@@ -61,7 +58,7 @@ export default function ListingpagePage({ productType }) {
         </div>
         <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px]">
           {data.products.map((item, index) => (
-            <div className="flex w-full bg-white-A700 shadow-sm rounded-[5px]" onClick={()=>handleClick(item)}>
+            <div className="flex w-full bg-white-A700 shadow-sm rounded-[5px]" onClick={() => handleClick(item)}>
               <Img
                 src={"images/" + item.image}
                 alt="orthopeadicmat"

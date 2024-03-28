@@ -3,16 +3,22 @@ import { Helmet } from "react-helmet";
 import { Img, Text, Button } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate} from 'react-router-dom';
+
 export default function DetailPage() {
   const location = useLocation();
   const data = location.state?.data;
   const [selectedImage, setSelectedImage] = useState(data.images[0]);
+  let navigate = useNavigate();
 
-  // selectedImage = data.images[0];
+
   const handleClick = (image) => {
     setSelectedImage(image);
   };
+
+  const handleEnquireRedirection = ()=>{
+    navigate(`/contactus?product=${data.headerTitle}`)
+  }
   return (
     <>
       <Helmet>
@@ -95,7 +101,7 @@ export default function DetailPage() {
                     <Text as="p" className="w-[93%] md:w-full !text-blue_gray-400">
                       {data.headerDescription}
                     </Text>
-                    <Button shape="round" className="sm:px-5 font-inter font-medium min-w-[178px]">
+                    <Button shape="round" className="sm:px-5 font-inter font-medium min-w-[178px]" onClick={handleEnquireRedirection}>
                       Enquire now
                     </Button>
                   </div>
