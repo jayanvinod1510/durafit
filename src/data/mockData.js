@@ -20,7 +20,7 @@ export const productList = {
         "detailTitle": "Complete eco-friendly choice for a restful and supportive night’s sleep",
         "detailDescription": "Tailored for those experiencing back and joint pain, our specially designed mattress offers gentle cushioning and buoyant support providing an everyday remedy to relieve pain. Crafted with 100% organic latex, this Naturapedic mattress not only ensures a cool sleeping experience but also promotes spine support.",
         "features": [{
-          "image": "img_frame_19_44x64.png",
+          "image": "spine.svg",
           "titleLine1": "Works on Back",
           "titleLine2": "and Joint Pain"
         }, {
@@ -29,7 +29,7 @@ export const productList = {
           "titleLine2": "Bamboo Fabric"
         },
         {
-          "image": "img_frame_19_44x64.png",
+          "image": "sustain.svg",
           "titleLine1": "Sustainable",
           "titleLine2": "Material"
         },
@@ -39,7 +39,7 @@ export const productList = {
           "titleLine2": "Material"
         },
         {
-          "image": "img_frame_19_44x64.png",
+          "image": "ortho.svg",
           "titleLine1": "Orthopedic",
           "titleLine2": "Support"
         }
@@ -49,12 +49,105 @@ export const productList = {
       },
       {
         "image": "img_orthopeadic_mat_465x504.png",
+        "headerTitle": "Viscoflex Mattress",
+        "headerDescription": "Introducing the ViscoFlex Mattress, where advanced pressure-relieving technology meets perfect posture support. Experience the ultimate in comfort as this mattress conforms to your body, alleviating pressure points and ensuring optimal spinal alignment. Enjoy restful nights and wake up refreshed, knowing that your sleep is well taken care of.",
+        "detailTitle": "Precision engineered for orthopaedic benefits",
+        "detailDescription": "Our mattress is designed to provide exceptional support to your spine, neck and shoulders. With the inclusion of memory foam at the core, it ensures an enhanced sleeping experience. Revel in orthopaedic support, hypoallergenic features, cool nights and the luxury of memory foam- a perfect combination for a revitalizing and comfortable night’s sleep.",
+        "features": [{
+          "image": "ortho.svg",
+          "titleLine1": "Orthopedic",
+          "titleLine2": "Support"
+        }, {
+          "image": "img_frame_19.svg",
+          "titleLine1": "Naturally",
+          "titleLine2": "Cooling"
+        },
+        {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure Relieving",
+          "titleLine2": "Technology"
+        },
+        {
+          "image": "img_frame_19_blue_gray_400_44x74.svg",
+          "titleLine1": "Ultrasoft",
+          "titleLine2": "Material"
+        },
+        {
+          "image": "vector.svg",
+          "titleLine1": "Hypo-",
+          "titleLine2": "allergenic"
+        }
+        ],
+        "images": ["viscoflex1.png", "viscoflex2.png", "viscoflex3.png", "viscoflex4.png"],
+        "footerImage":"up-in-the-clouds_1024x1024 1.png",
       },
       {
         "image": "img_orthopeadic_mat_1.png",
+        "headerTitle": "Memory Plus Mattress",
+        "headerDescription": "Discover the Memory Plus Mattress, your ticket to unparalleled comfort. Engineered for the even distribution of body weight, this mattress ensures every inch of your body is cradled in blissful support. Say goodbye to overheating with its naturally cooling technology, and embrace restful, cool nights of sleep.",
+        "detailTitle": "Precision engineered for orthopaedic benefits",
+        "detailDescription": "Our mattress is designed to provide exceptional support to your spine, neck and shoulders. With the inclusion of memory foam at thecore, it ensures an enhanced sleeping experience. Revel in orthopaedic support, hypoallergenic features, cool nights and the luxury of memory foam- a perfect combination for a revitalizing and comfortable night’s sleep.",
+        "features": [{
+          "image": "contouring.svg",
+          "titleLine1": "Contouring",
+          "titleLine2": "Memory Foam"
+        }, {
+          "image": "img_frame_19.svg",
+          "titleLine1": "Naturally",
+          "titleLine2": "Cooling"
+        },
+        {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure Relieving",
+          "titleLine2": "Technology"
+        },
+        {
+          "image": "spine.svg",
+          "titleLine1": "Proper Spine",
+          "titleLine2": "Alignment"
+        },
+        {
+          "image": "disturbance.svg",
+          "titleLine1": "No Partner",
+          "titleLine2": "Disturbance"
+        }
+        ],
+        "images": ["memory1.png", "memory2.png", "memory3.png", "memory4.png"],
+        "footerImage":"memory_plus_footer.png",
       },
       {
         "image": "img_orthopeadic_mat_2.png",
+        "headerTitle": "Pro-X Mattress",
+        "headerDescription": "Experience the Pro-X Mattress where softness meets smart technology. Sink into the embrace of ultrasoft foam material that molds to your body for unmatched comfort. Stay cool and dry with its cutting-edge moisture absorption technology, ensuring a refreshing night’s sleep every time you lay down. Elevate your sleep with Pro-X for the perfect blend of softness and dryness.",
+        "detailTitle": "Revitalizing your nights with a perfect balance of comfort and support",
+        "detailDescription": "Our specially engineered mattress offers a cool and comforting sensation to ease away the strains of the day. Designed for optimal joint and back support, it ensures you wake up feeling fresher and ready to embrace the day ahead. Elevate your sleep experience with a perfect balance of comfort and support, making every night a rejuvenating escape.",
+        "features": [{
+          "image": "spine.svg",
+          "titleLine1": "Beneficial for",
+          "titleLine2": "Joint & Back Pain"
+        }, {
+          "image": "deepsleep.svg",
+          "titleLine1": "Deep Sleep",
+          "titleLine2": "Experience"
+        },
+        {
+          "image": "img_frame_19_blue_gray_400_44x74.svg",
+          "titleLine1": "Breathable",
+          "titleLine2": "Mattress"
+        },
+        {
+          "image": "air.svg",
+          "titleLine1": "Promotes",
+          "titleLine2": "required air-flow"
+        },
+        {
+          "image": "img_frame_19_blue_gray_400_44x64.svg",
+          "titleLine1": "Moisture",
+          "titleLine2": "Absorption"
+        }
+        ],
+        "images": ["prox1.png", "prox2.png", "prox3.png", "prox4.png"],
+        "footerImage":"prox_footer.png",
       },
     ],
     reasons: [
@@ -85,7 +178,15 @@ export const productList = {
         answer: ""
       },
       {
-        question: "How is Black Edition?",
+        question: "What is the 100-nights trial?",
+        answer: ""
+      },
+      {
+        question: "What kind of bedframe works with a Durafit mattress?",
+        answer: ""
+      },
+      {
+        question: "How is the material sustainable?",
         answer: ""
       }
     ]
