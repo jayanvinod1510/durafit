@@ -189,7 +189,7 @@ export default function DetailPage() {
             ))},
           </div>
           <div ref = {videoRef}>
-          <ReactPlayer url = "videos/demo-video.mp4" playing={videoIsVisible} width='100%'></ReactPlayer>
+          <ReactPlayer url = "videos/demo-video1.mp4" playing={videoIsVisible} width='100%'></ReactPlayer>
           </div>
           
           <div className="flex bg-blue_gray-800">

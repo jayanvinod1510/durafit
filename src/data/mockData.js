@@ -261,9 +261,62 @@ export const productList = {
     products: [
       {
         "image": "orthopeadic_pillow_acetate_4_1.png",
+        "headerTitle": "Memory Pillow",
+        "headerDescription": "Experience personalized comfort with our Memory Foam Pillows. These pillows adapt to your unique shape, cradling your head and neck for unparalleled support and pressure relief. Enjoy a restful night's sleep with the perfect alignment and comfort provided by our memory foam pillows.",
+        "detailTitle": "A blend of quality and comfort with our Dream Pillow",
+        "detailDescription": "The Bamboo fabric cover distinguishes it from others. It is super soft, anti-bacterial and anti-allergenic. Suitable for every type of sleeper and provides the right amount of support with the right amount of fuffiness just like Durafit Mattress. Presenting the best solution for your tossing and turning nights.",
+        "features": [{
+          "image": "contouring.svg",
+          "titleLine1": "Contouring Support",
+          "titleLine2": ""
+        }, {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure Relief",
+          "titleLine2": ""
+        },
+        {
+          "image": "img_frame_19.svg",
+          "titleLine1": "Temperature Sensitivity",
+          "titleLine2": ""
+        },
+        {
+          "image": "vector.svg",
+          "titleLine1": "Hypoallergenic",
+          "titleLine2": ""
+        }
+        ],
+        "images": ["memoryp1.png", "memoryp2.png"],
+        "footerImage":"memory_pillow_footer.png",
       },
       {
         "image": "orthopeadic_pillow_acetate_4_2.png",
+        "headerTitle": "Latex Pillow",
+        "headerDescription": "Discover the natural comfort of Latex Foam Pillows. Crafted from eco-friendly latex, these pillows offer resilient support that promotes proper spine alignment. Enjoy a cool and refreshing night's sleep, and rest assured knowing that our latex pillows are built to last, providing you with comfortable support for years to come.",
+        "detailTitle": "A blend of quality and comfort with our Dream Pillow",
+        "detailDescription": "The Bamboo fabric cover distinguishes it from others. It is super soft, anti-bacterial and anti-allergenic. Suitable for every type of sleeper and provides the right amount of support with the right amount of fuffiness just like Durafit Mattress. Presenting the best solution for your tossing and turning nights.",
+        "features": [{
+          "image": "img_frame_19_blue_gray_400.svg",
+          "titleLine1": "Natural Material",
+          "titleLine2": ""
+        }, {
+          "image": "contouring.svg",
+          "titleLine1": "Supportive Comfort",
+          "titleLine2": ""
+        },
+        {
+          "image": "img_frame_19_44x64.png",
+          "titleLine1": "Breathability",
+          "titleLine2": ""
+        },
+        {
+          "image": "img_frame_19_blue_gray_400_44x64.svg",
+          "titleLine1": "Durability",
+          "titleLine2": ""
+        }
+        ],
+        "images": ["latex1.png", "memoryp2.png"],
+        "footerImage":"latex_footer.png",
+        
       },
     ],
     reasons: [
