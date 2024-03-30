@@ -13,6 +13,8 @@ export const productList = {
       {
         "image": "img_orthopeadic_mat.png",
         "headerTitle": "Naturapedic Mattress",
+        "shortDescriptionLine1":"Sink into the soothing, natural embrace of bamboo ",
+        "shortDescriptionLine2":"fibers every night with a connection to nature.",
         "headerDescription": "Experience the Naturapedic Bamboo Mattress - a touch of nature in your bedroom. Sink into the\
           soothing, natural embrace of bamboo fibers every night. This sustainable choice not only offers\
           supreme comfort but also a connection to the earth beneath you. Sleep soundly on the harmony of\
@@ -51,6 +53,8 @@ export const productList = {
         "image": "img_orthopeadic_mat_465x504.png",
         "headerTitle": "Viscoflex Mattress",
         "headerDescription": "Introducing the ViscoFlex Mattress, where advanced pressure-relieving technology meets perfect posture support. Experience the ultimate in comfort as this mattress conforms to your body, alleviating pressure points and ensuring optimal spinal alignment. Enjoy restful nights and wake up refreshed, knowing that your sleep is well taken care of.",
+        "shortDescriptionLine1":"Experience the ultimate in comfort as this mattress",
+        "shortDescriptionLine2":" conforms to your body and ensuring spinal alignment",
         "detailTitle": "Precision engineered for orthopaedic benefits",
         "detailDescription": "Our mattress is designed to provide exceptional support to your spine, neck and shoulders. With the inclusion of memory foam at the core, it ensures an enhanced sleeping experience. Revel in orthopaedic support, hypoallergenic features, cool nights and the luxury of memory foam- a perfect combination for a revitalizing and comfortable night’s sleep.",
         "features": [{
@@ -85,6 +89,8 @@ export const productList = {
         "image": "img_orthopeadic_mat_1.png",
         "headerTitle": "Memory Plus Mattress",
         "headerDescription": "Discover the Memory Plus Mattress, your ticket to unparalleled comfort. Engineered for the even distribution of body weight, this mattress ensures every inch of your body is cradled in blissful support. Say goodbye to overheating with its naturally cooling technology, and embrace restful, cool nights of sleep.",
+        "shortDescriptionLine1":"Engineered for the even distribution of body",
+        "shortDescriptionLine2":" weight ensuring rest to every inch of your body",
         "detailTitle": "Precision engineered for orthopaedic benefits",
         "detailDescription": "Our mattress is designed to provide exceptional support to your spine, neck and shoulders. With the inclusion of memory foam at thecore, it ensures an enhanced sleeping experience. Revel in orthopaedic support, hypoallergenic features, cool nights and the luxury of memory foam- a perfect combination for a revitalizing and comfortable night’s sleep.",
         "features": [{
@@ -119,6 +125,8 @@ export const productList = {
         "image": "img_orthopeadic_mat_2.png",
         "headerTitle": "Pro-X Mattress",
         "headerDescription": "Experience the Pro-X Mattress where softness meets smart technology. Sink into the embrace of ultrasoft foam material that molds to your body for unmatched comfort. Stay cool and dry with its cutting-edge moisture absorption technology, ensuring a refreshing night’s sleep every time you lay down. Elevate your sleep with Pro-X for the perfect blend of softness and dryness.",
+        "shortDescriptionLine1":"Stay cool with its moisture absorption",
+        "shortDescriptionLine2": " technology, ensuring a refreshing night’s sleep",
         "detailTitle": "Revitalizing your nights with a perfect balance of comfort and support",
         "detailDescription": "Our specially engineered mattress offers a cool and comforting sensation to ease away the strains of the day. Designed for optimal joint and back support, it ensures you wake up feeling fresher and ready to embrace the day ahead. Elevate your sleep experience with a perfect balance of comfort and support, making every night a rejuvenating escape.",
         "features": [{
@@ -263,6 +271,8 @@ export const productList = {
         "image": "orthopeadic_pillow_acetate_4_1.png",
         "headerTitle": "Memory Pillow",
         "headerDescription": "Experience personalized comfort with our Memory Foam Pillows. These pillows adapt to your unique shape, cradling your head and neck for unparalleled support and pressure relief. Enjoy a restful night's sleep with the perfect alignment and comfort provided by our memory foam pillows.",
+        "shortDescriptionLine1":"Pillows that cradle your head and neck for",
+        "shortDescriptionLine2":" unparalleled support and pressure relief",
         "detailTitle": "A blend of quality and comfort with our Dream Pillow",
         "detailDescription": "The Bamboo fabric cover distinguishes it from others. It is super soft, anti-bacterial and anti-allergenic. Suitable for every type of sleeper and provides the right amount of support with the right amount of fuffiness just like Durafit Mattress. Presenting the best solution for your tossing and turning nights.",
         "features": [{
@@ -292,6 +302,8 @@ export const productList = {
         "image": "orthopeadic_pillow_acetate_4_2.png",
         "headerTitle": "Latex Pillow",
         "headerDescription": "Discover the natural comfort of Latex Foam Pillows. Crafted from eco-friendly latex, these pillows offer resilient support that promotes proper spine alignment. Enjoy a cool and refreshing night's sleep, and rest assured knowing that our latex pillows are built to last, providing you with comfortable support for years to come.",
+        "shortDescriptionLine1":"Crafted from eco-friendly latex, these pillows ",
+        "shortDescriptionLine2":"offer resilient support for spine alignment",
         "detailTitle": "A blend of quality and comfort with our Dream Pillow",
         "detailDescription": "The Bamboo fabric cover distinguishes it from others. It is super soft, anti-bacterial and anti-allergenic. Suitable for every type of sleeper and provides the right amount of support with the right amount of fuffiness just like Durafit Mattress. Presenting the best solution for your tossing and turning nights.",
         "features": [{

@@ -19,6 +19,9 @@ const sizes = {
   xs: "h-[48px] px-[30px] text-base",
   sm: "h-[54px] px-[30px] text-xl",
 };
+const fontSizes = {
+  xl: "text-xl",
+};
 
 const Button = ({
   children,
@@ -29,11 +32,12 @@ const Button = ({
   variant = "fill",
   size = "sm",
   color = "deep_orange_300",
+  fontSize = "",
   ...restProps
 }) => {
   return (
     <button
-      className={`${className} flex items-center justify-center text-center cursor-pointer ${(shape && shapes[shape]) || ""} ${(size && sizes[size]) || ""} ${(variant && variants[variant]?.[color]) || ""}`}
+      className={`${className} flex items-center justify-center text-center cursor-pointer ${(fontSize && fontSizes[fontSize])||""} ${(shape && shapes[shape]) || ""} ${(size && sizes[size]) || ""} ${(variant && variants[variant]?.[color]) || ""}`}
       {...restProps}
     >
       {!!leftIcon && leftIcon}
@@ -52,6 +56,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(["md", "lg", "xs", "sm"]),
   variant: PropTypes.oneOf(["outline", "fill"]),
   color: PropTypes.oneOf(["deep_orange_300_deep_orange_400_01", "deep_orange_300"]),
+  fontSize: PropTypes.oneOf(["xl"])
 };
 
 export { Button };

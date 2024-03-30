@@ -147,7 +147,12 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 3 */}
-        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px] md:p-5 rotate-[0deg] bg-[url(/public/images/img_section_11.png)] bg-cover bg-no-repeat">
+        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px] md:p-5 rotate-[0deg] bg-[url(/public/images/img_section_11.png)] bg-cover bg-no-repeat" style={{
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        height: '100vh', // Set the height to the full viewport height
+      }}>
           <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
             <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px]" style={{"float":"right"}}>
               <div className="self-stretch">

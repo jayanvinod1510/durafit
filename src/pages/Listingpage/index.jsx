@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Button, Text, Img } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { productList } from "data/mockData";
 import { useNavigate } from "react-router-dom";
+import { Animated } from "react-animated-css";
+import {
+  motion, MotionConfig, AnimatePresence
+} from "framer-motion"
+
+
 import {
   AccordionItemHeading,
   AccordionItemButton,
@@ -12,14 +18,35 @@ import {
   Accordion,
   AccordionItem,
 } from "react-accessible-accordion";
+import { ItemCard } from "components/ItemCard";
 
 export default function ListingpagePage({ productType }) {
   const data = productList[productType]
+  const [isHovered, setIsHovered] = useState(Array(data.products.length).fill(false));
   let navigate = useNavigate();
   const handleClick = (item) => {
     // Navigate to a different screen when the component is clicked
     let path = `/details`;
     navigate(path, { state: { data: item } });
+  };
+
+  const handleMouseEnter = (index) => {
+    console.log("index", index)
+    const newHoverState = [...isHovered];
+    newHoverState[index] = true;
+    setIsHovered(newHoverState);
+  };
+
+  const handleMouseLeave = (index) => {
+    console.log("leave index", index)
+    const newHoverState = [...isHovered];
+    newHoverState[index] = false;
+    setIsHovered(newHoverState);
+  };
+  const variants = {
+    hidden: { y: -10, opacity: 0 },
+    visible: { y: 0, opacity: 100 },
+    exiting: { y: 1000, opacity: 0, scale: 0 }
   };
   return (
     <>
@@ -58,15 +85,31 @@ export default function ListingpagePage({ productType }) {
         </div>
         <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px]">
           {data.products.map((item, index) => (
-            <div className="flex w-full bg-white-A700 shadow-sm rounded-[5px]" onClick={() => handleClick(item)}>
-              <Img
-                src={"images/" + item.image}
-                alt="orthopeadicmat"
-                className="h-[465px] w-full md:h-auto object-cover rounded-[5px]"
-              />
+            <div className={"flex w-full bg-white-A700 shadow-sm rounded-[5px]"} onClick={() => handleClick(item)}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+            >
+              {isHovered[index] ?
 
-            </div>
-          ))}
+                <ItemCard data={item} isHovered={isHovered[index]} imgClassName={"h-[289px] w-full md:h-auto object-cover rounded-[5px] cursor-pointer"}></ItemCard>
+                :
+                <MotionConfig transition={{ duration: 0.3 }}>
+                  <AnimatePresence>
+
+                    <motion.img
+                      style={{ y: 0 }}
+                      initial={{ opacity: 0, scale: 0.95}}
+                      animate={{ opacity: 1, scale: 1, height: '100%' }}
+                      exit={{ opacity: 0, scale: 0, height: "50%" }}
+                      transition={{ duration: 0.3, ease: 'easeInOut', }}
+                      className={"h-[465px] w-full md:h-auto object-cover rounded-[5px] "} src={"images/" + item.image} alt={""} loading={"lazy"} />
+                  </AnimatePresence>
+                </MotionConfig>
+
+              }
+
+            </div>))}
+
         </div>
         <div className="mt-[50px] px-[130px] md:px-5">
           <div className="flex flex-col items-center w-full gap-[31px] py-[78px] mx-auto md:p-5 md:py-5 bg-blue_gray-800 max-w-[1180px] rounded-[5px]">
@@ -195,3 +238,8 @@ export default function ListingpagePage({ productType }) {
     </>
   );
 }
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30
+};
