@@ -44,6 +44,10 @@ const ProjectRoutes = () => {
       path: "details",
       element: <Details />,
     },
+    {
+      path: "cushioning",
+      element: <Listingpage productType={"Pillows"}/>,
+    },
   ]);
 
   return element;

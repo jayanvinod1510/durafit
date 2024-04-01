@@ -69,28 +69,28 @@ export default function Footer({ ...props }) {
               <div className="flex flex-col">
                 <ul className="flex flex-col self-start items-start gap-[15px]">
                   <li>
-                    <a href="listingpage" className="opacity-0.6">
+                    <a href="blackedition" className="opacity-0.6">
                       <Text size="md" as="p">
                         Black Edition
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="Mattress" rel="noreferrer" className="opacity-0.6">
+                    <a href="mattress" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Mattress
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="Pillow" rel="noreferrer" className="opacity-0.6">
+                    <a href="pillows" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Pillow
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="opacity-0.6">
+                    <a href="cushioning" className="opacity-0.6">
                       <Text size="md" as="p">
                         Furniture cushion
                       </Text>
