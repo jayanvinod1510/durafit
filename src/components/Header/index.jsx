@@ -1,11 +1,16 @@
 import React from "react";
 import { Button, Text, Img } from "./..";
+import { useNavigate} from 'react-router-dom';
 
 export default function Header({ ...props }) {
+  let navigate = useNavigate();
+  const handleHomeRedirection = ()=>{
+    navigate(`/`)
+  }
   return (
     <header {...props} style ={{"position":"fixed","width":"100%","zIndex":"1"}}>
       <div className="flex md:flex-col justify-between items-center w-full gap-5 mx-auto max-w-[1180px]">
-          <Img src="images/img_image_55.png" alt="imagefiftyfive" className="w-[15%] md:w-full object-cover" />
+          <Img src="images/img_image_55.png" alt="imagefiftyfive" className="w-[15%] md:w-full object-cover" style={{"cursor":"pointer"}} onClick={handleHomeRedirection}/>
         <div className="flex md:flex-col justify-between items-center w-[70%] md:w-full gap-5">
           <ul className="flex gap-10 flex-wrap">
             <li>
@@ -23,7 +28,7 @@ export default function Header({ ...props }) {
               </a>
             </li>
             <li>
-              <a href="pillows" lassName="self-start opacity-0.8">
+              <a href="pillows" className="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Pillows
                 </Text>

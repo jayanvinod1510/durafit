@@ -3,6 +3,8 @@ import { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import ReactPlayer from 'react-player'
+import { useInView } from "react-intersection-observer";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
@@ -20,7 +22,7 @@ export default function ContactUsPage() {
     console.log(params.get('product'))
     message = "I am interested to know more about " + params.get('product')
   }
-
+  const { ref: videoRef, inView: videoIsVisible } = useInView();
   const form = useRef();
   const sendEmail = (e) => {
     setisLoading(true)
@@ -110,7 +112,7 @@ export default function ContactUsPage() {
                   Get in Touch With Us
                 </Text>
                 <div className="self-stretch">
-                  <Text size="xl" as="p" className="!text-blue_gray-400 tracking-[0.18px] text-center leading-[150%]">
+                  <Text size="xl" as="p" className="! tracking-[0.18px] text-center leading-[150%]" style={{"color":"#BBBBBB"}}>
                     For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff
                     Always Be There To Help You Out. Do Not Hesitate!
                   </Text>
@@ -152,14 +154,6 @@ export default function ContactUsPage() {
                       Sat-Sun: 9:00 - 21:00
                     </>
                   </Text>
-                </div>
-                <div className="flex mb-[30px]">
-                  <div className="flex items-center gap-2.5">
-                    <Img src="images/img_vector_black_900_27x22.svg" alt="vector_five" className="h-[27px]" />
-                    <Text size="2xl" as="p" className="!text-black-900">
-                      Follow Us on
-                    </Text>
-                  </div>
                 </div>
               </div>
                 <form ref = {form} onSubmit={sendEmail} className="flex flex-col items-start w-[60%] md:w-full mt-[50px] gap-[34px]">
@@ -294,11 +288,10 @@ export default function ContactUsPage() {
             </a>
           </div>
         </div>
-        <div className="h-[419px] md:h-auto mt-[70px] bg-blue_gray-900 relative rounded-[5px]">
-          <Img src="images/img_photo.png" alt="photo_one" className="h-[419px] w-full object-cover rounded-[5px]" />
-          <Button size="lg" className="left-0 bottom-0 right-0 top-0 m-auto md:p-5 shadow-xs absolute rounded-[5px]">
-            <Img src="images/img_vector_deep_orange_a100.svg" />
-          </Button>
+        <div className="md:h-auto mt-[70px] bg-blue_gray-900 rounded-[5px]">
+        <div style={{"height":"auto !important"}} ref = {videoRef}>
+          <ReactPlayer url = {`videos/contact_us.mp4`} playing={videoIsVisible} width='100%' height='100%'></ReactPlayer>
+        </div>
         </div>
         <footer className="px-14 py-[69px] md:p-5 bg-blue-50">
           <div className="flex flex-col w-full gap-[51px] mx-auto sm:gap-[25px] max-w-[1180px]">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import {Animated} from "react-animated-css";
 import ReactPlayer from 'react-player'
 import { useInView } from "react-intersection-observer";
 import { Img, Text, Button } from "../../components";
@@ -92,21 +93,27 @@ export default function DetailPage() {
                 <div className="w-full">
                   <div className="flex flex-col items-start gap-[30px]">
                     <div className="flex flex-col items-start">
-                      <Text size="5xl" as="p" className="!text-gray-900">
-                        {data.headerTitle}
-                      </Text>
-                      <div className="flex">
-                        <Text size="s" as="p" className="!text-gray-500">
-                          Popular Choice
+                      <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeInUp">
+                        <Text size="5xl" as="p" className="!text-gray-900">
+                          {data.headerTitle}
                         </Text>
-                      </div>
+                        <div className="flex">
+                          <Text size="s" as="p" className="!text-gray-500">
+                            Popular Choice
+                          </Text>
+                        </div>
+                      </Animated>
                     </div>
-                    <Text as="p" className="w-[93%] md:w-full !text-blue_gray-400">
-                      {data.headerDescription}
-                    </Text>
-                    <Button shape="round" className="sm:px-5 font-inter font-medium min-w-[178px]" onClick={handleEnquireRedirection}>
-                      Enquire now
-                    </Button>
+                    <Animated style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeInUp">
+                      <Text as="p" className="w-[93%] md:w-full !text-blue_gray-400 text-justify">
+                        {data.headerDescription}
+                      </Text>
+                    </Animated>
+                    <Animated style={{"width": "100%","animation-delay": "450ms"}} animationIn="fadeInUp">
+                      <Button shape="round" className="sm:px-5 font-inter font-medium min-w-[178px]" onClick={handleEnquireRedirection}>
+                        Enquire now
+                      </Button>
+                    </Animated>
                   </div>
                 </div>
               </div>
@@ -188,12 +195,8 @@ export default function DetailPage() {
               // </div>
             ))},
           </div>
-          <div ref = {videoRef}>
-          <ReactPlayer url = "videos/demo-video1.mp4" playing={videoIsVisible} width='100%'></ReactPlayer>
-          </div>
-          
-          <div className="flex bg-blue_gray-800">
-            <Img src="images/img_Detail_1.png" alt="Detailone" className="w-[70%] object-cover" />
+          <div style={{"height":"auto !important"}}  ref = {videoRef}>
+          <ReactPlayer url = {`videos/${data.video}`} playing={videoIsVisible} width='100%' height='100%'></ReactPlayer>
           </div>
           <Img
             src={`images/${data.footerImage}`}
