@@ -5,8 +5,8 @@ export default function Header({ ...props }) {
   return (
     <header {...props} style ={{"position":"fixed","width":"100%","zIndex":"1"}}>
       <div className="flex md:flex-col justify-between items-center w-full gap-5 mx-auto max-w-[1180px]">
-        <Img src="images/img_image_55.png" alt="imagefiftyfive" className="w-[15%] md:w-full object-cover" />
-        <div className="flex md:flex-col justify-between items-center w-[60%] md:w-full gap-5">
+          <Img src="images/img_image_55.png" alt="imagefiftyfive" className="w-[15%] md:w-full object-cover" />
+        <div className="flex md:flex-col justify-between items-center w-[70%] md:w-full gap-5">
           <ul className="flex gap-10 flex-wrap">
             <li>
               <a href="blackedition" className="self-start opacity-0.8">
@@ -30,9 +30,16 @@ export default function Header({ ...props }) {
               </a>
             </li>
             <li>
-              <a href="#" className="self-end opacity-0.8">
+              <a href="cushioning" className="self-end opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
-                  Furniture Cushioning
+                  Cushioning
+                </Text>
+              </a>
+            </li>
+            <li>
+              <a href="aboutus" className="self-end opacity-0.8">
+                <Text as="p" className="!text-blue_gray-800_a2">
+                  About Us
                 </Text>
               </a>
             </li>
