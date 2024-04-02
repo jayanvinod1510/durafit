@@ -6,6 +6,8 @@ import Header from "../../components/Header";
 import { productList } from "data/mockData";
 import { useNavigate } from "react-router-dom";
 import { Animated } from "react-animated-css";
+import { useInView } from "react-intersection-observer";
+
 import {
   motion, MotionConfig, AnimatePresence
 } from "framer-motion"
@@ -48,6 +50,10 @@ export default function ListingpagePage({ productType }) {
     visible: { y: 0, opacity: 100 },
     exiting: { y: 1000, opacity: 0, scale: 0 }
   };
+  const { ref: reason1Ref, inView: reasons1Visible } = useInView();
+  const { ref: reason2Ref, inView: reasons2Visible } = useInView();
+  const { ref: reason3Ref, inView: reasons3Visible } = useInView();
+
   return (
     <>
       <Helmet>
@@ -67,49 +73,53 @@ export default function ListingpagePage({ productType }) {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-start gap-[15px] p-2.5">
-          <Text
-            size="6xl"
-            as="p"
-            className="w-[64%] md:w-full mt-[70px] ml-[190px] md:ml-0 !text-blue_gray-800 leading-[60px]"
-          >
-            <>
-              {data.headerLine1}
-              <br />
-              {data.headerLine2}
-            </>
-          </Text>
-          <Text as="p" className="w-[64%] md:w-full ml-[190px] md:ml-0 !text-blue_gray-800">
-            {data.description}
-          </Text>
-        </div>
-        <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px]">
-          {data.products.map((item, index) => (
-            <div className={"flex w-full bg-white-A700 shadow-sm rounded-[5px]"} onClick={() => handleClick(item)}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
+        <div className="max-w-[1058px] items-center flex flex-col justify-center mx-auto">
+          <div className="flex flex-col items-start gap-[15px] py-2.5">
+            <Text
+              size="6xl"
+              as="p"
+              className="w-[64%] md:w-full mt-[70px] md:ml-0 !text-blue_gray-800 leading-[60px]"
             >
-              {isHovered[index] ?
+              <>
+                {data.headerLine1}
+                <br />
+                {data.headerLine2}
+              </>
+            </Text>
+            <Text as="p" className="w-[64%] md:w-full md:ml-0 !text-blue_gray-800">
+              {data.description}
+            </Text>
+          </div>
+          <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px]">
+            {data.products.map((item, index) => (
+              <div className={"flex w-full bg-white-A700 shadow-sm rounded-[5px]"} onClick={() => handleClick(item)}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              >
+                {isHovered[index] ?
 
-                <ItemCard data={item} isHovered={isHovered[index]} imgClassName={"h-[289px] w-full md:h-auto object-cover rounded-[5px] cursor-pointer"}></ItemCard>
-                :
-                <MotionConfig transition={{ duration: 0.3 }}>
-                  <AnimatePresence>
+                  <ItemCard data={item} isHovered={isHovered[index]} imgClassName={"h-[289px] w-full md:h-auto object-cover rounded-[5px] cursor-pointer"}></ItemCard>
+                  :
+                  <MotionConfig transition={{ duration: 0.3 }}>
+                    <AnimatePresence>
+                      <motion.img
+                        // initial={{ opacity: 0, scale: 0.3, height: "10%"}}
+                        // animate={{ opacity: 1, scale: 1, height: '100%' }}
+                        // exit={{ opacity: 0, scale: 0, height: "50%" }}
+                        // transition={{ duration: 0.3, }}
+                        style={{y:0}}
+                        initial={{ opacity: 0, scale: 0.96 }}
+                        animate={{ opacity: 1, scale: 1}}
+                        exit={{ opacity: 0, scale: 0.96}}
+                        transition={{ duration: 0.3 }}
+                        className={"h-[465px] cursor-pointer w-full md:h-auto object-cover rounded-[5px] "} src={"images/" + item.image} alt={""} loading={"lazy"} />
+                    </AnimatePresence>
+                  </MotionConfig>
+                }
 
-                    <motion.img
-                      style={{ y: 0 }}
-                      initial={{ opacity: 0, scale: 0.95}}
-                      animate={{ opacity: 1, scale: 1, height: '100%' }}
-                      exit={{ opacity: 0, scale: 0, height: "50%" }}
-                      transition={{ duration: 0.3, ease: 'easeInOut', }}
-                      className={"h-[465px] w-full md:h-auto object-cover rounded-[5px] "} src={"images/" + item.image} alt={""} loading={"lazy"} />
-                  </AnimatePresence>
-                </MotionConfig>
+              </div>))}
 
-              }
-
-            </div>))}
-
+          </div>
         </div>
         <div className="mt-[50px] px-[130px] md:px-5">
           <div className="flex flex-col items-center w-full gap-[31px] py-[78px] mx-auto md:p-5 md:py-5 bg-blue_gray-800 max-w-[1180px] rounded-[5px]">
@@ -125,14 +135,17 @@ export default function ListingpagePage({ productType }) {
                 <div className="flex md:flex-col justify-between items-center gap-5">
                   <div className="flex justify-center w-[63%] md:w-full">
                     <div className="w-full">
-                      <div className="flex flex-col gap-1">
+                    <Animated animationInDuration={2000} style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeIn" animationOut="fadeOut"  isVisible={reasons1Visible}>
+                      <div ref = {reason1Ref} className="flex flex-col gap-1">
                         <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
                           {data.reasons[0].title}
                         </Text>
+
                         <Text as="p" className="!text-gray-100 !font-light">
                           {data.reasons[0].reason}
                         </Text>
                       </div>
+                    </Animated>
                     </div>
                   </div>
                   <Img
@@ -150,7 +163,8 @@ export default function ListingpagePage({ productType }) {
                 />
                 <div className="flex justify-center w-[55%] md:w-full">
                   <div className="w-full">
-                    <div className="flex flex-col gap-2.5">
+                  <Animated animationInDuration={2000}  style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeIn"  animationOut="fadeOut" isVisible={reasons2Visible}>
+                    <div  ref = {reason2Ref} className="flex flex-col gap-2.5">
                       <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
                         {data.reasons[1].title}
                       </Text>
@@ -158,13 +172,15 @@ export default function ListingpagePage({ productType }) {
                         {data.reasons[1].reason}
                       </Text>
                     </div>
+                  </Animated>
                   </div>
                 </div>
               </div>
               <div className="flex md:flex-col justify-between items-center gap-5">
                 <div className="flex justify-center w-[52%] md:w-full">
                   <div className="w-full">
-                    <div className="flex flex-col gap-2.5">
+                  <Animated animationInDuration={2000}  style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeIn"  animationOut="fadeOut" isVisible={reasons3Visible}>
+                    <div  ref = {reason3Ref} className="flex flex-col gap-2.5">
                       <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
                         {data.reasons[2].title}
                       </Text>
@@ -172,6 +188,7 @@ export default function ListingpagePage({ productType }) {
                         {data.reasons[2].reason}
                       </Text>
                     </div>
+                  </Animated>
                   </div>
                 </div>
                 <Img
