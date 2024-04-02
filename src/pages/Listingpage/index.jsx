@@ -28,6 +28,7 @@ export default function ListingpagePage({ productType }) {
   let navigate = useNavigate();
   const handleClick = (item) => {
     // Navigate to a different screen when the component is clicked
+    window.scrollTo(0, 0)
     let path = `/details`;
     navigate(path, { state: { data: item } });
   };

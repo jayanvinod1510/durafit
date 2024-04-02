@@ -1,4 +1,5 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 import {Animated} from "react-animated-css";
 import { useInView } from "react-intersection-observer";
 import { Helmet } from "react-helmet";
@@ -7,6 +8,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 export default function LandingpagePage() {
+
   
   const { ref: sofaRef, inView: sofaIsVisible } = useInView();
   const { ref: eleganceRef, inView: eleganceIsVisible } = useInView();
@@ -45,50 +47,71 @@ export default function LandingpagePage() {
             </div>
           </div>
         </div>
-        <div className="py-[70px] md:py-5">
-          <div className="flex md:flex-col justify-between items-center gap-5 px-[196px] md:px-5">
-            <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
-              <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Temperature Control
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[9%] md:w-full gap-0.5">
-              <Img src="images/img_frame_19_44x64.png" alt="image_one" className="w-[67%] object-cover" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Light weight
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[17%] md:w-full">
-              <Img src="images/img_frame_19_blue_gray_400.svg" alt="image_two" className="h-[45px]" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Eco-friendly Materials
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[14%] md:w-full">
-              <Img src="images/img_frame_19_44x64.png" alt="image_three" className="w-[45%] object-cover" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Breathable Fabric
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[14%] md:w-full">
-              <Img src="images/img_frame_19_blue_gray_400_44x64.svg" alt="image_four" className="h-[44px]" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Easy Maintenance
-                </Text>
-              </a>
-            </div>
+        
+          <div className="py-[70px] md:py-5">
+          <Marquee style={{"text-align":"center"}} direction = "right">
+              <div className="flex md:flex-col justify-between items-center gap-[80px] md:px-5">
+                
+                <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
+                  <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Temperature Control
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[9%] md:w-full gap-0.5">
+                  <Img src="images/img_frame_19_44x64.png" alt="image_one" className="w-[67%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Light weight
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[17%] md:w-full">
+                  <Img src="images/img_frame_19_blue_gray_400.svg" alt="image_two" className="h-[45px]" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Eco-friendly Materials
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[17%] md:w-full">
+                  <Img src="images/medikit.svg" alt="image_three" className="w-[45%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                    Doctor Recommended
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[14%] md:w-full">
+                  <Img src="images/air.svg" alt="image_three" className="w-[45%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Breathable Fabric
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[14%] md:w-full">
+                  <Img src="images/img_frame_19_blue_gray_400_44x74.svg" alt="image_three" className="w-[45%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Ultra-soft Material 
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[14%] md:w-full">
+                  <Img src="images/img_frame_19_blue_gray_400_44x64.svg" alt="image_four" className="h-[44px]" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Easy Maintenance
+                    </Text>
+                  </a>
+                </div>
+              </div>
+            </Marquee>
           </div>
-        </div>
+        
 
         {/* Section 1 */}
         <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_9.png)] bg-cover bg-no-repeat">
@@ -110,9 +133,11 @@ export default function LandingpagePage() {
                     these premium mattresses redefine your sleep experience
                   </>
                 </Text>
+                <a href="/blackedition" className="opacity-0.8">
                 <Button shape="round" className="mb-[149px] mr-[420px] mt-[15px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
               Explore more
             </Button>
+            </a>
               </div>
             </div>
           </Animated>
@@ -140,9 +165,11 @@ export default function LandingpagePage() {
                 </Text>
               </div>
             </div>
+            <a href="/mattress" className="opacity-0.8">
             <Button shape="round" className="mb-[137px] sm:px-5 font-medium min-w-[191px]">
               Explore more
             </Button>
+            </a>
           </Animated>
         </div>
 
@@ -172,9 +199,11 @@ export default function LandingpagePage() {
                   </Text>
                 </div>
               </div>
+              <a href="/pillows" className="opacity-0.8">
               <Button shape="round" className="sm:px-5 font-medium min-w-[191px]">
                 Explore more
               </Button>
+              </a>
             </div>
           </Animated>
         </div>
@@ -200,9 +229,11 @@ export default function LandingpagePage() {
                 </div>
               
             </div>
+            <a href="#" className="opacity-0.8">
             <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px]">
               Explore more
             </Button>
+            </a>
           </Animated>
         </div>
         <div className="flex md:flex-col justify-between gap-5 p-[70px] md:p-5 bg-blue_gray-800">

@@ -1,10 +1,17 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import {Animated} from "react-animated-css";
+import ReactPlayer from 'react-player'
+import Marquee from "react-fast-marquee";
+import { useInView } from "react-intersection-observer";
 import { Img, Heading, Text, Button } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 export default function AboutUsPage() {
+  const { ref: titleRef, inView: titleIsVisible } = useInView();
+  const { ref: videoRef, inView: videoIsVisible } = useInView();
+  console.log(videoIsVisible)
   return (
     <>
       <Helmet>
@@ -32,8 +39,9 @@ export default function AboutUsPage() {
                   <div>
                     <div>
                       <div className="flex md:flex-col justify-center items-start gap-[50px]">
-                        <div className="flex flex-col items-start w-[19%] md:w-full gap-[9px]">
-                          <Text size="4xl" as="p" className="!text-blue_gray-900 leading-[125%]">
+                        <div ref = {titleRef} className="flex flex-col items-start w-[25%] md:w-full gap-[9px]">
+                        <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeInUp" isVisible={titleIsVisible}>
+                          <Text size="4xl" as="p" className="!text-blue_gray-900 leading-[125%]" style={{"margin-bottom":"10px"}}>
                             <>
                               Dive into a<br />
                               Cloud-like <br />
@@ -43,8 +51,10 @@ export default function AboutUsPage() {
                           <Text as="p" className="!text-blue_gray-400">
                             Comfort | Support | Value
                           </Text>
+                          </Animated>
                         </div>
-                        <Text as="p" className="w-[81%] md:w-full !text-blue_gray-800">
+                        <Animated style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeInUp" isVisible={titleIsVisible}>
+                        <Text as="p" style={{"width":"100%"}} className="w-[81%] md:w-full !text-blue_gray-800">
                           <span className="text-indigo-400">
                             <>
                               We deliver the comfort you want and support you can trust. With all new Innovative series
@@ -66,34 +76,15 @@ export default function AboutUsPage() {
                             </>
                           </span>
                         </Text>
+                        </Animated>
                       </div>
                     </div>
                   </div>
-                  <div className="h-[374px] md:h-auto bg-blue_gray-900 relative rounded-[5px]">
-                    <Img
-                      src="images/img_image_61.png"
-                      alt="imagesixtyone"
-                      className="h-[374px] w-full object-cover rounded-[5px]"
-                    />
-                    <a
-                      href="https://www.pexels.com/video/hand-bed-bedroom-home-4153246/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="bottom-[10.22px] right-[27.00px] m-auto absolute"
-                    >
-                      <Text size="4xl" as="p" className="!text-white-A700 underline">
-                        Video link
-                      </Text>
-                    </a>
-                    <Button
-                      size="md"
-                      className="left-0 bottom-0 right-0 top-0 m-auto md:p-5 shadow-xs absolute rounded-[5px]"
-                    >
-                      <Img src="images/img_vector_deep_orange_a100.svg" />
-                    </Button>
-                  </div>
                 </div>
               </div>
+              <div style={{"height":"auto !important"}} ref = {videoRef}>
+                    <ReactPlayer url = {`videos/about_us.mp4`} playing={videoIsVisible} width='100%' height='100%'></ReactPlayer>
+                  </div>
               <div className="flex md:flex-col justify-between items-center gap-5">
                 <div className="flex flex-col w-[42%] md:w-full gap-1">
                   <div className="flex">
@@ -128,64 +119,91 @@ export default function AboutUsPage() {
               </div>
             </div>
           </div>
-          <div className="flex md:flex-col justify-between items-center gap-5 p-[70px] md:p-5">
-            <div className="flex flex-col items-center w-[16%] md:w-full ml-[126px] gap-0.5 md:ml-0">
-              <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Temperature Control
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[9%] md:w-full gap-0.5">
-              <Img src="images/img_frame_19_44x64.png" alt="image_one" className="w-[67%] object-cover" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Light weight
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[17%] md:w-full">
-              <Img src="images/img_frame_19_blue_gray_400.svg" alt="image_two" className="h-[45px]" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Eco-friendly Materials
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[14%] md:w-full">
-              <Img src="images/img_frame_19_44x64.png" alt="image_three" className="w-[45%] object-cover" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Breathable Fabric
-                </Text>
-              </a>
-            </div>
-            <div className="flex flex-col items-center w-[14%] md:w-full mr-[126px] md:mr-0">
-              <Img src="images/img_frame_19_blue_gray_400_44x64.svg" alt="image_four" className="h-[44px]" />
-              <a href="#" className="opacity-0.8">
-                <Text as="p" className="!text-blue_gray-800_a2">
-                  Easy Maintenance
-                </Text>
-              </a>
-            </div>
+          <div className="py-[70px] md:py-5">
+          <Marquee style={{"text-align":"center"}} direction = "right">
+              <div className="flex md:flex-col justify-between items-center gap-[80px] md:px-5">
+                
+                <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
+                  <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Temperature Control
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[9%] md:w-full gap-0.5">
+                  <Img src="images/img_frame_19_44x64.png" alt="image_one" className="w-[67%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Light weight
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[17%] md:w-full">
+                  <Img src="images/img_frame_19_blue_gray_400.svg" alt="image_two" className="h-[45px]" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Eco-friendly Materials
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[17%] md:w-full">
+                  <Img src="images/medikit.svg" alt="image_three" className="w-[45%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                    Doctor Recommended
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[14%] md:w-full">
+                  <Img src="images/air.svg" alt="image_three" className="w-[45%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Breathable Fabric
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[14%] md:w-full">
+                  <Img src="images/img_frame_19_blue_gray_400_44x74.svg" alt="image_three" className="w-[45%] object-cover" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Ultra-soft Material 
+                    </Text>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center w-[14%] md:w-full">
+                  <Img src="images/img_frame_19_blue_gray_400_44x64.svg" alt="image_four" className="h-[44px]" />
+                  <a href="#" className="opacity-0.8">
+                    <Text as="p" className="!text-blue_gray-800_a2">
+                      Easy Maintenance
+                    </Text>
+                  </a>
+                </div>
+              </div>
+            </Marquee>
           </div>
         </div>
-        <div className="h-[909px] w-full px-[179px] mx-auto md:p-5 md:px-5 relative max-w-[1799px]">
-          <div className="w-full h-max left-0 bottom-0 right-0 top-0 py-[50px] m-auto md:py-5 bg-white-A700 absolute">
+        <div className="h-fit w-full mx-auto md:p-5 md:px-5 relative max-w-[1799px]">
+          <div className="w-full h-fit left-0 bottom-0 right-0 top-0 pt-[50px] pb-[20px] md:py-5 bg-white-A700 relative" style={{"margin-top":"0px !important","margin-bottom":"0px !important"}}>
             <div className="flex justify-end pb-4 px-4 bg-white-A700">
-              <div className="flex flex-col items-center w-[93%] md:w-full mr-[83px] gap-[66px] md:mr-0 sm:gap-[33px]">
+              <div className="flex flex-col items-center w-[93%] md:w-full mr-[83px] gap-[10px] md:mr-0 sm:gap-[33px]">
                 <div className="flex">
                   <div className="flex flex-col items-center">
                     <Text size="2xl" as="p" className="!text-gray-700 text-center">
                       Share your setup with
                     </Text>
+                    <br></br>
                     <Heading size="s" as="h1" className="mt-[-10px] !text-gray-800 text-center">
                       #DurafitIndia
                     </Heading>
                   </div>
                 </div>
-                <div className="flex md:flex-col self-stretch justify-center items-start gap-4">
+                <a href="https://www.instagram.com/durafitmattresses?igsh=MWZ2dGxyMnl3OWc5cA==" target="_blank" className="opacity-0.8">
+                  <Img
+                        src="images/insta_icon.svg"
+                      />
+                </a>
+                {/* <div className="flex md:flex-col self-stretch justify-center items-start gap-4">
                   <div className="flex flex-col items-end md:self-stretch gap-4 flex-1">
                     <Img
                       src="images/img_rectangle_38.png"
@@ -214,11 +232,15 @@ export default function AboutUsPage() {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
           <Img
+              style={{"width":"100%"}}
+              src="images/image_set.svg"
+            />
+          {/* <Img
             src="images/img_rectangle_35.png"
             alt="image_eleven"
             className="h-[312px] w-[7%] left-[10%] top-[15%] m-auto object-cover absolute"
@@ -237,7 +259,7 @@ export default function AboutUsPage() {
             src="images/img_rectangle_45.png"
             alt="image_fourteen"
             className="h-[433px] w-[17%] right-[10%] top-[17%] m-auto object-cover absolute"
-          />
+          /> */}
         </div>
         <Footer className="px-14 py-[69px] md:p-5 bg-blue-50" />
       </div>

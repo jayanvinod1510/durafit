@@ -11,6 +11,7 @@ export const productList = {
       art, designed to seamlessly blend aesthetics and functionality.",
     products: [
       {
+        "video":"Naturapedic.mp4",
         "image": "img_orthopeadic_mat.png",
         "headerTitle": "Naturapedic Mattress",
         "shortDescriptionLine1":"Sink into the soothing, natural embrace of bamboo ",
@@ -50,6 +51,7 @@ export const productList = {
         "footerImage":"img_up_in_the_clouds_1024x1024_494x1440.png",
       },
       {
+        "video":"ViscoFlex.mp4",
         "image": "img_orthopeadic_mat_465x504.png",
         "headerTitle": "Viscoflex Mattress",
         "headerDescription": "Introducing the ViscoFlex Mattress, where advanced pressure-relieving technology meets perfect posture support. Experience the ultimate in comfort as this mattress conforms to your body, alleviating pressure points and ensuring optimal spinal alignment. Enjoy restful nights and wake up refreshed, knowing that your sleep is well taken care of.",
@@ -86,6 +88,7 @@ export const productList = {
         "footerImage":"up-in-the-clouds_1024x1024 1.png",
       },
       {
+        "video":"Memory.mp4",
         "image": "img_orthopeadic_mat_1.png",
         "headerTitle": "Memory Plus Mattress",
         "headerDescription": "Discover the Memory Plus Mattress, your ticket to unparalleled comfort. Engineered for the even distribution of body weight, this mattress ensures every inch of your body is cradled in blissful support. Say goodbye to overheating with its naturally cooling technology, and embrace restful, cool nights of sleep.",
@@ -122,6 +125,7 @@ export const productList = {
         "footerImage":"memory_plus_footer.png",
       },
       {
+        "video":"ProX.mp4",
         "image": "img_orthopeadic_mat_2.png",
         "headerTitle": "Pro-X Mattress",
         "headerDescription": "Experience the Pro-X Mattress where softness meets smart technology. Sink into the embrace of ultrasoft foam material that molds to your body for unmatched comfort. Stay cool and dry with its cutting-edge moisture absorption technology, ensuring a refreshing night’s sleep every time you lay down. Elevate your sleep with Pro-X for the perfect blend of softness and dryness.",
@@ -268,6 +272,7 @@ export const productList = {
     description: "At Durafit, we understand that a good night's sleep is essential for your overall well-being. That's why we have meticulously designed each mattress in our collection to provide you with the perfect balance of support and relaxation. Our mattresses are more than just a place to lay your head; they are your ticket to uninterrupted and restful sleep",
     products: [
       {
+        "video":"demo-video1.mp4",
         "image": "orthopeadic_pillow_acetate_4_1.png",
         "headerTitle": "Memory Pillow",
         "headerDescription": "Experience personalized comfort with our Memory Foam Pillows. These pillows adapt to your unique shape, cradling your head and neck for unparalleled support and pressure relief. Enjoy a restful night's sleep with the perfect alignment and comfort provided by our memory foam pillows.",
@@ -328,6 +333,7 @@ export const productList = {
         ],
         "images": ["latex1.png", "memoryp2.png"],
         "footerImage":"latex_footer.png",
+        "video":"demo-video1.mp4"
         
       },
     ],
