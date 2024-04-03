@@ -54,13 +54,13 @@ export default function DetailPage() {
                   />
                   <div className="flex md:flex-row sm:flex-col w-[74%] md:w-full gap-5">
                     {data.images.map((image, i)=>(
-                      <div className="flex flex-col w-full sm:w-full pt-[9px] bg-gray-100 rounded-[10px]"
+                      <div className="flex flex-col w-full sm:w-full pt-[9px] bg-gray-100 rounded-[10px] h-[100px] w-[95px] "
                       onClick={()=>handleClick(image)}
                       >
                       <Img
                         src={`images/${image}`}
                         alt={`outdoorsofa_${i}`}
-                        className="h-[91px] object-cover rounded-[10px] cursor-pointer"
+                        className="h-[100px] w-[95px] object-cover rounded-[10px] cursor-pointer"
                       />
                     </div>
                     ))}

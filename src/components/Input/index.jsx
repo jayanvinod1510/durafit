@@ -11,6 +11,7 @@ const variants = {
 };
 const sizes = {
   xs: "h-[74px] pl-[30px] pr-[35px] text-base",
+  md: "h-[54px] pl-[15px] py-[10px] text-base"
 };
 
 const Input = React.forwardRef(

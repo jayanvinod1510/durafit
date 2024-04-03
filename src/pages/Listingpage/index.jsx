@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { Button, Text, Img } from "../../components";
+import { Button, Text, Img, Input } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { productList } from "data/mockData";
@@ -19,6 +19,7 @@ import {
   AccordionItemState,
   Accordion,
   AccordionItem,
+  AccordionItemPanel,
 } from "react-accessible-accordion";
 import { ItemCard } from "components/ItemCard";
 
@@ -54,7 +55,11 @@ export default function ListingpagePage({ productType }) {
   const { ref: reason1Ref, inView: reasons1Visible } = useInView();
   const { ref: reason2Ref, inView: reasons2Visible } = useInView();
   const { ref: reason3Ref, inView: reasons3Visible } = useInView();
-
+  const signUpNowSuffix = <div className="flex justify-center items-center bg-deep_orange-300 border text-blue_gray-800 text-[20px] h-[54px] min-w-[137px] rounded-r-[10px] cursor-pointer"
+    onClick={() => { console.log("Send Email") }}
+  >
+    Sign Up
+  </div>;
   return (
     <>
       <Helmet>
@@ -108,10 +113,10 @@ export default function ListingpagePage({ productType }) {
                         // animate={{ opacity: 1, scale: 1, height: '100%' }}
                         // exit={{ opacity: 0, scale: 0, height: "50%" }}
                         // transition={{ duration: 0.3, }}
-                        style={{y:0}}
+                        style={{ y: 0 }}
                         initial={{ opacity: 0, scale: 0.96 }}
-                        animate={{ opacity: 1, scale: 1}}
-                        exit={{ opacity: 0, scale: 0.96}}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.96 }}
                         transition={{ duration: 0.3 }}
                         className={"h-[465px] cursor-pointer w-full md:h-auto object-cover rounded-[5px] "} src={"images/" + item.image} alt={""} loading={"lazy"} />
                     </AnimatePresence>
@@ -136,17 +141,17 @@ export default function ListingpagePage({ productType }) {
                 <div className="flex md:flex-col justify-between items-center gap-5">
                   <div className="flex justify-center w-[63%] md:w-full">
                     <div className="w-full">
-                    <Animated animationInDuration={2000} style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeIn" animationOut="fadeOut"  isVisible={reasons1Visible}>
-                      <div ref = {reason1Ref} className="flex flex-col gap-1">
-                        <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
-                          {data.reasons[0].title}
-                        </Text>
+                      <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": "400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons1Visible}>
+                        <div ref={reason1Ref} className="flex flex-col gap-1">
+                          <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
+                            {data.reasons[0].title}
+                          </Text>
 
-                        <Text as="p" className="!text-gray-100 !font-light">
-                          {data.reasons[0].reason}
-                        </Text>
-                      </div>
-                    </Animated>
+                          <Text as="p" className="!text-gray-100 !font-light">
+                            {data.reasons[0].reason}
+                          </Text>
+                        </div>
+                      </Animated>
                     </div>
                   </div>
                   <Img
@@ -164,32 +169,32 @@ export default function ListingpagePage({ productType }) {
                 />
                 <div className="flex justify-center w-[55%] md:w-full">
                   <div className="w-full">
-                  <Animated animationInDuration={2000}  style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeIn"  animationOut="fadeOut" isVisible={reasons2Visible}>
-                    <div  ref = {reason2Ref} className="flex flex-col gap-2.5">
-                      <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
-                        {data.reasons[1].title}
-                      </Text>
-                      <Text as="p" className="!text-gray-100 !font-light">
-                        {data.reasons[1].reason}
-                      </Text>
-                    </div>
-                  </Animated>
+                    <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": "400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons2Visible}>
+                      <div ref={reason2Ref} className="flex flex-col gap-2.5">
+                        <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
+                          {data.reasons[1].title}
+                        </Text>
+                        <Text as="p" className="!text-gray-100 !font-light">
+                          {data.reasons[1].reason}
+                        </Text>
+                      </div>
+                    </Animated>
                   </div>
                 </div>
               </div>
               <div className="flex md:flex-col justify-between items-center gap-5">
                 <div className="flex justify-center w-[52%] md:w-full">
                   <div className="w-full">
-                  <Animated animationInDuration={2000}  style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeIn"  animationOut="fadeOut" isVisible={reasons3Visible}>
-                    <div  ref = {reason3Ref} className="flex flex-col gap-2.5">
-                      <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
-                        {data.reasons[2].title}
-                      </Text>
-                      <Text as="p" className="!text-gray-100 !font-light">
-                        {data.reasons[2].reason}
-                      </Text>
-                    </div>
-                  </Animated>
+                    <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": "400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons3Visible}>
+                      <div ref={reason3Ref} className="flex flex-col gap-2.5">
+                        <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
+                          {data.reasons[2].title}
+                        </Text>
+                        <Text as="p" className="!text-gray-100 !font-light">
+                          {data.reasons[2].reason}
+                        </Text>
+                      </div>
+                    </Animated>
                   </div>
                 </div>
                 <Img
@@ -230,26 +235,40 @@ export default function ListingpagePage({ productType }) {
                       </AccordionItemState>
                     </AccordionItemButton>
                   </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className="flex justify-between items-center gap-5 py-1">
+                      <Text size="xl" as="p" className="self-start !text-blue_gray-800 tracking-[-0.50px]">
+                        {_.answer}
+                      </Text>
+                    </div>
+                  </AccordionItemPanel>
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
         </div>
         <div className="flex flex-col items-end justify-center h-[400px] md:h-auto pl-14 pr-[98px] gap-[30px] py-[98px] md:p-5 bg-[url(/public/images/img_frame_64.png)] bg-cover bg-no-repeat">
-          <div className="flex justify-end w-[29%] md:w-full mr-8 md:mr-0">
+          <div className="flex justify-end w-[40%] md:w-full mr-8 md:mr-0">
             <div className="w-full">
-              <Text size="6xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px]">
+              <Text size="4xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px] drop-shadow-md"
+                style={{ filter: 'style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0.3rem 0.1rem);' }}
+              >
                 <>
-                  Join the Durafit
+                  Join the Durafit Club and get
                   <br />
-                  Club today!
+                  updates on our new products!
                 </>
               </Text>
+              <div className="flex self-stretch justify-end py-[30px]">
+                <Input type="email" size="md" shape="round" style={{ "color": "#434343" }} name="email" placeholder={`Enter your email ID here...`} className="sm:px-5 min-w-[89%] border-none"
+                  suffix={signUpNowSuffix}
+                />
+              </div>
             </div>
           </div>
-          <Button shape="round" className="mr-8 md:mr-0 sm:px-5 font-medium min-w-[191px]">
+          {/* <Button shape="round" className="mr-8 md:mr-0 sm:px-5 font-medium min-w-[191px]">
             Explore more
-          </Button>
+          </Button> */}
         </div>
         <Footer className="px-14 py-[69px] md:p-5 bg-blue-50" />
       </div>
