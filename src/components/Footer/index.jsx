@@ -41,20 +41,20 @@ export default function Footer({ ...props }) {
                   +91 0000000000
                 </Text>
               </div>
-              <div className="flex w-full lg:hidden">
-              <div className="flex gap-5">
-                <Text size="md" as="p" className="self-start !text-gray-900 text-right">
-                  Send us email at:
-                </Text>
-                <div className="flex self-end">
-                  <a href="example@example.com" target="_blank" rel="noreferrer">
-                    <Text size="md" as="p" className="!text-deep_orange-400_01 text-center !font-medium">
-                      example@example.com
-                    </Text>
-                  </a>
+              <div className="flex w-full hidden md:block">
+                <div className="flex gap-5">
+                  <Text size="md" as="p" className="self-start !text-gray-900 text-right">
+                    Send us email at:
+                  </Text>
+                  <div className="flex self-end">
+                    <a href="example@example.com" target="_blank" rel="noreferrer">
+                      <Text size="md" as="p" className="!text-deep_orange-400_01 text-center !font-medium">
+                        example@example.com
+                      </Text>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
               <div className="flex flex-col self-start md:hidden">
                 <ul className="flex flex-col self-start items-start gap-3.5">
                   <li>
