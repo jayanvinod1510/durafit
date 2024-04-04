@@ -33,12 +33,12 @@ export default function LandingpagePage() {
                   <Img
                     src="images/img_up_in_the_clouds_1024x1024.png"
                     alt="upinthe_one"
-                    className="h-[674px] w-full object-cover"
+                    className="h-[674px] md:h-[750px] w-full object-cover"
                   />
                   <Text
                     size="7xl"
                     as="p"
-                    className="w-max top-[8%] right-0 left-0 m-auto !text-blue_gray-800 text-center absolute"
+                    className="w-max top-[8%] right-0 left-0 m-auto !text-blue_gray-800 text-center absolute md:text-[35px] md:leading-normal md:px-5"
                   >
                     Where Comfort Meets Quality
                   </Text>
@@ -50,7 +50,7 @@ export default function LandingpagePage() {
         
           <div className="py-[70px] md:py-5">
           <Marquee style={{"text-align":"center"}} direction = "right">
-              <div className="flex md:flex-col justify-between items-center gap-[80px] md:px-5">
+              <div className="flex md:flex-row justify-between items-center gap-[80px] md:px-5">
                 
                 <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
                   <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />
@@ -114,18 +114,18 @@ export default function LandingpagePage() {
         
 
         {/* Section 1 */}
-        <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_9.png)] bg-cover bg-no-repeat">
+        <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 bg-[url(/public/images/img_section_9.png)] md:bg-center bg-cover bg-no-repeat">
           <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
-            <div className="flex justify-end w-[43%] md:w-full mt-[149px]" style={{"float":"right"}}>
+            <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[410px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{"float":"right"}}>
               <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="!text-blue_gray-100 leading-[60px]">
-                  <>
+                  <p class = "md:text-[25px]  md:!text-blue_gray-800">
                     Elegance in Every
                     <br />
                     Thread of Black Edition
-                  </>
+                  </p>
                 </Text>
-                <Text as="p" className="w-[98%] md:w-full !text-blue_gray-100">
+                <Text as="p" className="w-[98%] md:w-full !text-blue_gray-100 md:!text-gray-900_90">
                   <>
                     Experience the epitome of comfort and style with our exclusive <br />
                     Black Edition collection. Crafted with precision and sophistication,
@@ -134,7 +134,7 @@ export default function LandingpagePage() {
                   </>
                 </Text>
                 <a href="/blackedition" className="opacity-0.8">
-                <Button shape="round" className="mb-[149px] mr-[420px] mt-[15px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
+                <Button shape="round" className="mb-[149px] md:mb-0 md:w-full mr-[420px] mt-[15px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
               Explore more
             </Button>
             </a>
@@ -144,18 +144,18 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 2 */}
-        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_12.png)] bg-cover bg-no-repeat">
+        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] bg-[url(/public/images/img_section_12.png)] md:bg-center bg-cover bg-no-repeat">
           <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
-            <div className="flex w-[34%] md:w-full mt-[137px]" style={{"margin-bottom": "20px"}}>
+            <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[380px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
               <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="w-[93%] md:w-full !text-blue_gray-800 leading-[60px]">
-                  <>
+                  <p class = "md:text-[25px]  md:!text-blue_gray-800">
                     Selling Sleep,
                     <br />
                     not just Mattress
-                  </>
+                  </p>
                 </Text>
-                <Text as="p" className="!text-blue_gray-800">
+                <Text as="p" className="!text-blue_gray-800 pt-5 md:pt-0 md:!text-gray-900_90">
                   <>
                     Discover a world of tranquility and restful nights with <br />
                     our exceptional mattress collection. Engineered for <br />
@@ -165,8 +165,8 @@ export default function LandingpagePage() {
                 </Text>
               </div>
             </div>
-            <a href="/mattress" className="opacity-0.8">
-            <Button shape="round" className="mb-[137px] sm:px-5 font-medium min-w-[191px]">
+            <a href="/mattress" className="opacity-0.8 md:px-5 md:bg-gray-50 md:pb-5">
+            <Button shape="round" className="mb-[137px] sm:px-5 font-medium min-w-[191px] md:mb-0 md:w-full">
               Explore more
             </Button>
             </a>
@@ -174,23 +174,23 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 3 */}
-        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px] md:p-5 rotate-[0deg] bg-[url(/public/images/img_section_11.png)] bg-cover bg-no-repeat" style={{
+        <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:p-0 rotate-[0deg] bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat" style={{
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         height: '100vh', // Set the height to the full viewport height
       }}>
           <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
-            <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px]" style={{"float":"right"}}>
+            <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[609px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{"float":"right"}}>
               <div className="self-stretch">
                 <div ref = {pillowRef} className="flex flex-col gap-2.5">
                   <Text size="6xl" as="p" className="w-[66%] md:w-full !text-blue_gray-800 leading-[60px]">
-                    <>
+                    <p class = "md:text-[25px]  md:!text-blue_gray-800">
                       Pillows that <br />
                       Hug You Back
-                    </>
+                    </p>
                   </Text>
-                  <Text as="p" className="!text-blue_gray-800">
+                  <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
                     <>
                       Experience the softest embrace for your head and neck with <br />
                       our pillow collection. Designed for ultimate relaxation, our <br />
@@ -199,8 +199,8 @@ export default function LandingpagePage() {
                   </Text>
                 </div>
               </div>
-              <a href="/pillows" className="opacity-0.8">
-              <Button shape="round" className="sm:px-5 font-medium min-w-[191px]">
+              <a href="/pillows" className="opacity-0.8 md:w-full">
+              <Button shape="round" className="sm:px-5 font-medium min-w-[191px]  md:mb-0 md:w-full">
                 Explore more
               </Button>
               </a>
@@ -209,17 +209,17 @@ export default function LandingpagePage() {
         </div>
               
         {/* Section 4 */}
-        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px] md:p-5 bg-[url(/public/images/img_section_13.png)] bg-cover bg-no-repeat">
+        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/img_section_13.png)]  md:bg-center bg-cover bg-no-repeat">
           <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
-            <div className="flex w-[42%] md:w-full mt-[149px]" style={{"margin-bottom": "20px"}}>
+            <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[400px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
                 <div ref = {sofaRef} className="flex flex-col w-full gap-2.5">
                   <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
-                    <>
+                    <p class = "md:text-[25px]  md:!text-blue_gray-800">
                       Sofas and Chairs, <br />
                       Reimagined Comfort
-                    </>
+                    </p>
                   </Text>
-                  <Text as="p" className="!text-blue_gray-800">
+                  <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
                     <>
                       Upgrade your lounging experience with our furniture cushionings <br />
                       collection. Transform your sofas and chairs into cozy havens of <br />
@@ -229,8 +229,8 @@ export default function LandingpagePage() {
                 </div>
               
             </div>
-            <a href="#" className="opacity-0.8">
-            <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px]">
+            <a href="#" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:pb-5">
+            <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px]  md:mb-0 md:w-full">
               Explore more
             </Button>
             </a>

@@ -9,7 +9,7 @@ const sizes = {
   s: "text-[13px] font-normal",
   "2xl": "text-xl font-medium",
   "3xl": "text-[32px] font-light md:text-3xl sm:text-[28px]",
-  "4xl": "text-[40px] font-normal md:text-[38px] sm:text-4xl",
+  "4xl": "text-[35px] font-normal md:text-[35px] sm:text-[16px]",
   xl: "text-lg font-normal",
   md: "text-sm font-normal",
 };
@@ -18,7 +18,7 @@ const Text = ({ children, className = "", as, size = "lg", ...restProps }) => {
   const Component = as || "p";
 
   return (
-    <Component className={`text-gray-900_90 font-poppins ${className} ${sizes[size]}`} {...restProps}>
+    <Component className={`text-gray-900_90 md:w-full font-poppins ${className} ${sizes[size]}`} {...restProps}>
       {children}
     </Component>
   );
