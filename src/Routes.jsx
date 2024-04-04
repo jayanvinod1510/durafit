@@ -46,7 +46,7 @@ const ProjectRoutes = () => {
     },
     {
       path: "cushioning",
-      element: <Listingpage productType={"Pillows"}/>,
+      element: <Listingpage productType={"Cushioning"}/>,
     },
   ]);
 

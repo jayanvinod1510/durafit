@@ -195,9 +195,13 @@ export default function DetailPage() {
               // </div>
             ))},
           </div>
-          <div style={{"height":"auto !important"}}  ref = {videoRef}>
+          {data.video == 'NA' ? (
+            <div></div>
+          ) : (
+            <div style={{"height":"auto !important"}}  ref = {videoRef}>
           <ReactPlayer url = {`videos/${data.video}`} playing={videoIsVisible} width='100%' height='100%'></ReactPlayer>
           </div>
+          )}
           <Img
             src={`images/${data.footerImage}`}
             alt="upinthe_three"
