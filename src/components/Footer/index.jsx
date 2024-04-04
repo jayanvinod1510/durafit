@@ -8,7 +8,7 @@ export default function Footer({ ...props }) {
         <div className="flex flex-col gap-5">
           <div className="flex sm:flex-col justify-between items-center gap-5">
             <Img src="images/img_asset_2_1.png" alt="asset2one_one" className="w-[14%] sm:w-full object-cover" />
-            <div className="flex">
+            <div className="flex md:hidden">
               <div className="flex gap-5">
                 <Text size="md" as="p" className="self-start !text-gray-900 text-right">
                   Send us email at:
@@ -41,7 +41,21 @@ export default function Footer({ ...props }) {
                   +91 0000000000
                 </Text>
               </div>
-              <div className="flex flex-col self-start">
+              <div className="flex w-full hidden md:block">
+                <div className="flex gap-5">
+                  <Text size="md" as="p" className="self-start !text-gray-900 text-right">
+                    Send us email at:
+                  </Text>
+                  <div className="flex self-end">
+                    <a href="example@example.com" target="_blank" rel="noreferrer">
+                      <Text size="md" as="p" className="!text-deep_orange-400_01 text-center !font-medium">
+                        example@example.com
+                      </Text>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col self-start md:hidden">
                 <ul className="flex flex-col self-start items-start gap-3.5">
                   <li>
                     <a href="/" rel="noreferrer" className="opacity-0.6">
@@ -66,7 +80,7 @@ export default function Footer({ ...props }) {
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col md:hidden">
                 <ul className="flex flex-col self-start items-start gap-[15px]">
                   <li>
                     <a href="blackedition" className="opacity-0.6">
@@ -102,16 +116,16 @@ export default function Footer({ ...props }) {
           </div>
         </div>
         <div className="flex sm:flex-col justify-between items-center gap-5">
-          <Text size="md" as="p" className="self-end opacity-0.6">
+          <Text size="md" as="p" className="self-end opacity-0.6 md:w-full">
             Copyright @ sample 2023. All rights reserved.
           </Text>
-          <div className="flex justify-between w-[22%] sm:w-full gap-5 flex-wrap">
+          <div className="flex justify-between w-[22%] sm:w-full gap-5 flex-wrap md:flex-col">
             <a href="#" className="self-start opacity-0.6">
               <Text size="md" as="p" className="text-right">
                 Terms and service
               </Text>
             </a>
-            <a href="#" className="self-end opacity-0.6">
+            <a href="#" className="self-end md:flex-start opacity-0.6">
               <Text size="md" as="p" className="text-right">
                 Privacy Policy
               </Text>
