@@ -187,19 +187,19 @@ export const productList = {
     faqs: [
       {
         question: "What is Black Edition?",
-        answer: ""
+        answer: "Something New"
       },
       {
         question: "What is the 100-nights trial?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "What kind of bedframe works with a Durafit mattress?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "How is the material sustainable?",
-        answer: ""
+        answer: "Something"
       }
     ]
   },
@@ -247,19 +247,19 @@ export const productList = {
     faqs: [
       {
         question: "Can a mattress be customized to size?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "What is the 100-nights trial?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "Is the mattress material safe for me?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "How long is the warranty?",
-        answer: ""
+        answer: "Something"
       }
     ]
   },
@@ -357,19 +357,19 @@ export const productList = {
     faqs: [
       {
         question: "What is the difference between two pillow types?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "Does pillow also have 100-nights trial?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "Is the material anti-allergenic?",
-        answer: ""
+        answer: "Something"
       },
       {
         question: "How to clean the pillow?",
-        answer: ""
+        answer: "Something"
       }
     ]
   }
