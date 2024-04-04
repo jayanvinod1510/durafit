@@ -212,20 +212,191 @@ export const productList = {
     description: "At Durafit, we understand that a good night's sleep is essential for your overall well-being. That's why we have meticulously designed each mattress in our collection to provide you with the perfect balance of support and relaxation. Our mattresses are more than just a place to lay your head; they are your ticket to uninterrupted and restful sleep",
     products: [
       {
-        "image": "orthopeadic_mattress_acetate_4 1.png",
+        "video":"Ambition +.mp4",
+        "image": "ambition.png",
+        "headerTitle": "Ambition Plus Mattress",
+        "shortDescriptionLine1":"Experience superior posture support as you ",
+        "shortDescriptionLine2":"sleep, making every night's rest comfortable.",
+        "headerDescription": "Ambition Plus Mattress where sustainability meets enduring comfort. Crafted from sustainable and durable materials, it's designed to stand the test of time. Experience superior posture support as you sleep, making every night's rest a step towards your ambitions. Choose Ambition Plus for a sustainable, long-lasting, and supportive sleep solution.",
+        "detailTitle": "Experience a more deeper, soundful and rejuvenating sleep",
+        "detailDescription": "Luxurious cushioning materials for perfect back support and extra-soft surface treatments creating a plusher, more comfortable feel. This mattress is designed to make luxurious sleep an affordable deal. Built with advanced Unicell Technology which gives the right amount of support your body needs during the night.",
+        "features": [{
+          "image": "unicell.svg",
+          "titleLine1": "Unicell",
+          "titleLine2": "Technology"
+        }, {
+          "image": "spine.svg",
+          "titleLine1": "Posture",
+          "titleLine2": "Support"
+        },
+        {
+          "image": "sustain.svg",
+          "titleLine1": "Sustainable",
+          "titleLine2": "Material"
+        },
+        {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure Relieving",
+          "titleLine2": "Technology"
+        },
+        {
+          "image": "money.svg",
+          "titleLine1": "Affordable",
+          "titleLine2": "Luxury"
+        }
+        ],
+        "images": ["ambition1.png", "ambition2.png", "ambition3.png", "ambition4.png"],
+        "footerImage":"ambition_footer.png",
       },
       {
-        "image": "orthopeadic_mattress_acetate_4_2.png",
+        "video":"DuraSoft.mp4",
+        "image": "durasoft.png",
+        "headerTitle": "Durasoft Mattress",
+        "shortDescriptionLine1":"Crafted with high-density Vital Bond technology, ",
+        "shortDescriptionLine2":"this mattress guarantees long-lasting support.",
+        "headerDescription": "Introducing the Durasoft Mattress, your gateway to optimum comfort and unparalleled durability. Crafted with high-density Vital Bond technology, this mattress guarantees long-lasting support and resilience. Experience a night of undisturbed, luxurious comfort as you sleep soundly on Durasoft.",
+        "detailTitle": "Advanced mattress packed with latest sleep innovation technologies",
+        "detailDescription": "DuraSoft mattress range of collection will gently support your body at all points and transform your spine to a good standing posture. It is made to pay special attention to shoulders, hips and lower back- the heaviest parts of the human body.",
+        "features": [{
+          "image": "pressure_relieve.svg",
+          "titleLine1": "High density",
+          "titleLine2": "Vital bond"
+        }, {
+          "image": "spine.svg",
+          "titleLine1": "Orthopedic",
+          "titleLine2": "Spine Support"
+        },
+        {
+          "image": "contouring.svg",
+          "titleLine1": "Maintained",
+          "titleLine2": "firmness"
+        },
+        {
+          "image": "air.svg",
+          "titleLine1": "Rebonded",
+          "titleLine2": "Foam Technology"
+        },
+        {
+          "image": "contouring.svg",
+          "titleLine1": "High Density ",
+          "titleLine2": "Firm Core"
+        }
+        ],
+        "images": ["durasoft1.png", "durasoft2.png", "durasoft3.png", "durasoft4.png"],
+        "footerImage":"durasoft_footer.png",
       },
       {
+        "video":"2in1.mp4",
         "image": "orthopeadic_mattress_acetate_4_3.png",
+        "headerTitle": "2 in 1 Mattress",
+        "shortDescriptionLine1":"Designed for proper posture and equipped with",
+        "shortDescriptionLine2":"advanced pressure-relieving technology",
+        "headerDescription": "Our 2-in-1 Mattress – the key to better sleep. Designed for proper posture and equipped with advanced pressure-relieving technology, it's the ultimate sleep solution. Experience the perfect balance of support and comfort, ensuring you wake up refreshed and ready to take on the day. Say goodbye to discomfort and hello to your best night's sleep ever with our 2-in-1 Mattress.",
+        "detailTitle": "Mattress that keeps your night cool and give zero partner disturbance",
+        "detailDescription": "Gentle support for your body at all points while keeping your spine in the same shape as a person with good standing position. It is made to pay special attention to shoulders, hips and lower back- the heaviest parts of the human body.",
+        "features": [{
+          "image": "spine.svg",
+          "titleLine1": "Optimum",
+          "titleLine2": "Back Support"
+        }, {
+          "image": "ortho.svg",
+          "titleLine1": "Attention to hips,",
+          "titleLine2": "shoulder & back"
+        },
+        {
+          "image": "img_frame_19_blue_gray_400_44x74.svg",
+          "titleLine1": "Extra",
+          "titleLine2": "comfort"
+        },
+        {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure relieving",
+          "titleLine2": "technology"
+        },
+        {
+          "image": "deepsleep.svg",
+          "titleLine1": "Dual Firm",
+          "titleLine2": "Technology"
+        }
+        ],
+        "images": ["twoinone1.png", "twoinone2.png", "twoinone3.png", "twoinone4.png"],
+        "footerImage":"twoinone_footer.png",
       },
       {
+        "video":"2in1+.mp4",
         "image": "orthopeadic_mattress_acetate_4_4.png",
+        "headerTitle": "2 in 1 Plus Mattress",
+        "shortDescriptionLine1":"Enjoy the perfect balance of resilience and",
+        "shortDescriptionLine2":"plushness as you sink into this soft mattress",
+        "headerDescription": "The 2-in-1 Plus Mattress – where superior bounce-back and ultra-soft material converge for the ultimate sleep experience. Enjoy the perfect balance of resilience and plushness as you sink into the embrace of this exceptional mattress. Experience nights of restful slumber and awaken refreshed, thanks to its unique combination of bounce and softness.",
+        "detailTitle": "Mattress that keeps your night cool and give zero partner disturbance",
+        "detailDescription": "Gentle support for your body at all points while keeping your spine in the same shape as a person with good standing position. It is made to pay special attention to shoulders, hips and lower back- the heaviest parts of the human body.",
+        "features": [{
+          "image": "contouring.svg",
+          "titleLine1": "Superior",
+          "titleLine2": "Bounce back"
+        }, {
+          "image": "spine.svg",
+          "titleLine1": "Attention",
+          "titleLine2": "to spine"
+        },
+        {
+          "image": "img_frame_19_blue_gray_400_44x74.svg",
+          "titleLine1": "Ultra soft",
+          "titleLine2": "Material"
+        },
+        {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure relieving",
+          "titleLine2": "technology"
+        },
+        {
+          "image": "deepsleep.svg",
+          "titleLine1": "Dual Firm",
+          "titleLine2": "Technology"
+        }
+        ],
+        "images": ["twoinoneplus1.png", "twoinoneplus2.png", "twoinoneplus3.png", "twoinoneplus4.png"],
+        "footerImage":"twoinoneplus_footer.png",
       },
       {
+        "video":"2in1+ Lux.mp4",
         "image": "orthopeadic_mattress_acetate_4_5.png",
+        "headerTitle": "2 in 1 Plus Luxury Mattress",
+        "shortDescriptionLine1":"Advanced pressure relief technology, it cradles",
+        "shortDescriptionLine2":"your body, ensuring a restful night's sleep",
+        "headerDescription": "2-in-1 Plus Luxury Mattress – where innovation meets luxury. Featuring a high-resilience (HR) foam layer, this mattress provides the perfect balance of support and comfort. With advanced pressure relief technology, it cradles your body, ensuring a restful night's sleep. Elevate your sleep experience with the 2-in-1 Plus Luxury Mattress for the ultimate in support and pressure relief.",
+        "detailTitle": "Ergonomically designed for seven zone body support with firm & resilient technology",
+        "detailDescription": "Experience unparalleled comfort and support with our hybrid mattress, meticulously crafted with a perfect blend of high density vital bond material for exceptional support and High resilience foam for optimal comfort. This innovation 3-zone mattress is designed to provide you with the ultimate sleeping experience, ensuring a perfect balance between support and luxury.",
+        "features": [{
+          "image": "img_frame_19_blue_gray_400_44x74.svg",
+          "titleLine1": "Ultrasoft",
+          "titleLine2": "Foam Material"
+        }, {
+          "image": "img_frame_19_44x64.png",
+          "titleLine1": "Luxury knitted",
+          "titleLine2": "Material"
+        },
+        {
+          "image": "contouring.svg",
+          "titleLine1": "HR foam",
+          "titleLine2": "layer"
+        },
+        {
+          "image": "vector.svg",
+          "titleLine1": "Naturally",
+          "titleLine2": "hypoallergic"
+        },
+        {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure relieving",
+          "titleLine2": "technology"
+        }
+        ],
+        "images": ["twolux1.png", "twolux2.png", "twolux3.png", "twolux4.png"],
+        "footerImage":"twolux_footer.png",
       },
+      
     ],
     reasons: [
       {
@@ -263,16 +434,126 @@ export const productList = {
       }
     ]
   },
+  "Cushioning":
+  {
+    productType: "Cushioning",
+    image: "cushioning_header.png",
+    headerLine1: "Comfort seating for your guests",
+    headerLine2: "",
+    description: "We believe that a great night's sleep starts with the perfect pillow, and that's exactly what we offer. Our pillows are designed to cradle your neck and head in gentle support, providing you with the sweetest dreams night after night with the softest materials. Say goodbye to restless nights and hello to the ultimate in relaxation.",
+    products: [
+      {
+        "video":"NA",
+        "image": "memoryc.png",
+        "headerTitle": "Memory Cushion",
+        "shortDescriptionLine1":"Pillows that cradle your head and neck for ",
+        "shortDescriptionLine2":"unparalleled support and pressure relief",
+        "headerDescription": "Experience personalized comfort with our Memory Foam Cushion. These cushion adapt to your back shape for unparalleled support and pressure relief. Enjoy a comfortable seating ensuring a reliving experience for your guest.",
+        "detailTitle": "A blend of quality and comfort",
+        "detailDescription": "The Bamboo fabric cover distinguishes it from others. It is super soft, anti-bacterial and anti-allergenic. Suitable for every type of sleeper and provides the right amount of support with the right amount of fuffiness just like Durafit Mattress. Presenting the best solution for your comfort sitting experience.",
+        "features": [{
+          "image": "contouring.svg",
+          "titleLine1": "Contouring Support",
+          "titleLine2": ""
+        }, {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Pressure Relief",
+          "titleLine2": ""
+        },
+        {
+          "image": "img_frame_19.svg",
+          "titleLine1": "Temperature Sensitivity",
+          "titleLine2": ""
+        },
+        {
+          "image": "vector.svg",
+          "titleLine1": "Hypoallergenic",
+          "titleLine2": ""
+        }
+        ],
+        "images": ["memoryc1.png", "memoryp2.png"],
+        "footerImage":"memoryc_footer.png",
+      },
+      {
+        "video":"NA",
+        "image": "latexc.png",
+        "headerTitle": "Latex Cushion",
+        "shortDescriptionLine1":"PCrafted from eco-friendly latex, these pillows ",
+        "shortDescriptionLine2":"offer resilient support for spine alignment",
+        "headerDescription": "Discover the natural comfort of Latex Foam Cushion. Crafted from eco-friendly latex, these cushions offer resilient support that promotes proper spine alignment. Enjoy a cool and refreshing experience and rest assured knowing that our latex pillows are built to last, providing you with comfortable support for years to come.",
+        "detailTitle": "A blend of quality and comfort",
+        "detailDescription": "The Bamboo fabric cover distinguishes it from others. It is super soft, anti-bacterial and anti-allergenic. Suitable for every type of sleeper and provides the right amount of support with the right amount of fuffiness just like Durafit Mattress. Presenting the best solution for your comfort sitting experience.",
+        "features": [{
+          "image": "img_frame_19_blue_gray_400.svg",
+          "titleLine1": "Natural Material",
+          "titleLine2": ""
+        }, {
+          "image": "contouring.svg",
+          "titleLine1": "Supportive Comfort",
+          "titleLine2": ""
+        },
+        {
+          "image": "img_frame_19_44x64.png",
+          "titleLine1": "Breathability",
+          "titleLine2": ""
+        },
+        {
+          "image": "img_frame_19_blue_gray_400_44x64.svg",
+          "titleLine1": "Durability",
+          "titleLine2": ""
+        }
+        ],
+        "images": ["latexc1.png", "memoryp2.png"],
+        "footerImage":"latexc_footer.png",
+      },
+      
+    ],
+    reasons: [
+      {
+        title: "Enhanced neck and spine alignment for improved posture",
+        reason: "Alleviates pressure points and muscle tension, enhancing comfort  ensuring a quality, uninterrupted experience",
+        image: "cushioning1.png",
+      },
+      {
+        title: "Reduced tension and pressure",
+        reason: "Featuring advanced breathable technology, our fabric ensures optimal air  circulation, keeping your baby cool and comfortable. Its innovative  design promotes a safer, hypoallergenic sleep environment for delicate skin",
+        image: "cushioning2.png",
+      },
+      {
+        title: "Optimal support adapting to individual postures",
+        reason: "Adapts to individual sitting styles, providing tailored support for the back, maximizing comfort, and ensuring restorative seating",
+        image: "cushioning3.png",
+      }
+    ],
+    faqs: [
+      {
+        question: "What is the difference between two pillow types?",
+        answer: ""
+      },
+      {
+        question: "Does pillow also have 100-nights trial?",
+        answer: ""
+      },
+      {
+        question: "Is the material anti-allergenic?",
+        answer: ""
+      },
+      {
+        question: "How to clean the pillow?",
+        answer: ""
+      }
+    ]
+  },
   "Pillows":
   {
     productType: "Pillows",
     image: "up-in-the-clouds_1024x1024_3.png",
-    headerLine1: "Selling Sleep,",
-    headerLine2: "not just Mattress",
-    description: "At Durafit, we understand that a good night's sleep is essential for your overall well-being. That's why we have meticulously designed each mattress in our collection to provide you with the perfect balance of support and relaxation. Our mattresses are more than just a place to lay your head; they are your ticket to uninterrupted and restful sleep",
+    headerLine1: "Pillows that Hug You Back",
+    headerLine2: "",
+    description: "We believe that a great night's sleep starts with the perfect pillow, and that's exactly what we offer. Our pillows are designed to cradle your neck and head in gentle support, providing you with the sweetest dreams night after night with the softest materials. Say goodbye to restless nights and hello to the ultimate in relaxation.",
     products: [
       {
-        "video":"demo-video1.mp4",
+        "video":"NA",
         "image": "orthopeadic_pillow_acetate_4_1.png",
         "headerTitle": "Memory Pillow",
         "headerDescription": "Experience personalized comfort with our Memory Foam Pillows. These pillows adapt to your unique shape, cradling your head and neck for unparalleled support and pressure relief. Enjoy a restful night's sleep with the perfect alignment and comfort provided by our memory foam pillows.",
@@ -333,7 +614,7 @@ export const productList = {
         ],
         "images": ["latex1.png", "memoryp2.png"],
         "footerImage":"latex_footer.png",
-        "video":"demo-video1.mp4"
+        "video":"NA"
         
       },
     ],
