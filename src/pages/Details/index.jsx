@@ -35,7 +35,7 @@ export default function DetailPage() {
             <div className="w-full top-[0.00px] right-0 left-0 m-auto absolute">
               <div>
                 <div>
-                  <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
+                  <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
                   <Img
                     src="images/img_up_in_the_clouds_1024x1024_1.png"
                     alt="upinthe_one"
@@ -52,9 +52,9 @@ export default function DetailPage() {
                     alt="36476white_one"
                     className="h-[590px] w-full md:h-auto object-cover rounded-[5px]"
                   />
-                  <div className="flex md:flex-row sm:flex-col w-[74%] md:w-full gap-5">
+                  <div className="flex md:flex-row flex-wrap w-[74%] sm:justify-center  md:w-full gap-5">
                     {data.images.map((image, i)=>(
-                      <div className="flex flex-col w-full sm:w-full pt-[9px] bg-gray-100 rounded-[10px] h-[100px] w-[95px] "
+                      <div className="flex flex-col w-full bg-gray-100 rounded-[10px] h-[100px] md:h-[70px] w-[95px] md:w-[65px]"
                       onClick={()=>handleClick(image)}
                       >
                       <Img
@@ -110,7 +110,7 @@ export default function DetailPage() {
                       </Text>
                     </Animated>
                     <Animated style={{"width": "100%","animation-delay": "450ms"}} animationIn="fadeInUp">
-                      <Button shape="round" className="sm:px-5 font-inter font-medium min-w-[178px]" onClick={handleEnquireRedirection}>
+                      <Button shape="round" className="sm:px-5 font-inter font-medium min-w-[178px] sm:w-full" onClick={handleEnquireRedirection}>
                         Enquire now
                       </Button>
                     </Animated>
@@ -131,7 +131,7 @@ export default function DetailPage() {
             {data.features.map((feature, i) => (
 
               <div className={`flex flex-col items-center w-[6%] sm:w-full  ${i === 0 ? "md:ml-0 ml-[200px]" : ""}`}>
-                <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] object-cover" />
+                <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] sm:w-full object-cover" />
                 <a href="#" className="opacity-0.8 leading-6">
                   <Text as="p" className="!text-blue_gray-800_a2 text-center">
                     <>

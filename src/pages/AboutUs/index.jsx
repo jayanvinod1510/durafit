@@ -23,7 +23,7 @@ export default function AboutUsPage() {
           <div>
             <div>
               <div>
-                <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
+                <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
                 <Img
                   src="images/img_up_in_the_clouds_1024x1024_785x1440.png"
                   alt="upinthe_one"

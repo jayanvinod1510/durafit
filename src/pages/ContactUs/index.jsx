@@ -101,7 +101,7 @@ export default function ContactUsPage() {
       </Helmet>
       <div className="w-full bg-gray-100">
         <div className="flex flex-col pb-[100px] gap-[91px] md:gap-[68px] md:pb-5 sm:gap-[45px] bg-white-A700">
-          <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
+          <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
           <br></br>
           <br></br>
           <br></br>

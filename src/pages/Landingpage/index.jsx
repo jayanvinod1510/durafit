@@ -25,7 +25,7 @@ export default function LandingpagePage() {
           <div>
             <div>
               <div className="self-end">
-                <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
+                <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
                 <br></br>
                 <br></br>
                 <br></br>

@@ -68,7 +68,7 @@ const toggleSideNav = () => {
           </a>
           
 </div>
-<div className="hidden sm:block cursor-pointer"
+<div className="hidden md:block cursor-pointer"
   onClick={() => toggleSideNav()}>
   <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0.142822 0.143066H23V2.42878H0.142822V0.143066ZM5.85711 5.85735H23V8.14307H5.85711V5.85735ZM13 11.5716H23V13.8574H13V11.5716Z" fill="#737373" />

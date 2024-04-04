@@ -70,7 +70,7 @@ export default function ListingpagePage({ productType }) {
         <div>
           <div>
             <div>
-              <Header className="p-[23px] sm:p-5 bg-gray-100_cc" />
+              <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
               <Img
                 src={"images/" + data.image}
                 alt="upinthe_one"
