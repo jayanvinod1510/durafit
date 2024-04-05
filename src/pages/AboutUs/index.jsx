@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 import {Animated} from "react-animated-css";
 import ReactPlayer from 'react-player'
 import Marquee from "react-fast-marquee";
@@ -11,7 +12,21 @@ import Header from "../../components/Header";
 export default function AboutUsPage() {
   const { ref: titleRef, inView: titleIsVisible } = useInView();
   const { ref: videoRef, inView: videoIsVisible } = useInView();
+  const [innerWidth, setInnerWidth] = useState(window.innerWidtht);
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   console.log(videoIsVisible)
+  console.log("innerWidth : ",innerWidth)
+  
   return (
     <>
       <Helmet>
@@ -24,6 +39,16 @@ export default function AboutUsPage() {
             <div>
               <div>
                 <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
+                {innerWidth < 768 ? (
+                  <br/>
+                ) : (
+                  <></>
+                )}
+                {innerWidth < 768 ? (
+                  <br/>
+                ) : (
+                  <></>
+                )}
                 <Img
                   src="images/img_up_in_the_clouds_1024x1024_785x1440.png"
                   alt="upinthe_one"
@@ -38,13 +63,23 @@ export default function AboutUsPage() {
                 <div className="flex flex-col gap-[100px] md:gap-[75px] sm:gap-[50px]">
                   <div>
                     <div>
-                      <div className="flex md:flex-col justify-center items-start gap-[50px]">
+                      <div className="flex md:flex-col justify-center items-start gap-[50px] md:gap-[20px]">
                         <div ref = {titleRef} className="flex flex-col items-start w-[25%] md:w-full gap-[9px]">
                         <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeInUp" isVisible={titleIsVisible}>
-                          <Text size="4xl" as="p" className="!text-blue_gray-900 leading-[125%]" style={{"margin-bottom":"10px"}}>
+                          <Text size="4xl" as="p" className="!text-blue_gray-900 leading-[125%] md:!text-[30px]" style={{"margin-bottom":"10px"}}>
                             <>
-                              Dive into a<br />
-                              Cloud-like <br />
+                              Dive into a&nbsp;
+                              {innerWidth > 768 ? (
+                                <br />
+                              ) : (
+                                <></>
+                              )}
+                              Cloud-like&nbsp;
+                              {innerWidth > 768 ? (
+                                <br />
+                              ) : (
+                                <></>
+                              )}
                               Comfort
                             </>
                           </Text>
@@ -88,7 +123,7 @@ export default function AboutUsPage() {
               <div className="flex md:flex-col justify-between items-center gap-5">
                 <div className="flex flex-col w-[42%] md:w-full gap-1">
                   <div className="flex">
-                    <Text size="4xl" as="p" className="!text-blue_gray-900 tracking-[0.80px]">
+                    <Text size="4xl" as="p" className="!text-blue_gray-900 tracking-[0.80px] md:!text-[25px]">
                       The Sleep Story
                     </Text>
                   </div>
@@ -103,7 +138,7 @@ export default function AboutUsPage() {
                 </div>
                 <div className="flex flex-col w-[46%] md:w-full gap-[5px]">
                   <div className="flex">
-                    <Text size="4xl" as="p" className="!text-blue_gray-900 tracking-[0.80px]">
+                    <Text size="4xl" as="p" className="!text-blue_gray-900 tracking-[0.80px] md:!text-[25px]">
                       How sleep affects us?
                     </Text>
                   </div>
@@ -121,7 +156,7 @@ export default function AboutUsPage() {
           </div>
           <div className="py-[70px] md:py-5">
           <Marquee style={{"text-align":"center"}} direction = "right">
-              <div className="flex md:flex-col justify-between items-center gap-[80px] md:px-5">
+              <div className="flex md:flex-row justify-between items-center gap-[80px] md:px-5">
                 
                 <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
                   <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />

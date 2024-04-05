@@ -119,7 +119,7 @@ export default function ContactUsPage() {
                 </div>
               </div>
             </div>
-            <div className="flex md:flex-col justify-between items-start w-[75%] md:w-full pb-[50px] pr-[50px] gap-5 md:pb-5 md:pr-5">
+            <div className="flex md:flex-col-reverse justify-between items-start w-[75%] md:w-full pb-[50px] pr-[50px] gap-5 md:pb-5 md:pr-0">
               <div className="flex flex-col justify-center w-[30%] md:w-full gap-[39px] p-5">
                 <div className="flex flex-col mt-[30px] gap-2.5">
                   <div className="flex items-center gap-2.5">

@@ -31,7 +31,7 @@ export default function DetailPage() {
       </Helmet>
       <div className="w-full bg-gray-100">
         <div>
-          <div className="h-[1030px] relative">
+          <div className="h-[1030px] md:h-[900px] relative">
             <div className="w-full top-[0.00px] right-0 left-0 m-auto absolute">
               <div>
                 <div>
@@ -52,7 +52,7 @@ export default function DetailPage() {
                     alt="36476white_one"
                     className="h-[590px] w-full md:h-auto object-cover rounded-[5px]"
                   />
-                  <div className="flex md:flex-row flex-wrap w-[74%] sm:justify-center  md:w-full gap-5">
+                  <div className="flex md:flex-row flex-wrap w-[74%] sm:justify-center  md:w-full gap-5 md:gap-2">
                     {data.images.map((image, i)=>(
                       <div className="flex flex-col w-full bg-gray-100 rounded-[10px] h-[100px] md:h-[70px] w-[95px] md:w-[65px]"
                       onClick={()=>handleClick(image)}
@@ -119,21 +119,21 @@ export default function DetailPage() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-full mt-20 gap-2 mx-auto md:p-5 max-w-[1040px]">
-            <Text size="4xl" as="p" className="!text-blue_gray-800 !font-light leading-[60px]">
+          <div className="flex flex-col w-full mt-20 md:mt-2 gap-2 mx-auto md:p-5 max-w-[1040px]">
+            <Text size="4xl" as="p" className="!text-blue_gray-800 !font-light leading-[60px] md:!text-[25px] md:leading-normal">
               {data.detailTitle}
             </Text>
             <Text as="p" className="!text-blue_gray-400">
               {data.detailDescription}
             </Text>
           </div>
-          <div className="flex sm:flex-col justify-between items-center mt-2.5 gap-5 p-[70px] md:p-5">
+          <div className="flex sm:flex-row sm:grid sm:grid-cols-3 justify-between items-center mt-2.5 gap-5 p-[70px] md:p-5">
             {data.features.map((feature, i) => (
 
               <div className={`flex flex-col items-center w-[6%] sm:w-full  ${i === 0 ? "md:ml-0 ml-[200px]" : ""}`}>
-                <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] sm:w-full object-cover" />
+                <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] sm:w-2/3 object-cover" />
                 <a href="#" className="opacity-0.8 leading-6">
-                  <Text as="p" className="!text-blue_gray-800_a2 text-center">
+                  <Text as="p" className="!text-blue_gray-800_a2 text-center md:!text-[13px]">
                     <>
                       {feature.titleLine1}
                       <br />
