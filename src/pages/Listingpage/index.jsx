@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Button, Text, Img, Input } from "../../components";
 import Footer from "../../components/Footer";
@@ -27,6 +27,18 @@ export default function ListingpagePage({ productType }) {
   const data = productList[productType]
   const [isHovered, setIsHovered] = useState(Array(data.products.length).fill(false));
   let navigate = useNavigate();
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const handleClick = (item) => {
     // Navigate to a different screen when the component is clicked
     window.scrollTo(0, 0)
@@ -55,7 +67,7 @@ export default function ListingpagePage({ productType }) {
   const { ref: reason1Ref, inView: reasons1Visible } = useInView();
   const { ref: reason2Ref, inView: reasons2Visible } = useInView();
   const { ref: reason3Ref, inView: reasons3Visible } = useInView();
-  const signUpNowSuffix = <div className="flex justify-center items-center bg-deep_orange-300 border text-blue_gray-800 text-[20px] h-[54px] min-w-[137px] rounded-r-[10px] cursor-pointer"
+  const signUpNowSuffix = <div className="flex justify-center items-center bg-deep_orange-300 border text-blue_gray-800 text-[20px] md:text-[15px] md:h-[35px] md:min-w-[100px] h-[54px] min-w-[137px] rounded-r-[10px] cursor-pointer"
     onClick={() => { console.log("Send Email") }}
   >
     Sign Up
@@ -71,6 +83,8 @@ export default function ListingpagePage({ productType }) {
           <div>
             <div>
               <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
+              <br class = " hidden md:block"/>
+              <br class = " hidden md:block"/>
               <Img
                 src={"images/" + data.image}
                 alt="upinthe_one"
@@ -80,11 +94,11 @@ export default function ListingpagePage({ productType }) {
           </div>
         </div>
         <div className="max-w-[1058px] items-center flex flex-col justify-center mx-auto">
-          <div className="flex flex-col items-start gap-[15px] py-2.5">
+          <div className="flex flex-col items-start gap-[15px] py-2.5 md:px-5">
             <Text
               size="6xl"
               as="p"
-              className="w-[64%] md:w-full mt-[70px] md:ml-0 !text-blue_gray-800 leading-[60px]"
+              className="w-[64%] md:w-full mt-[70px] md:ml-0 !text-blue_gray-800 leading-[60px] md:mt-9 md:!text-[30px] md:leading-normal"
             >
               <>
                 {data.headerLine1}
@@ -96,7 +110,7 @@ export default function ListingpagePage({ productType }) {
               {data.description}
             </Text>
           </div>
-          <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px]">
+          <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px] md:hidden">
             {data.products.map((item, index) => (
               <div className={"flex w-full bg-white-A700 shadow-sm rounded-[5px]"} onClick={() => handleClick(item)}
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -126,28 +140,78 @@ export default function ListingpagePage({ productType }) {
               </div>))}
 
           </div>
+          <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-0 grid max-w-[1058px] hidden md:block">
+          {data.products.map((item, index) => (
+            <div>
+              <div className="flex w-full bg-white-A700 shadow-sm rounded-[5px]">
+                <Img
+                  src={"images/" + item.image}
+                  alt="orthopeadicmat"
+                  className="h-[465px] w-full md:h-auto object-cover rounded-[5px]"
+                />
+              </div>
+              <div className="px-6 pb-10">
+            <div className="py-4 cursor-pointer">
+                <Text
+                    size="xl"
+                    as="p"
+                    className="w-full !text-blue_gray-800 text-center"
+                >
+                    <>
+                        {item.headerTitle}
+                    </>
+                </Text>
+                <Text
+                    size="xs"
+                    as="p"
+                    className="md:w-full text-center"
+                >
+                    <>
+                        {item.shortDescriptionLine1}
+                    </>
+                </Text>
+                <Text
+                    size="xs"
+                    as="p"
+                    className="md:w-full text-center"
+                >
+                    <>
+                        {item.shortDescriptionLine2}
+                    </>
+                </Text>
+
+            </div>
+            <Button fontSize="xl" shape="round" onClick={() => handleClick(item)} className="sm:px-5 font-inter font-medium min-w-full self-center ">
+                View Details
+            </Button>
         </div>
-        <div className="mt-[50px] px-[130px] md:px-5">
+            </div>
+            
+          ))}
+        </div>
+
+        </div>
+        <div className="mt-[50px] px-[130px] md:px-0">
           <div className="flex flex-col items-center w-full gap-[31px] py-[78px] mx-auto md:p-5 md:py-5 bg-blue_gray-800 max-w-[1180px] rounded-[5px]">
-            <div className="flex self-stretch justify-center px-[100px] md:px-5">
+            <div className="flex self-stretch justify-center px-[100px] md:px-0">
               <div className="flex">
-                <Text size="6xl" as="p" className="!text-deep_orange-400 capitalize !font-medium">
+                <Text size="6xl" as="p" className="!text-deep_orange-400 capitalize !font-medium md:!text-[28px] md:leading-normal">
                   Why Choose Durafit {data.productType}
                 </Text>
               </div>
             </div>
             <div className="w-[83%] md:w-full mb-[43px]">
               <div>
-                <div className="flex md:flex-col justify-between items-center gap-5">
+                <div className="flex md:flex-col-reverse justify-between items-center gap-5">
                   <div className="flex justify-center w-[63%] md:w-full">
                     <div className="w-full">
-                      <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": "400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons1Visible}>
+                      <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": innerWidth < 768? "0ms":"400ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons1Visible}>
                         <div ref={reason1Ref} className="flex flex-col gap-1">
                           <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
                             {data.reasons[0].title}
                           </Text>
 
-                          <Text as="p" className="!text-gray-100 !font-light">
+                          <Text as="p" className="!text-gray-100 !font-light md:mb-4">
                             {data.reasons[0].reason}
                           </Text>
                         </div>
@@ -169,12 +233,12 @@ export default function ListingpagePage({ productType }) {
                 />
                 <div className="flex justify-center w-[55%] md:w-full">
                   <div className="w-full">
-                    <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": "400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons2Visible}>
+                    <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": innerWidth < 768? "0ms":"400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons2Visible}>
                       <div ref={reason2Ref} className="flex flex-col gap-2.5">
                         <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
                           {data.reasons[1].title}
                         </Text>
-                        <Text as="p" className="!text-gray-100 !font-light">
+                        <Text as="p" className="!text-gray-100 !font-light md:mb-4">
                           {data.reasons[1].reason}
                         </Text>
                       </div>
@@ -182,10 +246,10 @@ export default function ListingpagePage({ productType }) {
                   </div>
                 </div>
               </div>
-              <div className="flex md:flex-col justify-between items-center gap-5">
+              <div className="flex md:flex-col-reverse justify-between items-center gap-5">
                 <div className="flex justify-center w-[52%] md:w-full">
                   <div className="w-full">
-                    <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": "400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons3Visible}>
+                    <Animated animationInDuration={2000} style={{ "width": "100%", "animation-delay": innerWidth < 768? "0ms":"400ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={reasons3Visible}>
                       <div ref={reason3Ref} className="flex flex-col gap-2.5">
                         <Text size="3xl" as="p" className="!text-blue_gray-100 leading-[44px]">
                           {data.reasons[2].title}
@@ -211,7 +275,7 @@ export default function ListingpagePage({ productType }) {
             <Text
               size="6xl"
               as="p"
-              className="w-[41%] md:w-full !text-blue_gray-800 tracking-[-1.00px] !font-medium leading-[60px]"
+              className="w-[41%] md:w-full !text-blue_gray-800 tracking-[-1.00px] !font-medium leading-[60px] md:!text-[25px] md:text-center"
             >
               Frequently asked questions
             </Text>
@@ -247,20 +311,20 @@ export default function ListingpagePage({ productType }) {
             </Accordion>
           </div>
         </div>
-        <div className="flex flex-col items-end justify-center h-[400px] md:h-auto pl-14 pr-[98px] gap-[30px] py-[98px] md:p-5 bg-[url(/public/images/img_frame_64.png)] bg-cover bg-no-repeat">
-          <div className="flex justify-end w-[40%] md:w-full mr-8 md:mr-0">
+        <div className="flex flex-col items-end justify-center md:justify-end h-[400px] md:h-[400px] pl-14 pr-[98px] gap-[30px] py-[98px] md:p-0 bg-[url(/public/images/img_frame_64.png)] bg-cover bg-no-repeat">
+          <div className="flex justify-end md:justify-between w-[40%] md:w-full mr-8 md:mr-0 md:px-5  md:bg-gray-50">
             <div className="w-full">
-              <Text size="4xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px] drop-shadow-md"
+              <Text size="4xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px] md:!text-[18px] drop-shadow-md md:text-center md:leading-normal md:pt-5"
                 style={{ filter: 'style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0.3rem 0.1rem);' }}
               >
                 <>
-                  Join the Durafit Club and get
-                  <br />
+                  Join the Durafit Club and get&nbsp;
+                  <br class="md:hidden" />
                   updates on our new products!
                 </>
               </Text>
-              <div className="flex self-stretch justify-end py-[30px]">
-                <Input type="email" size="md" shape="round" style={{ "color": "#434343" }} name="email" placeholder={`Enter your email ID here...`} className="sm:px-5 min-w-[89%] border-none"
+              <div className="flex self-stretch justify-end md:justify-center py-[30px] md:py-[20px]">
+                <Input type="email" size="md" shape="round" style={{ "color": "#434343" }} name="email" placeholder={`Enter your email ID here...`} className="sm:px-5 min-w-[89%] md:!pr-0 md:h-[35px] md:!text-[15px] border-none"
                   suffix={signUpNowSuffix}
                 />
               </div>

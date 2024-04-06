@@ -1,5 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import { useEffect, useState } from "react";
 import {Animated} from "react-animated-css";
 import { useInView } from "react-intersection-observer";
 import { Helmet } from "react-helmet";
@@ -14,6 +15,19 @@ export default function LandingpagePage() {
   const { ref: eleganceRef, inView: eleganceIsVisible } = useInView();
   const { ref: mattressRef, inView: mattressIsVisible } = useInView();
   const { ref: pillowRef, inView: pillowIsVisible } = useInView();
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  console.log("innerWidth : ",innerWidth)
   return (
     <>
       <Helmet>
@@ -28,7 +42,7 @@ export default function LandingpagePage() {
                 <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
                 <br></br>
                 <br></br>
-                <br></br>
+                <br class="md:hidden"></br>
                 <div className="h-[674px] md:h-auto relative">
                   <Img
                     src="images/img_up_in_the_clouds_1024x1024.png"
@@ -115,7 +129,7 @@ export default function LandingpagePage() {
 
         {/* Section 1 */}
         <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 bg-[url(/public/images/img_section_9.png)] md:bg-center bg-cover bg-no-repeat">
-          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
+          <Animated style={{"width": "100%","animation-delay":innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
             <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[410px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{"float":"right"}}>
               <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="!text-blue_gray-100 leading-[60px]">
@@ -145,7 +159,7 @@ export default function LandingpagePage() {
 
         {/* Section 2 */}
         <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] bg-[url(/public/images/img_section_12.png)] md:bg-center bg-cover bg-no-repeat">
-          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
+          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
             <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[380px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
               <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="w-[93%] md:w-full !text-blue_gray-800 leading-[60px]">
@@ -180,7 +194,7 @@ export default function LandingpagePage() {
         backgroundPosition: 'center',
         height: '100vh', // Set the height to the full viewport height
       }}>
-          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
+          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
             <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[609px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{"float":"right"}}>
               <div className="self-stretch">
                 <div ref = {pillowRef} className="flex flex-col gap-2.5">
@@ -210,7 +224,7 @@ export default function LandingpagePage() {
               
         {/* Section 4 */}
         <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/img_section_13.png)]  md:bg-center bg-cover bg-no-repeat">
-          <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
+          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
             <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[400px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
                 <div ref = {sofaRef} className="flex flex-col w-full gap-2.5">
                   <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">

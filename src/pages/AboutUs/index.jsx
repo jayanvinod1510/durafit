@@ -12,7 +12,7 @@ import Header from "../../components/Header";
 export default function AboutUsPage() {
   const { ref: titleRef, inView: titleIsVisible } = useInView();
   const { ref: videoRef, inView: videoIsVisible } = useInView();
-  const [innerWidth, setInnerWidth] = useState(window.innerWidtht);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
       setInnerWidth(window.innerWidth);
@@ -65,7 +65,7 @@ export default function AboutUsPage() {
                     <div>
                       <div className="flex md:flex-col justify-center items-start gap-[50px] md:gap-[20px]">
                         <div ref = {titleRef} className="flex flex-col items-start w-[25%] md:w-full gap-[9px]">
-                        <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeInUp" isVisible={titleIsVisible}>
+                        <Animated style={{"width": "100%","animation-delay": "300ms"}} animationIn="fadeInUp" isVisible={innerWidth < 768? true : titleIsVisible}>
                           <Text size="4xl" as="p" className="!text-blue_gray-900 leading-[125%] md:!text-[30px]" style={{"margin-bottom":"10px"}}>
                             <>
                               Dive into a&nbsp;
