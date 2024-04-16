@@ -18,7 +18,7 @@ export default function ContactUsPage() {
   const [contactErrorMessage, setContactErrorMessage] = useState("");
   const [nameErrorMessage, setNameErrorMessage] = useState("");
   const [isLoading, setisLoading] = useState(false);
-  if (params.get('product')){
+  if (params.get('product')) {
     console.log(params.get('product'))
     message = "I am interested to know more about " + params.get('product')
   }
@@ -28,33 +28,33 @@ export default function ContactUsPage() {
     setisLoading(true)
     var error = false
     e.preventDefault();
-    console.log("name",form.current.name.value)
-    console.log("contact",form.current.contact.value)
+    console.log("name", form.current.name.value)
+    console.log("contact", form.current.contact.value)
 
-    if (!form.current.name.value){
+    if (!form.current.name.value) {
       setNameErrorMessage("Please Enter Name")
-      console.log("entered name not",nameErrorMessage)
+      console.log("entered name not", nameErrorMessage)
       error = true
-    }else{
+    } else {
       setNameErrorMessage("")
       error = false
     }
 
-    if(!form.current.contact.value){
+    if (!form.current.contact.value) {
       setContactErrorMessage("Please Enter Contact Number")
-      console.log("entered contact not",contactErrorMessage)
+      console.log("entered contact not", contactErrorMessage)
       error = true
-    }else{
-      if(form.current.contact.value.length != 10){
+    } else {
+      if (form.current.contact.value.length != 10) {
         setContactErrorMessage("Please Enter Valid Contact Number")
         error = true
-      }else{
+      } else {
         setContactErrorMessage("")
         error = false
       }
     }
 
-    if (error){
+    if (error) {
       setisLoading(false)
       return
     }
@@ -65,7 +65,7 @@ export default function ContactUsPage() {
       })
       .then(
         () => {
-          toast.success("Enquiry sent successfully !",{
+          toast.success("Enquiry sent successfully !", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: true,
@@ -73,13 +73,13 @@ export default function ContactUsPage() {
             pauseOnHover: true,
             draggable: false,
             theme: "light"
-            });
+          });
           form.current.reset()
           message = ""
           setisLoading(false)
         },
         (error) => {
-          toast.error("Error in sending enquiry !",{
+          toast.error("Error in sending enquiry !", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: true,
@@ -87,7 +87,7 @@ export default function ContactUsPage() {
             pauseOnHover: true,
             draggable: false,
             theme: "light"
-            });
+          });
           setisLoading(false)
         },
       );
@@ -112,7 +112,7 @@ export default function ContactUsPage() {
                   Get in Touch With Us
                 </Text>
                 <div className="self-stretch">
-                  <Text size="xl" as="p" className="! tracking-[0.18px] text-center leading-[150%]" style={{"color":"#BBBBBB"}}>
+                  <Text size="xl" as="p" className="! tracking-[0.18px] text-center leading-[150%]" style={{ "color": "#BBBBBB" }}>
                     For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff
                     Always Be There To Help You Out. Do Not Hesitate!
                   </Text>
@@ -156,79 +156,79 @@ export default function ContactUsPage() {
                   </Text>
                 </div>
               </div>
-                <form ref = {form} onSubmit={sendEmail} className="flex flex-col items-start w-[60%] md:w-full mt-[50px] gap-[34px]">
-                  <div className="flex flex-col self-stretch items-start gap-[9px]">
-                    <div className="flex">
-                      <Text as="p" className="!text-black-900 !font-medium">
-                        Your name*
-                      </Text>
-                    </div>
-                    <Input
-                      style = {{"color":"#434343"}}
-                      shape="round"
-                      type="text"
-                      name="name"
-                      placeholder={`Enter your full name`}
-                      className="sm:px-5"
-                    />
-                    <Text as="p" className="!text-red-900 !font-medium">
+              <form ref={form} onSubmit={sendEmail} className="flex flex-col items-start w-[60%] md:w-full mt-[50px] gap-[34px]">
+                <div className="flex flex-col self-stretch items-start gap-[9px]">
+                  <div className="flex">
+                    <Text as="p" className="!text-black-900 !font-medium">
+                      Your name*
+                    </Text>
+                  </div>
+                  <Input
+                    style={{ "color": "#434343" }}
+                    shape="round"
+                    type="text"
+                    name="name"
+                    placeholder={`Enter your full name`}
+                    className="sm:px-5"
+                  />
+                  <Text as="p" className="!text-red-900 !font-medium">
                     {nameErrorMessage}
-                      </Text>
+                  </Text>
+                </div>
+                <div className="flex flex-col self-stretch items-start gap-2.5">
+                  <div className="flex">
+                    <Text as="p" className="!text-black-900 !font-medium">
+                      Email address
+                    </Text>
                   </div>
-                  <div className="flex flex-col self-stretch items-start gap-2.5">
-                    <div className="flex">
-                      <Text as="p" className="!text-black-900 !font-medium">
-                        Email address
-                      </Text>
-                    </div>
-                    <Input type="email" shape="round" style = {{"color":"#434343"}} name="email" placeholder={`Eg: sample@sample.com`} className="sm:px-5" />
+                  <Input type="email" shape="round" style={{ "color": "#434343" }} name="email" placeholder={`Eg: sample@sample.com`} className="sm:px-5" />
+                </div>
+                <div className="flex flex-col self-stretch items-start gap-[9px]">
+                  <div className="flex">
+                    <Text as="p" className="!text-black-900 !font-medium">
+                      Contact number*
+                    </Text>
                   </div>
-                  <div className="flex flex-col self-stretch items-start gap-[9px]">
-                    <div className="flex">
-                      <Text as="p" className="!text-black-900 !font-medium">
-                        Contact number*
-                      </Text>
-                    </div>
-                    <Input type = "number" shape="round" style = {{"color":"#434343"}} name="contact" placeholder={`Eg: 0000000000`} className="sm:px-5" />
-                    <Text as="p" className="!text-red-900 !font-medium">
+                  <Input type="number" shape="round" style={{ "color": "#434343" }} name="contact" placeholder={`Eg: 0000000000`} className="sm:px-5" />
+                  <Text as="p" className="!text-red-900 !font-medium">
                     {contactErrorMessage}
-                      </Text>
-                    
+                  </Text>
+
+                </div>
+                <div className="flex flex-col self-stretch items-start gap-2">
+                  <div className="flex">
+                    <Text as="p" className="!text-black-900 !font-medium">
+                      Subject
+                    </Text>
                   </div>
-                  <div className="flex flex-col self-stretch items-start gap-2">
-                    <div className="flex">
-                      <Text as="p" className="!text-black-900 !font-medium">
-                        Subject
-                      </Text>
-                    </div>
-                    <Input shape="round" style = {{"color":"#434343"}} name="subject" placeholder={`Enter your Enquiry subject`} className="sm:px-5" />
+                  <Input shape="round" style={{ "color": "#434343" }} name="subject" placeholder={`Enter your Enquiry subject`} className="sm:px-5" />
+                </div>
+                <div className="flex flex-col self-stretch items-start gap-[7px]">
+                  <div className="flex">
+                    <Text as="p" className="!text-black-900 !font-medium">
+                      Message
+                    </Text>
                   </div>
-                  <div className="flex flex-col self-stretch items-start gap-[7px]">
-                    <div className="flex">
-                      <Text as="p" className="!text-black-900 !font-medium">
-                        Message
-                      </Text>
-                    </div>
-                    <TextArea
-                      style = {{"color":"#434343"}}
-                      shape="round"
-                      defaultValue = {message}
-                      name="message"
-                      placeholder={`Enter your Enquiry here..`}
-                      className="self-stretch sm:p-5 text-gray-500"
-                    />
-                  </div>
-                  <Button disabled={isLoading} style = {{"background":isLoading?"#bbbbbb":"","color":isLoading?"#ffffff !important":""}} shape="round" className="sm:px-5 !text-indigo-900 font-medium min-w-[133px]">
-                    {isLoading?'Submitting...':'Submit'}
-                  </Button>
-                  <ToastContainer/>
-                </form>
+                  <TextArea
+                    style={{ "color": "#434343" }}
+                    shape="round"
+                    defaultValue={message}
+                    name="message"
+                    placeholder={`Enter your Enquiry here..`}
+                    className="self-stretch sm:p-5 text-gray-500"
+                  />
+                </div>
+                <Button disabled={isLoading} style={{ "background": isLoading ? "#bbbbbb" : "", "color": isLoading ? "#ffffff !important" : "" }} shape="round" className="sm:px-5 !text-indigo-900 font-medium min-w-[133px]">
+                  {isLoading ? 'Submitting...' : 'Submit'}
+                </Button>
+                <ToastContainer />
+              </form>
             </div>
           </div>
         </div>
-        <div className="flex md:flex-col justify-between mt-[70px] gap-5 px-[345px] md:px-5">
-          <div className="flex md:flex-row sm:flex-col w-[76%] md:w-full gap-[70px]">
-            <div className="flex flex-col items-center flex-1">
+        <div className="flex md:flex-col justify-center items-center mt-[70px] gap-5 md:px-5">
+          <div className="flex md:flex-row sm:flex-col md:w-full gap-[70px] items-center justify-center">
+            <div className="flex flex-col items-center">
               <Img src="images/img_frame_19_gray_900_01.svg" alt="high_quality" className="h-[45px]" />
               <div className="flex flex-col items-center justify-center">
                 <a href="#" className="opacity-0.8">
@@ -243,7 +243,7 @@ export default function ContactUsPage() {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center flex-1">
+            <div className="flex flex-col items-center">
               <Img src="images/img_frame_19_gray_900_01_45x65.svg" alt="image" className="h-[45px]" />
               <div className="flex flex-col items-center gap-0.5">
                 <a href="#" className="opacity-0.8">
@@ -258,7 +258,7 @@ export default function ContactUsPage() {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center w-[19%] sm:w-full">
+            <div className="flex flex-col items-center sm:w-full">
               <Img src="images/img_frame_19_2.svg" alt="image" className="h-[45px]" />
               <div className="flex flex-col">
                 <a href="#" className="opacity-0.8">
@@ -273,25 +273,25 @@ export default function ContactUsPage() {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col items-center w-[14%] md:w-full">
-            <Img src="images/img_frame_19_3.svg" alt="image" className="h-[45px]" />
-            <a href="#" className="opacity-0.8">
-              <Text as="p" className="!text-blue_gray-800_a2">
-                Made in India
-              </Text>
-            </a>
-            <a href="Homebrand" target="_blank" rel="noreferrer" className="mt-0.5 opacity-0.8">
-              <Text size="xs" as="p" className="!text-indigo-400_a2">
-                Homebrand
-              </Text>
-            </a>
+            <div className="flex flex-col items-center sm:w-full">
+              <Img src="images/img_frame_19_3.svg" alt="image" className="h-[45px]" />
+              <a href="#" className="opacity-0.8">
+                <Text as="p" className="!text-blue_gray-800_a2">
+                  Made in India
+                </Text>
+              </a>
+              <a href="Homebrand" target="_blank" rel="noreferrer" className="mt-0.5 opacity-0.8">
+                <Text size="xs" as="p" className="!text-indigo-400_a2">
+                  Homebrand
+                </Text>
+              </a>
+            </div>
           </div>
         </div>
         <div className="md:h-auto mt-[70px] bg-blue_gray-900 rounded-[5px]">
-        <div style={{"height":"auto !important"}} ref = {videoRef}>
-          <ReactPlayer url = {`videos/contact_us.mp4`} playing={videoIsVisible} width='100%' height='100%'></ReactPlayer>
-        </div>
+          <div style={{ "height": "auto !important" }} ref={videoRef}>
+            <ReactPlayer url={`videos/contact_us.mp4`} playing={videoIsVisible} width='100%' height='100%'></ReactPlayer>
+          </div>
         </div>
         <footer className="px-14 py-[69px] md:p-5 bg-blue-50">
           <div className="flex flex-col w-full gap-[51px] mx-auto sm:gap-[25px] max-w-[1180px]">
