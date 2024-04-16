@@ -270,7 +270,7 @@ export default function ListingpagePage({ productType }) {
             </div>
           </div>
         </div>
-        <div className="px-14 py-[79px] md:p-5 bg-gray-50">
+        {/* <div className="px-14 py-[79px] md:p-5 bg-gray-50">
           <div className="flex md:flex-col justify-between items-center w-full gap-5 mx-auto max-w-[1170px]">
             <Text
               size="6xl"
@@ -310,7 +310,9 @@ export default function ListingpagePage({ productType }) {
               ))}
             </Accordion>
           </div>
-        </div>
+        </div> */}
+        <br/>
+        <br/>
         <div className="flex flex-col items-end justify-center md:justify-end h-[400px] md:h-[400px] pl-14 pr-[98px] gap-[30px] py-[98px] md:p-0 bg-[url(/public/images/img_frame_64.png)] bg-cover bg-no-repeat">
           <div className="flex justify-end md:justify-between w-[40%] md:w-full mr-8 md:mr-0 md:px-5  md:bg-gray-50">
             <div className="w-full">

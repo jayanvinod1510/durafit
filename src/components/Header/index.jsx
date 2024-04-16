@@ -16,7 +16,7 @@ const toggleSideNav = () => {
   return (
     <header {...props} style ={{"position":"fixed","width":"100%","zIndex":"1"}}>
       <div className="flex md:flex-row justify-between items-center w-full gap-5 mx-auto max-w-[1180px]">
-          <Img src="images/img_image_55.png" alt="imagefiftyfive" className="w-[15%] w-full object-cover" style={{"cursor":"pointer"}} onClick={handleHomeRedirection}/>
+          <Img src="images/img_image_55.png" alt="imagefiftyfive" className="w-[15%] md:w-[23%] w-full object-cover" style={{"cursor":"pointer"}} onClick={handleHomeRedirection}/>
         <div className="flex md:hidden justify-between items-center w-[70%] md:w-full gap-5">
           <ul className="flex gap-10 flex-wrap">
             <li>

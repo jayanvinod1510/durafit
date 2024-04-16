@@ -2,7 +2,7 @@ export const productList = {
   "Black Edition":
   {
     productType: "Black Edition",
-    image: "img_up_in_the_clouds_1024x1024_703x1440.png",
+    image: "black_edition.png",
     headerLine1: "Elegance in Every",
     headerLine2: "Thread of Black Edition",
     description: "Experience the epitome of sophistication and refinement with our exclusive collection. We believe that your\
@@ -12,7 +12,7 @@ export const productList = {
     products: [
       {
         "video":"Naturapedic.mp4",
-        "image": "img_orthopeadic_mat.png",
+        "image": "black_edition1.png",
         "headerTitle": "Naturapedic Mattress",
         "shortDescriptionLine1":"Sink into the soothing, natural embrace of bamboo ",
         "shortDescriptionLine2":"fibers every night with a connection to nature.",
@@ -48,11 +48,11 @@ export const productList = {
         }
         ],
         "images": ["img_36476_white_zoom_6.png", "img_outdoor_sofa_set_2.png", "img_stuart_sofa_1.png", "img_maya_sofa_three.png"],
-        "footerImage":"img_up_in_the_clouds_1024x1024_494x1440.png",
+        "footerImage":"NA",
       },
       {
         "video":"ViscoFlex.mp4",
-        "image": "img_orthopeadic_mat_465x504.png",
+        "image": "black_edition2.png",
         "headerTitle": "Viscoflex Mattress",
         "headerDescription": "Introducing the ViscoFlex Mattress, where advanced pressure-relieving technology meets perfect posture support. Experience the ultimate in comfort as this mattress conforms to your body, alleviating pressure points and ensuring optimal spinal alignment. Enjoy restful nights and wake up refreshed, knowing that your sleep is well taken care of.",
         "shortDescriptionLine1":"Experience the ultimate in comfort as this mattress",
@@ -85,11 +85,11 @@ export const productList = {
         }
         ],
         "images": ["viscoflex1.png", "viscoflex2.png", "viscoflex3.png", "viscoflex4.png"],
-        "footerImage":"up-in-the-clouds_1024x1024 1.png",
+        "footerImage":"NA",
       },
       {
         "video":"Memory.mp4",
-        "image": "img_orthopeadic_mat_1.png",
+        "image": "black_edition3.png",
         "headerTitle": "Memory Plus Mattress",
         "headerDescription": "Discover the Memory Plus Mattress, your ticket to unparalleled comfort. Engineered for the even distribution of body weight, this mattress ensures every inch of your body is cradled in blissful support. Say goodbye to overheating with its naturally cooling technology, and embrace restful, cool nights of sleep.",
         "shortDescriptionLine1":"Engineered for the even distribution of body",
@@ -122,11 +122,11 @@ export const productList = {
         }
         ],
         "images": ["memory1.png", "memory2.png", "memory3.png", "memory4.png"],
-        "footerImage":"memory_plus_footer.png",
+        "footerImage":"NA",
       },
       {
         "video":"ProX.mp4",
-        "image": "img_orthopeadic_mat_2.png",
+        "image": "black_edition4.png",
         "headerTitle": "Pro-X Mattress",
         "headerDescription": "Experience the Pro-X Mattress where softness meets smart technology. Sink into the embrace of ultrasoft foam material that molds to your body for unmatched comfort. Stay cool and dry with its cutting-edge moisture absorption technology, ensuring a refreshing night’s sleep every time you lay down. Elevate your sleep with Pro-X for the perfect blend of softness and dryness.",
         "shortDescriptionLine1":"Stay cool with its moisture absorption",
@@ -159,7 +159,7 @@ export const productList = {
         }
         ],
         "images": ["prox1.png", "prox2.png", "prox3.png", "prox4.png"],
-        "footerImage":"prox_footer.png",
+        "footerImage":"NA",
       },
     ],
     reasons: [
@@ -168,7 +168,7 @@ export const productList = {
         reason: "Experience unparalleled support and comfort with our mattresses, designed to provide superior\
           orthopedic backing and posture control for all ages. Wake up refreshed and pain-free, every\
           day",
-        image: "img_fcf037cde48a756f_upscale.png",
+        image: "black_edition_reason1.png",
       },
       {
         title: "Sustainable and Hypoallergenic Fabric",
@@ -213,7 +213,7 @@ export const productList = {
     products: [
       {
         "video":"Ambition +.mp4",
-        "image": "ambition.png",
+        "image": "mattress1.png",
         "headerTitle": "Ambition Plus Mattress",
         "shortDescriptionLine1":"Experience superior posture support as you ",
         "shortDescriptionLine2":"sleep, making every night's rest comfortable.",
@@ -246,11 +246,11 @@ export const productList = {
         }
         ],
         "images": ["ambition1.png", "ambition2.png", "ambition3.png", "ambition4.png"],
-        "footerImage":"ambition_footer.png",
+        "footerImage":"NA",
       },
       {
         "video":"DuraSoft.mp4",
-        "image": "durasoft.png",
+        "image": "mattress2.png",
         "headerTitle": "Durasoft Mattress",
         "shortDescriptionLine1":"Crafted with high-density Vital Bond technology, ",
         "shortDescriptionLine2":"this mattress guarantees long-lasting support.",
@@ -283,11 +283,11 @@ export const productList = {
         }
         ],
         "images": ["durasoft1.png", "durasoft2.png", "durasoft3.png", "durasoft4.png"],
-        "footerImage":"durasoft_footer.png",
+        "footerImage":"NA",
       },
       {
         "video":"2in1.mp4",
-        "image": "orthopeadic_mattress_acetate_4_3.png",
+        "image": "mattress3.png",
         "headerTitle": "2 in 1 Mattress",
         "shortDescriptionLine1":"Designed for proper posture and equipped with",
         "shortDescriptionLine2":"advanced pressure-relieving technology",
@@ -320,11 +320,11 @@ export const productList = {
         }
         ],
         "images": ["twoinone1.png", "twoinone2.png", "twoinone3.png", "twoinone4.png"],
-        "footerImage":"twoinone_footer.png",
+        "footerImage":"NA",
       },
       {
         "video":"2in1+.mp4",
-        "image": "orthopeadic_mattress_acetate_4_4.png",
+        "image": "mattress4.png",
         "headerTitle": "2 in 1 Plus Mattress",
         "shortDescriptionLine1":"Enjoy the perfect balance of resilience and",
         "shortDescriptionLine2":"plushness as you sink into this soft mattress",
@@ -357,17 +357,17 @@ export const productList = {
         }
         ],
         "images": ["twoinoneplus1.png", "twoinoneplus2.png", "twoinoneplus3.png", "twoinoneplus4.png"],
-        "footerImage":"twoinoneplus_footer.png",
+        "footerImage":"NA",
       },
       {
         "video":"2in1+ Lux.mp4",
-        "image": "orthopeadic_mattress_acetate_4_5.png",
+        "image": "mattress5.png",
         "headerTitle": "2 in 1 Plus Luxury Mattress",
         "shortDescriptionLine1":"Advanced pressure relief technology, it cradles",
         "shortDescriptionLine2":"your body, ensuring a restful night's sleep",
         "headerDescription": "2-in-1 Plus Luxury Mattress – where innovation meets luxury. Featuring a high-resilience (HR) foam layer, this mattress provides the perfect balance of support and comfort. With advanced pressure relief technology, it cradles your body, ensuring a restful night's sleep. Elevate your sleep experience with the 2-in-1 Plus Luxury Mattress for the ultimate in support and pressure relief.",
-        "detailTitle": "Ergonomically designed for seven zone body support with firm & resilient technology",
-        "detailDescription": "Experience unparalleled comfort and support with our hybrid mattress, meticulously crafted with a perfect blend of high density vital bond material for exceptional support and High resilience foam for optimal comfort. This innovation 3-zone mattress is designed to provide you with the ultimate sleeping experience, ensuring a perfect balance between support and luxury.",
+        "detailTitle": "A memory foam collection for Luxurious and most comfortable environment",
+        "detailDescription": "Introducing DURA Luxury by Durafit, a mattress designed for rejuvenating sleep. Featuring a blend of high density vital bond layer.",
         "features": [{
           "image": "img_frame_19_blue_gray_400_44x74.svg",
           "titleLine1": "Ultrasoft",
@@ -394,7 +394,44 @@ export const productList = {
         }
         ],
         "images": ["twolux1.png", "twolux2.png", "twolux3.png", "twolux4.png"],
-        "footerImage":"twolux_footer.png",
+        "footerImage":"NA",
+      },
+      {
+        "video":"2in1+ Lux.mp4",
+        "image": "mattress6.png",
+        "headerTitle": "Hybrid Mattress",
+        "shortDescriptionLine1":"Advanced pressure relief technology, it cradles",
+        "shortDescriptionLine2":"your body, ensuring a restful night's sleep",
+        "headerDescription": "Three-Zone Comfort Mattress – Discover affordable luxury with a breathable design that promotes a cooler, more comfortable sleep. This mattress features three distinct comfort zones that provide tailored support where you need it most, ensuring a relaxed and restorative night’s sleep. Enjoy the high-quality features of a premium mattress without the premium price.",
+        "detailTitle": "Ergonomically designed for seven zone body support with firm & resilient technology",
+        "detailDescription": "Experience unparalleled comfort and support with our hybrid mattress, meticulously crafted with a perfect blend of high density vital bond material for exceptional support and High resilience foam for optimal comfort. This innovation 3-zone mattress is designed to provide you with the ultimate sleeping experience, ensuring a perfect balance between support and luxury.",
+        "features": [{
+          "image": "spine.svg",
+          "titleLine1": "3 zone",
+          "titleLine2": "comfort"
+        }, {
+          "image": "img_frame_19_44x64.png",
+          "titleLine1": "Breathable",
+          "titleLine2": "Material"
+        },
+        {
+          "image": "contouring.svg",
+          "titleLine1": "Durable",
+          "titleLine2": ""
+        },
+        {
+          "image": "vector.svg",
+          "titleLine1": "Naturally",
+          "titleLine2": "hypoallergic"
+        },
+        {
+          "image": "pressure_relieve.svg",
+          "titleLine1": "Economic",
+          "titleLine2": "range"
+        }
+        ],
+        "images": ["hybrid1.png", "hybrid2.png", "hybrid3.png", "hybrid4.png"],
+        "footerImage":"NA",
       },
       
     ],
@@ -554,7 +591,7 @@ export const productList = {
     products: [
       {
         "video":"NA",
-        "image": "orthopeadic_pillow_acetate_4_1.png",
+        "image": "pillow1.png",
         "headerTitle": "Memory Pillow",
         "headerDescription": "Experience personalized comfort with our Memory Foam Pillows. These pillows adapt to your unique shape, cradling your head and neck for unparalleled support and pressure relief. Enjoy a restful night's sleep with the perfect alignment and comfort provided by our memory foam pillows.",
         "shortDescriptionLine1":"Pillows that cradle your head and neck for",
@@ -585,7 +622,7 @@ export const productList = {
         "footerImage":"memory_pillow_footer.png",
       },
       {
-        "image": "orthopeadic_pillow_acetate_4_2.png",
+        "image": "pillow2.png",
         "headerTitle": "Latex Pillow",
         "headerDescription": "Discover the natural comfort of Latex Foam Pillows. Crafted from eco-friendly latex, these pillows offer resilient support that promotes proper spine alignment. Enjoy a cool and refreshing night's sleep, and rest assured knowing that our latex pillows are built to last, providing you with comfortable support for years to come.",
         "shortDescriptionLine1":"Crafted from eco-friendly latex, these pillows ",
