@@ -9,7 +9,7 @@ const SideNavBar = ({ isOpen, onClose }) => {
         { name: 'Cushioning', route: 'cushioning' },
         { name: 'About Us', route: 'aboutus' },
         { name: 'Contact Us', route: 'contactus' },
-        { name: 'FAQs', route: '/' },
+        // { name: 'FAQs', route: '/' },
     ]
     return (
         <div class="hidden md:block">

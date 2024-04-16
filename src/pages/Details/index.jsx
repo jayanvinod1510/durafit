@@ -202,11 +202,15 @@ export default function DetailPage() {
           <ReactPlayer url = {`videos/${data.video}`} playing={videoIsVisible} width='100%' height='100%'></ReactPlayer>
           </div>
           )}
-          <Img
-            src={`images/${data.footerImage}`}
-            alt="upinthe_three"
-            className="h-[494px] w-full md:h-auto object-cover"
-          />
+          {data.footerImage == 'NA' ? (
+            <div></div>
+          ) : (
+              <Img
+              src={`images/${data.footerImage}`}
+              alt="upinthe_three"
+              className="h-[494px] w-full md:h-auto object-cover"
+            />
+          )}
           <Footer className="px-14 py-[69px] md:p-5 bg-blue-50" />
         </div>
       </div>

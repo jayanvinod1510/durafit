@@ -45,7 +45,7 @@ export default function LandingpagePage() {
                 <br class="md:hidden"></br>
                 <div className="h-[674px] md:h-auto relative">
                   <Img
-                    src="images/img_up_in_the_clouds_1024x1024.png"
+                    src="images/landing_page_main.png"
                     alt="upinthe_one"
                     className="h-[674px] md:h-[750px] w-full object-cover"
                   />
@@ -129,9 +129,9 @@ export default function LandingpagePage() {
 
         {/* Section 1 */}
         <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 bg-[url(/public/images/img_section_9.png)] md:bg-center bg-cover bg-no-repeat">
-          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
-            <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[410px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{ "float": "right" }}>
-              <div ref={eleganceRef} className="flex flex-col w-full gap-2.5">
+          <Animated style={{"width": "100%","animation-delay":innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
+            <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[427px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{"float":"right"}}>
+              <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="!text-blue_gray-100 leading-[60px]">
                   <p class="md:text-[25px]  md:!text-blue_gray-800">
                     Elegance in Every
@@ -141,9 +141,9 @@ export default function LandingpagePage() {
                 </Text>
                 <Text as="p" className="w-[98%] md:w-full !text-blue_gray-100 md:!text-gray-900_90">
                   <>
-                    Experience the epitome of comfort and style with our exclusive <br />
-                    Black Edition collection. Crafted with precision and sophistication,
-                    <br />
+                    Experience the epitome of comfort and style with our exclusive&nbsp;<br class = "md:hidden"/>
+                    Black Edition collection. Crafted with precision and sophistication,&nbsp;
+                    <br class = "md:hidden"/>
                     these premium mattresses redefine your sleep experience
                   </>
                 </Text>
@@ -159,9 +159,9 @@ export default function LandingpagePage() {
 
         {/* Section 2 */}
         <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] bg-[url(/public/images/img_section_12.png)] md:bg-center bg-cover bg-no-repeat">
-          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
-            <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[380px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
-              <div ref={mattressRef} className="flex flex-col w-full gap-2.5">
+          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
+            <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[435px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
+              <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="w-[93%] md:w-full !text-blue_gray-800 leading-[60px]">
                   <p class="md:text-[25px]  md:!text-blue_gray-800">
                     Selling Sleep,
@@ -171,9 +171,9 @@ export default function LandingpagePage() {
                 </Text>
                 <Text as="p" className="!text-blue_gray-800 pt-5 md:pt-0 md:!text-gray-900_90">
                   <>
-                    Discover a world of tranquility and restful nights with <br />
-                    our exceptional mattress collection. Engineered for <br />
-                    supreme comfort, our mattresses ensure you wake <br />
+                    Discover a world of tranquility and restful nights with <br class = "md:hidden"/>
+                    our exceptional mattress collection. Engineered for <br class = "md:hidden"/>
+                    supreme comfort, our mattresses ensure you wake <br class = "md:hidden"/>
                     up rejuvenated every morning
                   </>
                 </Text>
@@ -189,13 +189,13 @@ export default function LandingpagePage() {
 
         {/* Section 3 */}
         <div className="flex justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:p-0 rotate-[0deg] bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat" style={{
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          height: '100vh', // Set the height to the full viewport height
-        }}>
-          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
-            <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[609px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{ "float": "right" }}>
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        height: '100vh', // Set the height to the full viewport height
+      }}>
+          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
+            <div className="flex flex-col items-start w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[633px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{"float":"right"}}>
               <div className="self-stretch">
                 <div ref={pillowRef} className="flex flex-col gap-2.5">
                   <Text size="6xl" as="p" className="w-[66%] md:w-full !text-blue_gray-800 leading-[60px]">
@@ -206,8 +206,8 @@ export default function LandingpagePage() {
                   </Text>
                   <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
                     <>
-                      Experience the softest embrace for your head and neck with <br />
-                      our pillow collection. Designed for ultimate relaxation, our <br />
+                      Experience the softest embrace for your head and neck with <br class = "md:hidden"/>
+                      our pillow collection. Designed for ultimate relaxation, our <br class = "md:hidden"/>
                       pillow provide the perfect support for a heavenly night&#39;s sleep
                     </>
                   </Text>
@@ -223,27 +223,27 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 4 */}
-        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/img_section_13.png)]  md:bg-center bg-cover bg-no-repeat">
-          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
-            <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[400px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
-              <div ref={sofaRef} className="flex flex-col w-full gap-2.5">
-                <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
-                  <p class="md:text-[25px]  md:!text-blue_gray-800">
-                    Sofas and Chairs, <br />
-                    Reimagined Comfort
-                  </p>
-                </Text>
-                <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
-                  <>
-                    Upgrade your lounging experience with our furniture cushionings <br />
-                    collection. Transform your sofas and chairs into cozy havens of <br />
-                    comfort, enhancing your relaxation time at home
-                  </>
-                </Text>
-              </div>
-
+        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/landing_page_sofa.png)]  md:bg-center bg-cover bg-no-repeat">
+          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
+            <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[430px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
+                <div ref = {sofaRef} className="flex flex-col w-full gap-2.5">
+                  <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
+                    <p class = "md:text-[25px]  md:!text-blue_gray-800">
+                      Sofas and Chairs, <br />
+                      Reimagined Comfort
+                    </p>
+                  </Text>
+                  <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
+                    <>
+                      Upgrade your lounging experience with our furniture cushionings <br class = "md:hidden"/>
+                      collection. Transform your sofas and chairs into cozy havens of <br class = "md:hidden"/>
+                      comfort, enhancing your relaxation time at home
+                    </>
+                  </Text>
+                </div>
+              
             </div>
-            <a href="#" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:pb-5">
+            <a href="#" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:backdrop-opacity-0 md:pb-5">
               <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px] mt-[15px] md:mt-0 md:mb-0 md:w-full">
                 Explore more
               </Button>
