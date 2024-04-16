@@ -180,7 +180,7 @@ export default function LandingpagePage() {
               </div>
             </div>
             <a href="/mattress" className="opacity-0.8 md:px-5 md:bg-gray-50 md:pb-5">
-              <Button shape="round" className="mb-[137px] sm:px-5 mt-[15px] font-medium min-w-[191px] md:mb-0 md:w-full">
+              <Button shape="round" className="mb-[137px] sm:px-5 mt-[15px] md:mt-0 font-medium min-w-[191px] md:mb-0 md:w-full">
                 Explore more
               </Button>
             </a>
@@ -244,7 +244,7 @@ export default function LandingpagePage() {
 
             </div>
             <a href="#" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:pb-5">
-              <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px] mt-[15px] md:mb-0 md:w-full">
+              <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px] mt-[15px] md:mt-0 md:mb-0 md:w-full">
                 Explore more
               </Button>
             </a>
