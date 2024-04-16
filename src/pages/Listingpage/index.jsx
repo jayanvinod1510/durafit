@@ -190,10 +190,10 @@ export default function ListingpagePage({ productType }) {
 
         </div>
         <div className="mt-[50px] px-[130px] md:px-0">
-          <div className="flex flex-col items-center w-full gap-[31px] py-[78px] mx-auto md:p-5 md:py-5 bg-blue_gray-800 max-w-[1180px] rounded-[5px]">
+          <div className="flex flex-col items-center w-full gap-[31px] py-[78px] mx-auto md:p-5 md:py-5 bg-blue_gray-800 max-w-[1180px] lg:rounded-[5px]">
             <div className="flex self-stretch justify-center px-[100px] md:px-0">
               <div className="flex">
-                <Text size="6xl" as="p" className="!text-deep_orange-400 capitalize !font-medium md:!text-[28px] md:leading-normal">
+                <Text size="6xl" as="p" className="!text-deep_orange-400 capitalize !font-medium md:leading-normal">
                   Why Choose Durafit {data.productType}
                 </Text>
               </div>
