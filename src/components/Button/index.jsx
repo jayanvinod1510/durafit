@@ -7,7 +7,7 @@ const shapes = {
 const variants = {
   outline: {
     deep_orange_300_deep_orange_400_01:
-      "border border-solid deep_orange_300_deep_orange_400_01_border text-blue_gray-800",
+      "border border-solid border-deep_orange-300 text-blue_gray-800",
   },
   fill: {
     deep_orange_300: "bg-deep_orange-300 text-blue_gray-800",

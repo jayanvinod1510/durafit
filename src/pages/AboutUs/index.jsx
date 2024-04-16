@@ -155,8 +155,8 @@ export default function AboutUsPage() {
             </div>
           </div>
           <div className="py-[70px] md:py-5">
-          <Marquee style={{"text-align":"center"}} direction = "right">
-              <div className="flex md:flex-row justify-between items-center gap-[80px] md:px-5">
+          <Marquee style={{"text-align":"center"}} direction = "right" autoFill={true}>
+              <div className="flex md:flex-row justify-between items-center gap-[80px] mx-[40px] md:px-5">
                 
                 <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
                   <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />
