@@ -63,7 +63,7 @@ export default function LandingpagePage() {
         </div>
 
         <div className="py-[70px] md:py-5">
-          <Marquee style={{ "text-align": "center" }} direction="right" autoFill={true}>
+          <Marquee style={{ "text-align": "center", "z-index":0}} direction="right" autoFill={true}>
             <div className="flex md:flex-row justify-between items-center gap-[80px] mx-[40px] md:px-5">
 
               <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
@@ -128,7 +128,7 @@ export default function LandingpagePage() {
 
 
         {/* Section 1 */}
-        <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 bg-[url(/public/images/img_section_9.png)] md:bg-center bg-cover bg-no-repeat">
+        <div className="flex flex-col items-end justify-center h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 bg-[url(/public/images/img_section_9.png)] md:bg-center bg-cover bg-no-repeat ">
           <Animated style={{"width": "100%","animation-delay":innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
             <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[427px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{"float":"right"}}>
               <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
@@ -158,7 +158,7 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 2 */}
-        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] bg-[url(/public/images/img_section_12.png)] md:bg-center bg-cover bg-no-repeat">
+        <div className="flex flex-col items-start justify-center h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] bg-[url(/public/images/img_section_12.png)] md:bg-center bg-cover bg-no-repeat ">
           <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
             <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[435px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0">
               <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
