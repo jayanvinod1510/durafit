@@ -47,14 +47,12 @@ export default function ListingpagePage({ productType }) {
   };
 
   const handleMouseEnter = (index) => {
-    console.log("index", index)
     const newHoverState = [...isHovered];
     newHoverState[index] = true;
     setIsHovered(newHoverState);
   };
 
   const handleMouseLeave = (index) => {
-    console.log("leave index", index)
     const newHoverState = [...isHovered];
     newHoverState[index] = false;
     setIsHovered(newHoverState);

@@ -393,7 +393,7 @@ export const productList = {
           "titleLine2": "technology"
         }
         ],
-        "images": ["twolux1.png", "twolux2.png", "twolux3.png", "twolux4.png"],
+        "images": ["twolux1.png", "twolux2.png"],
         "footerImage":"NA",
       },
       {

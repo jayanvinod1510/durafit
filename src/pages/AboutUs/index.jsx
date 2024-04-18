@@ -24,8 +24,6 @@ export default function AboutUsPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log(videoIsVisible)
-  console.log("innerWidth : ",innerWidth)
   
   return (
     <>
@@ -88,7 +86,7 @@ export default function AboutUsPage() {
                           </Text>
                           </Animated>
                         </div>
-                        <Animated style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeInUp" isVisible={titleIsVisible}>
+                        <Animated style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeInUp" isVisible={innerWidth < 768? true : titleIsVisible}>
                         <Text as="p" style={{"width":"100%"}} className="w-[81%] md:w-full !text-blue_gray-800">
                           <span className="text-indigo-400">
                             <>

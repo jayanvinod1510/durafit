@@ -44,6 +44,8 @@ export default function DetailPage() {
                 </div>
               </div>
             </div>
+            <br class = " hidden md:block"/>
+            <br class = " hidden md:block"/>
             <div className="flex md:flex-col justify-end items-start w-full pl-14 pr-[110px] gap-[39px] bottom-[0.00px] right-0 left-0 py-[110px] m-auto md:p-5 bg-white-A700 absolute md:relative">
               <div className="w-[54%] md:w-full">
                 <div className="flex flex-col items-start gap-5">

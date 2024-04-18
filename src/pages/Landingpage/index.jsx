@@ -27,7 +27,6 @@ export default function LandingpagePage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log("innerWidth : ", innerWidth)
   return (
     <>
       <Helmet>

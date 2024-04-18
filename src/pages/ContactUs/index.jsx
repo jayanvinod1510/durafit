@@ -19,7 +19,6 @@ export default function ContactUsPage() {
   const [nameErrorMessage, setNameErrorMessage] = useState("");
   const [isLoading, setisLoading] = useState(false);
   if (params.get('product')) {
-    console.log(params.get('product'))
     message = "I am interested to know more about " + params.get('product')
   }
   const { ref: videoRef, inView: videoIsVisible } = useInView();
@@ -28,12 +27,9 @@ export default function ContactUsPage() {
     setisLoading(true)
     var error = false
     e.preventDefault();
-    console.log("name", form.current.name.value)
-    console.log("contact", form.current.contact.value)
 
     if (!form.current.name.value) {
       setNameErrorMessage("Please Enter Name")
-      console.log("entered name not", nameErrorMessage)
       error = true
     } else {
       setNameErrorMessage("")
@@ -42,7 +38,6 @@ export default function ContactUsPage() {
 
     if (!form.current.contact.value) {
       setContactErrorMessage("Please Enter Contact Number")
-      console.log("entered contact not", contactErrorMessage)
       error = true
     } else {
       if (form.current.contact.value.length != 10) {
