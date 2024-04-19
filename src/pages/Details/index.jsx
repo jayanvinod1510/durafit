@@ -31,7 +31,7 @@ export default function DetailPage() {
       </Helmet>
       <div className="w-full bg-gray-100">
         <div>
-          <div className="h-[1030px] md:h-[900px] relative">
+          <div className="h-[1030px] md:h-full relative">
             <div className="w-full top-[0.00px] right-0 left-0 m-auto absolute">
               <div>
                 <div>
@@ -129,10 +129,10 @@ export default function DetailPage() {
               {data.detailDescription}
             </Text>
           </div>
-          <div className="flex sm:flex-row sm:grid sm:grid-cols-3 justify-between items-center mt-2.5 gap-5 p-[70px] md:p-5">
+          <div className="flex sm:flex-row sm:flex-wrap justify-between sm:justify-center items-center mt-2.5 sm:mt-0 gap-y-5 p-[70px] md:p-5 w-full">
             {data.features.map((feature, i) => (
 
-              <div className={`flex flex-col items-center w-[6%] sm:w-full  ${i === 0 ? "md:ml-0 ml-[200px]" : ""}`}>
+              <div className={`flex flex-col items-center  w-[6%] ${data.features.length%2==0?"sm:w-1/2":"sm:w-1/3"} ${i === 0 ? "md:ml-0 ml-[200px]" : ""} ${i === (data.features.length -1) ? "md:mr-0 mr-[200px]" : ""}`}>
                 <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] sm:w-2/3 object-cover" />
                 <a href="#" className="opacity-0.8 leading-6">
                   <Text as="p" className="!text-blue_gray-800_a2 text-center md:!text-[13px]">
@@ -195,7 +195,7 @@ export default function DetailPage() {
               //     </Text>
               //   </a>
               // </div>
-            ))},
+            ))}
           </div>
           {data.video == 'NA' ? (
             <div></div>

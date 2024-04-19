@@ -17,7 +17,7 @@ const sizes = {
   md: "h-[132px] px-[50px]",
   lg: "h-[147px] px-14",
   xs: "h-[48px] px-[30px] text-base",
-  sm: "h-[54px] px-[30px] text-xl",
+  sm: "h-[54px] px-[30px] text-xl md:text-lg",
 };
 const fontSizes = {
   xl: "text-xl",

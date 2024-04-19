@@ -1,4 +1,5 @@
 import React from "react";
+import {Animated} from "react-animated-css";
 
 const SideNavBar = ({ isOpen, onClose }) => {
     const navigationItems = [
@@ -12,6 +13,8 @@ const SideNavBar = ({ isOpen, onClose }) => {
         // { name: 'FAQs', route: '/' },
     ]
     return (
+        <Animated style={{"width": "100%","animation-delay":"300ms"}} animationIn="slideIn" animationOut="slideOut" isVisible={isOpen}>
+        {/* <Animated animationIn="slideIn"  animationOut="slideOut" animationInDuration={5000} animationOutDuration={7000} animationInDelay={7000} isVisible={isOpen}> */}
         <div class="hidden md:block">
             {/* Side Navigation Bar */}
             <div
@@ -65,6 +68,7 @@ const SideNavBar = ({ isOpen, onClose }) => {
                 </nav>
             </div>
         </div>
+        </Animated>
     );
 };
 

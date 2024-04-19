@@ -10,7 +10,7 @@ export default function Footer({ ...props }) {
             <Img src="images/img_asset_2_1.png" alt="asset2one_one" className="w-[14%] sm:w-1/3 object-cover" />
             <div className="flex md:hidden">
               <div className="flex gap-5">
-                <Text size="md" as="p" className="self-start !text-gray-900 text-right">
+                <Text size="md" as="p" className="self-start !text-gray-900 text-right md:text-left">
                   Send us email at:
                 </Text>
                 <div className="flex self-end">

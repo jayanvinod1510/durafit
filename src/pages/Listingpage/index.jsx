@@ -96,7 +96,7 @@ export default function ListingpagePage({ productType }) {
             <Text
               size="6xl"
               as="p"
-              className="w-[64%] md:w-full mt-[70px] md:ml-0 !text-blue_gray-800 leading-[60px] md:mt-9 md:!text-[30px] md:leading-normal"
+              className="w-[64%] md:w-full mt-[70px] md:ml-0 !text-blue_gray-800 leading-[60px] md:mt-9 md:!text-[25px] md:leading-normal"
             >
               <>
                 {data.headerLine1}
