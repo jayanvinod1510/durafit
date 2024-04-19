@@ -43,7 +43,7 @@ export default function Footer({ ...props }) {
               </div>
               <div className="flex w-full md:items-start hidden md:block">
                 <div className="flex gap-5 md:gap-1">
-                  <Text size="md" as="p" className="self-start !text-gray-900 md:!text-gray-900_90 text-right">
+                  <Text size="md" as="p" className="self-start !text-gray-900 md:!text-gray-900_90 text-right md:text-left">
                     Send us email at:
                   </Text>
                   <div className="flex self-start">
