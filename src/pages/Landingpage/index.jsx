@@ -44,7 +44,7 @@ export default function LandingpagePage() {
                 <br class="md:hidden"></br>
                 <div className="h-[674px] md:h-auto relative">
                   <Img
-                    src="images/landing_page_main.png"
+                    src= {innerWidth < 768?"images/up-in-the-clouds_mobile.png":"images/landing_page_main.png"}
                     alt="upinthe_one"
                     className="h-[674px] md:h-[750px] w-full object-cover"
                   />
@@ -127,7 +127,8 @@ export default function LandingpagePage() {
 
 
         {/* Section 1 */}
-        <div className="flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 bg-[url(/public/images/img_section_9.png)] md:bg-center bg-cover bg-no-repeat ">
+        <div className={(innerWidth < 768 ?"bg-[url(/public/images/mattress_mobile_1.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat":"bg-[url(/public/images/img_section_9.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat")}
+        >
           <Animated style={{"width": "100%","animation-delay":innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
             <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[427px] md:p-5 md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.5)":"" }}>
               <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
@@ -157,7 +158,7 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 2 */}
-        <div className="flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] bg-[url(/public/images/img_section_12.png)] md:bg-center bg-cover bg-no-repeat ">
+        <div className={innerWidth < 768 ?"bg-[url(/public/images/mattress_mobile_2.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat":"bg-[url(/public/images/img_section_12.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat"}>
           <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
             <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[435px] md:p-5 md:bg-gray-50" style={{backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.5)":""}} >
               <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
@@ -187,7 +188,7 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 3 */}
-        <div className="flex flex-col justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:h-[750px] md:p-0 gap-[30px] rotate-[0deg] bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat" style={{
+        <div className={ innerWidth<768?" bg-[url(/public/images/pillows_mobile_1.png)] flex flex-col justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:h-[750px] md:p-0 gap-[30px] rotate-[0deg] bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat":"flex flex-col justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:h-[750px] md:p-0 gap-[30px] rotate-[0deg]  bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat"} style={{
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -222,7 +223,7 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 4 */}
-        <div className="flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/landing_page_sofa.png)]  md:bg-center bg-cover bg-no-repeat">
+        <div className={innerWidth<768?"flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/furniture_mobile.png)]  md:bg-center bg-cover bg-no-repeat":"flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/landing_page_sofa.png)]  md:bg-center bg-cover bg-no-repeat"}>
           <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
             <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[430px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0"style={{backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.5)":"" }}>
                 <div ref = {sofaRef} className="flex flex-col w-full gap-2.5">
