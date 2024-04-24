@@ -153,7 +153,7 @@ export default function AboutUsPage() {
             </div>
           </div>
           <div className="py-[70px] md:py-5">
-          <Marquee style={{"text-align":"center"}} direction = "right" autoFill={true}>
+          <Marquee style={{"text-align":"center", "zIndex":0}} direction = "right" autoFill={true}>
               <div className="flex md:flex-row justify-between items-center gap-[80px] mx-[40px] md:px-5">
                 
                 <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
@@ -216,7 +216,7 @@ export default function AboutUsPage() {
             </Marquee>
           </div>
         </div>
-        <div className="h-fit w-full mx-auto md:p-5 md:px-5 relative max-w-[1799px]">
+        <div className="h-fit w-full mx-auto lg:p-5 lg:px-5 relative max-w-[1799px]">
           <div className="w-full h-fit left-0 bottom-0 right-0 top-0 pt-[50px] pb-[20px] md:py-5 bg-white-A700 relative" style={{"margin-top":"0px !important","margin-bottom":"0px !important"}}>
             <div className="flex justify-end pb-4 px-4 bg-white-A700">
               <div className="flex flex-col items-center w-[93%] md:w-full mr-[83px] gap-[10px] md:mr-0 sm:gap-[33px]">

@@ -222,7 +222,7 @@ export default function ContactUsPage() {
           </div>
         </div>
         <div className="flex md:flex-col justify-center items-center mt-[70px] gap-5 md:px-5">
-          <div className="flex md:flex-row sm:flex-col md:w-full gap-[70px] items-center justify-center">
+          <div className="flex md:flex-row md:flex-wrap  gap-[70px] md:gap-0 md:ml-0 items-center justify-center">
             <div className="flex flex-col items-center">
               <Img src="images/img_frame_19_gray_900_01.svg" alt="high_quality" className="h-[45px]" />
               <div className="flex flex-col items-center justify-center">
@@ -253,7 +253,7 @@ export default function ContactUsPage() {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center sm:w-full">
+            {/* <div className="flex flex-col items-center sm:w-full">
               <Img src="images/img_frame_19_2.svg" alt="image" className="h-[45px]" />
               <div className="flex flex-col">
                 <a href="#" className="opacity-0.8">
@@ -267,7 +267,7 @@ export default function ContactUsPage() {
                   </Text>
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-col items-center sm:w-full">
               <Img src="images/img_frame_19_3.svg" alt="image" className="h-[45px]" />
               <a href="#" className="opacity-0.8">
@@ -328,7 +328,7 @@ export default function ContactUsPage() {
               </div>
               <div className="flex w-full md:items-start hidden md:block">
                 <div className="flex gap-5 md:gap-1">
-                  <Text size="md" as="p" className="self-start !text-gray-900 md:!text-gray-900_90 text-right">
+                  <Text size="md" as="p" className="self-start !text-gray-900 md:!text-gray-900_90 text-right md:text-left">
                     Send us email at:
                   </Text>
                   <div className="flex self-start">

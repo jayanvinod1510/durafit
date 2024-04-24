@@ -282,7 +282,7 @@ export default function LandingpagePage() {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center md:w-1/2">
+            {/* <div className="flex flex-col items-center md:w-1/2">
               <Img src="images/img_frame_19_45x65.svg" alt="image" className="h-[45px]" />
               <div className="flex flex-col">
                 <a href="#" className="opacity-0.8">
@@ -296,7 +296,7 @@ export default function LandingpagePage() {
                   </Text>
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-col items-center justify-center md:w-1/2 md:mr-0">
               <Img src="images/img_frame_19_1.svg" alt="image_five" className="h-[45px]" />
               <a href="#" className="opacity-0.8">
