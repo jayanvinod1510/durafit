@@ -131,7 +131,7 @@ export default function ContactUsPage() {
                     </>
                   </Text>
                 </div>
-                <div className="flex flex-col w-[79%] md:w-full gap-2.5">
+                <div className="flex flex-col w-[85%] md:w-full gap-2.5">
                   <div className="flex items-center gap-2.5">
                     <Img
                       src="images/img_vector_black_900.svg"
@@ -299,9 +299,9 @@ export default function ContactUsPage() {
                   Send us email at:
                 </Text>
                 <div className="flex self-end">
-                  <a href="example@example.com" target="_blank" rel="noreferrer">
+                  <a href="durafitindia@gmail.com" target="_blank" rel="noreferrer">
                     <Text size="md" as="p" className="!text-deep_orange-400_01 text-center !font-medium">
-                      example@example.com
+                      durafitindia@gmail.com
                     </Text>
                   </a>
                 </div>
@@ -319,11 +319,10 @@ export default function ContactUsPage() {
                     <br />
                     Ghatgate Jaipur, Rajasthan - 302004
                     <br />
-                    GSTIN Number : 08AAFCD4117M1ZJ
                   </>
                 </Text>
                 <Text size="md" as="p" className="opacity-0.6">
-                  +91 0000000000
+                  +91 89492 70403
                 </Text>
               </div>
               <div className="flex w-full md:items-start hidden md:block">
@@ -332,9 +331,9 @@ export default function ContactUsPage() {
                     Send us email at:
                   </Text>
                   <div className="flex self-start">
-                    <a href="example@example.com" target="_blank" rel="noreferrer">
+                    <a href="durafitindia@gmail.com" target="_blank" rel="noreferrer">
                       <Text size="md" as="p" className="!text-deep_orange-400_01 text-center !font-medium">
-                        example@example.com
+                        durafitindia@gmail.com
                       </Text>
                     </a>
                   </div>

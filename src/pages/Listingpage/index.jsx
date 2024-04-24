@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { Button, Text, Img, Input } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { productList } from "data/mockData";
 import { useNavigate } from "react-router-dom";
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
 import { Animated } from "react-animated-css";
 import { useInView } from "react-intersection-observer";
 
@@ -25,6 +27,7 @@ import { ItemCard } from "components/ItemCard";
 
 export default function ListingpagePage({ productType }) {
   const data = productList[productType]
+  const form = useRef();
   const [isHovered, setIsHovered] = useState(Array(data.products.length).fill(false));
   let navigate = useNavigate();
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -66,7 +69,40 @@ export default function ListingpagePage({ productType }) {
   const { ref: reason2Ref, inView: reasons2Visible } = useInView();
   const { ref: reason3Ref, inView: reasons3Visible } = useInView();
   const signUpNowSuffix = <div className="flex justify-center items-center bg-deep_orange-300 border text-blue_gray-800 text-[20px] md:text-[15px] md:h-[35px] md:min-w-[100px] h-[54px] min-w-[137px] rounded-r-[10px] cursor-pointer"
-    onClick={() => { console.log("Send Email") }}
+    onClick={() => { 
+      console.log("Send Email") 
+      console.log(form.current.email.value)
+      emailjs
+      .sendForm('service_ttaemon', 'template_15z1wh9', form.current, {
+        publicKey: 'oJEkbcCZqa8ux2je1',
+      })
+      .then(
+        () => {
+          console.log("Subsription Applied Successfully !")
+          toast.success("Subsription Applied Successfully !", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            theme: "light"
+          });
+          form.current.reset()
+        },
+        (error) => {
+          toast.error("Error in sending enquiry !", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            theme: "light"
+          });
+        },
+      );
+    }}
   >
     Sign Up
   </div>;
@@ -311,8 +347,8 @@ export default function ListingpagePage({ productType }) {
         </div> */}
         <br/>
         <br/>
-        <div className="flex flex-col items-end justify-center md:justify-end h-[400px] md:h-[400px] pl-14 pr-[98px] gap-[30px] py-[98px] md:p-0 bg-[url(/public/images/img_frame_64.png)] bg-cover bg-no-repeat">
-          <div className="flex justify-end md:justify-between w-[40%] md:w-full mr-8 md:mr-0 md:px-5  md:bg-gray-50">
+        <div className="flex flex-col items-end justify-center md:justify-end h-[400px] md:h-[400px] pl-14 pr-[98px] gap-[30px] py-[98px] md:p-0 bg-[url(/public/images/img_frame_64.png)] bg-center bg-cover bg-no-repeat">
+          <div className="flex justify-end md:justify-between w-[40%] md:w-full mr-8 md:mr-0 md:px-5  md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(0px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.6)":"" }}>
             <div className="w-full">
               <Text size="4xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px] md:!text-[18px] drop-shadow-md md:text-center md:leading-normal md:pt-5"
                 style={{ filter: 'style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0.3rem 0.1rem);' }}
@@ -323,11 +359,12 @@ export default function ListingpagePage({ productType }) {
                   updates on our new products!
                 </>
               </Text>
-              <div className="flex self-stretch justify-end md:justify-center py-[30px] md:py-[20px]">
+              <form ref={form} className="flex self-stretch justify-end md:justify-center py-[30px] md:py-[20px]">
                 <Input type="email" size="md" shape="round" style={{ "color": "#434343" }} name="email" placeholder={`Enter your email ID here...`} className="sm:px-5 min-w-[89%] md:!pr-0 md:h-[35px] md:!text-[15px] border-none"
                   suffix={signUpNowSuffix}
                 />
-              </div>
+                 <ToastContainer />
+              </form>
             </div>
           </div>
           {/* <Button shape="round" className="mr-8 md:mr-0 sm:px-5 font-medium min-w-[191px]">
