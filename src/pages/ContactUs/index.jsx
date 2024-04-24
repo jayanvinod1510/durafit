@@ -222,7 +222,7 @@ export default function ContactUsPage() {
           </div>
         </div>
         <div className="flex md:flex-col justify-center items-center mt-[70px] gap-5 md:px-5">
-          <div className="flex md:flex-row md:flex-wrap  gap-[70px] md:gap-0 md:ml-0 items-center justify-center">
+          <div className="flex md:flex-row md:flex-wrap  gap-[70px] md:gap-[20px]  md:ml-0 items-center justify-center">
             <div className="flex flex-col items-center">
               <Img src="images/img_frame_19_gray_900_01.svg" alt="high_quality" className="h-[45px]" />
               <div className="flex flex-col items-center justify-center">
