@@ -245,7 +245,7 @@ export const productList = {
           "titleLine2": "Luxury"
         }
         ],
-        "images": ["ambition1.png", "ambition2.png", "ambition3.png", "ambition4.png"],
+        "images": ["ambition4.png", "ambition1.png", "ambition2.png", "ambition3.png"],
         "footerImage":"NA",
       },
       {
@@ -282,7 +282,7 @@ export const productList = {
           "titleLine2": "Firm Core"
         }
         ],
-        "images": ["durasoft1.png", "durasoft2.png", "durasoft3.png", "durasoft4.png"],
+        "images": ["durasoft4.png","durasoft1.png", "durasoft2.png", "durasoft3.png"],
         "footerImage":"NA",
       },
       {

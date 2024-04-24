@@ -318,10 +318,10 @@ export default function LandingpagePage() {
             </Heading>
             <div className="flex flex-col sm:self-stretch gap-5 flex-1">
               <div className="flex items-center w-[44%] md:w-full gap-5">
-                <div className="self-start h-[50px] w-[50px] bg-blue_gray-100 rounded-[25px]" />
+                {/* <div className="self-start h-[50px] w-[50px] bg-blue_gray-100 rounded-[25px]" /> */}
                 <div className="flex flex-col items-start gap-[7px] flex-1">
                   <Heading size="xs" as="h2" className="!text-gray-900 tracking-[-1.00px]">
-                    Anonymous
+                    Great value and support
                   </Heading>
                   <RatingBar
                     value={4}
@@ -335,9 +335,7 @@ export default function LandingpagePage() {
               </div>
               <div>
                 <Text as="p" className="!text-indigo-400 leading-[22px]">
-                  Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem
-                  ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem Lorem ipsum lorem ipsum Lorem ipsum lorem
-                  ipsum Lorem ipsum lorem{" "}
+                Great value for the price. The mattress arrived on time and was easy to set up. It's been a month, and I've never slept better.{" "}
                 </Text>
               </div>
             </div>
@@ -346,10 +344,10 @@ export default function LandingpagePage() {
             <div className="flex flex-col sm:self-stretch gap-px flex-1">
               <div className="flex flex-col gap-5 flex-1">
                 <div className="flex items-center w-[44%] md:w-full gap-5">
-                  <div className="self-start h-[50px] w-[50px] bg-blue_gray-100 rounded-[25px]" />
+                  {/* <div className="self-start h-[50px] w-[50px] bg-blue_gray-100 rounded-[25px]" /> */}
                   <div className="flex flex-col items-start gap-[7px] flex-1">
                     <Heading size="xs" as="h2" className="!text-gray-900 tracking-[-1.00px]">
-                      Anonymous
+                      Cool and Comfy
                     </Heading>
                     <RatingBar
                       value={4}
@@ -363,9 +361,7 @@ export default function LandingpagePage() {
                 </div>
                 <div>
                   <Text as="p" className="!text-indigo-400 leading-[22px]">
-                    Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
-                    Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem Lorem ipsum lorem ipsum Lorem
-                    ipsum lorem ipsum Lorem ipsum lorem{" "}
+                  The cooling technology in this mattress is impressive. It keeps me comfortable all night long, even in warm weather.{" "}
                   </Text>
                 </div>
               </div>
