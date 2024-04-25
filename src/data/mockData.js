@@ -397,7 +397,7 @@ export const productList = {
         "footerImage":"NA",
       },
       {
-        "video":"2in1+ Lux.mp4",
+        "video":"Hybrid.mp4",
         "image": "mattress6.png",
         "headerTitle": "Hybrid Mattress",
         "shortDescriptionLine1":"Advanced pressure relief technology, it cradles",

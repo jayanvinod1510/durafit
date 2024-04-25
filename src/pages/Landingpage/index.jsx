@@ -243,7 +243,7 @@ export default function LandingpagePage() {
                 </div>
               
             </div>
-            <a href="#" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:backdrop-opacity-0 md:pb-5">
+            <a href="/cushioning" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:backdrop-opacity-0 md:pb-5">
               <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px] mt-[15px] md:mt-0 md:mb-0 md:w-full">
                 Explore more
               </Button>
@@ -312,8 +312,8 @@ export default function LandingpagePage() {
             </div>
           </div>
         </div>
-        <div className="flex md:flex-col pl-[78px] pr-14 gap-[100px] py-[78px] md:p-5">
-          <div className="flex sm:flex-col justify-center items-start w-[44%] md:w-full mb-[57px] ml-[39px] gap-[30px] md:mb-0 md:ml-0">
+        <div className="flex md:flex-col pl-[78px] pr-14 gap-[100px] md:py-[78px] pt-[78px] md:p-5">
+          <div className="flex sm:flex-col justify-center items-start w-[44%] md:w-full md:mb-[57px] ml-[39px] gap-[30px] md:mb-0 md:ml-0">
             <Heading as="h1" className="mb-6 tracking-[-1.00px]">
               “
             </Heading>
