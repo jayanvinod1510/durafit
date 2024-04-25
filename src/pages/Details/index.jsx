@@ -107,7 +107,7 @@ export default function DetailPage() {
                       </Animated>
                     </div>
                     <Animated style={{"width": "100%","animation-delay": "400ms"}} animationIn="fadeInUp">
-                      <Text as="p" className="w-[93%] md:w-full !text-blue_gray-400 text-justify">
+                      <Text as="p" className="w-[93%] md:w-full !text-blue_gray-400 text-justify sm:text-left">
                         {data.headerDescription}
                       </Text>
                     </Animated>
@@ -129,11 +129,11 @@ export default function DetailPage() {
               {data.detailDescription}
             </Text>
           </div>
-          <div className="flex sm:flex-row sm:flex-wrap justify-between sm:justify-center items-center mt-2.5 sm:mt-0 gap-y-5 p-[70px] md:p-5 w-full">
+          <div className="flex sm:flex-row sm:flex-wrap justify-between sm:justify-center items-center mt-2.5 sm:mt-0 gap-y-5 p-[70px] md:px-6 md:py-10 w-full">
             {data.features.map((feature, i) => (
 
               <div className={`flex flex-col items-center  w-[6%] ${data.features.length%2==0?"sm:w-1/2":"sm:w-1/3"} ${i === 0 ? "md:ml-0 ml-[200px]" : ""} ${i === (data.features.length -1) ? "md:mr-0 mr-[200px]" : ""}`}>
-                <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] sm:w-2/3 object-cover" />
+                <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] sm:w-[56%] object-cover" />
                 <a href="#" className="opacity-0.8 leading-6">
                   <Text as="p" className="!text-blue_gray-800_a2 text-center md:!text-[13px]">
                     <>

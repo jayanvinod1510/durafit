@@ -130,7 +130,7 @@ export default function LandingpagePage() {
         <div className={(innerWidth < 768 ?"bg-[url(/public/images/mattress_mobile_1.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat":"bg-[url(/public/images/img_section_9.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat")}
         >
           <Animated style={{"width": "100%","animation-delay":innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
-            <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[427px] md:p-5 md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.5)":"" }}>
+            <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[427px] md:p-5 md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":"" }}>
               <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="!text-blue_gray-100 leading-[60px]">
                   <p class="md:text-[25px]  md:!text-blue_gray-800">
@@ -160,7 +160,7 @@ export default function LandingpagePage() {
         {/* Section 2 */}
         <div className={innerWidth < 768 ?"bg-[url(/public/images/mattress_mobile_2.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat":"bg-[url(/public/images/img_section_12.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat"}>
           <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
-            <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[435px] md:p-5 md:bg-gray-50" style={{backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.5)":""}} >
+            <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[435px] md:p-5 md:bg-gray-50" style={{backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":""}} >
               <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="w-[93%] md:w-full !text-blue_gray-800 leading-[60px]">
                   <p class="md:text-[25px]  md:!text-blue_gray-800">
@@ -195,7 +195,7 @@ export default function LandingpagePage() {
         height: '100vh', // Set the height to the full viewport height
       }}>
           <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
-            <div className="flex flex-col items-start md:justify-end w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[427px] md:my-0 md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{ float: "right", backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.5)":"" }}>
+            <div className="flex flex-col items-start md:justify-end w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[427px] md:my-0 md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{ float: "right", backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":"" }}>
               <div className="self-stretch">
                 <div ref={pillowRef} className="flex flex-col gap-2.5">
                   <Text size="6xl" as="p" className="w-[66%] md:w-full !text-blue_gray-800 leading-[60px]">
@@ -225,7 +225,7 @@ export default function LandingpagePage() {
         {/* Section 4 */}
         <div className={innerWidth<768?"flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/furniture_mobile.png)]  md:bg-center bg-cover bg-no-repeat":"flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/landing_page_sofa.png)]  md:bg-center bg-cover bg-no-repeat"}>
           <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
-            <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[430px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0"style={{backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.5)":"" }}>
+            <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[430px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0"style={{backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":"" }}>
                 <div ref = {sofaRef} className="flex flex-col w-full gap-2.5">
                   <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
                     <p class = "md:text-[25px]  md:!text-blue_gray-800">
@@ -282,7 +282,7 @@ export default function LandingpagePage() {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col items-center md:w-1/2">
+            {/* <div className="flex flex-col items-center md:w-1/2">
               <Img src="images/img_frame_19_45x65.svg" alt="image" className="h-[45px]" />
               <div className="flex flex-col">
                 <a href="#" className="opacity-0.8">
@@ -296,7 +296,7 @@ export default function LandingpagePage() {
                   </Text>
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-col items-center justify-center md:w-1/2 md:mr-0">
               <Img src="images/img_frame_19_1.svg" alt="image_five" className="h-[45px]" />
               <a href="#" className="opacity-0.8">
