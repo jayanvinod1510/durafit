@@ -133,7 +133,7 @@ export default function DetailPage() {
             {data.features.map((feature, i) => (
 
               <div className={`flex flex-col items-center  w-[6%] ${data.features.length%2==0?"sm:w-1/2":"sm:w-1/3"} ${i === 0 ? "md:ml-0 ml-[200px]" : ""} ${i === (data.features.length -1) ? "md:mr-0 mr-[200px]" : ""}`}>
-                <Img src={`images/${feature.image}`} alt={`image_${i}`} className="w-[56%] sm:w-[56%] object-cover" />
+                <Img src={`images/${feature.image}`} alt={`image_${i}`} className={data.features.length%2==0?"w-[56%] sm:w-[40%] object-cover":"w-[56%] sm:w-[56%] object-cover"}/>
                 <a href="#" className="opacity-0.8 leading-6">
                   <Text as="p" className="!text-blue_gray-800_a2 text-center md:!text-[13px]">
                     <>
