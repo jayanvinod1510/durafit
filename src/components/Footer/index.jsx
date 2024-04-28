@@ -116,7 +116,6 @@ export default function Footer({ ...props }) {
         </div>
         <div className="flex sm:flex-col justify-between items-center gap-5 md:gap-1">
           <Text size="md" as="p" className="self-end opacity-0.6 md:w-full">
-            Copyright @ sample 2023. All rights reserved.
           </Text>
           <div className="flex justify-between w-[22%] sm:w-full gap-5 md:gap-1 flex-wrap md:flex-col">
             <a href="#" className="self-start opacity-0.6">
