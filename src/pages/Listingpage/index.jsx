@@ -353,7 +353,7 @@ export default function ListingpagePage({ productType }) {
           <div className="flex justify-end md:justify-between w-[40%] md:w-full mr-8 md:mr-0 md:px-5  md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(0px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.6)":"" }}>
             <div className="w-full">
               <Text size="4xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px] md:!text-[18px] drop-shadow-md md:text-center md:leading-normal md:pt-5"
-                style={{ filter: 'style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0.3rem 0.1rem);' }}
+                // style={{ filter: 'style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0.3rem 0.1rem);' }}
               >
                 <>
                   Join the Durafit Club and get&nbsp;
