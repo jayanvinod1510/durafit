@@ -349,14 +349,14 @@ export default function ContactUsPage() {
                     </a>
                   </li>
                   <li>
-                    <a href="aboutus" className="opacity-0.6">
+                    <a href="#/aboutus" className="opacity-0.6">
                       <Text size="md" as="p">
                         About us
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="contactus" rel="noreferrer" className="opacity-0.6">
+                    <a href="#/contactus" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Contact
                       </Text>
@@ -367,28 +367,28 @@ export default function ContactUsPage() {
               <div className="flex flex-col md:hidden">
                 <ul className="flex flex-col self-start items-start gap-[15px]">
                   <li>
-                    <a href="blackedition" className="opacity-0.6">
+                    <a href="#/blackedition" className="opacity-0.6">
                       <Text size="md" as="p">
                         Black Edition
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="mattress" rel="noreferrer" className="opacity-0.6">
+                    <a href="#/mattress" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Mattress
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="pillows" rel="noreferrer" className="opacity-0.6">
+                    <a href="#/pillows" rel="noreferrer" className="opacity-0.6">
                       <Text size="md" as="p">
                         Pillow
                       </Text>
                     </a>
                   </li>
                   <li>
-                    <a href="cushioning" className="opacity-0.6">
+                    <a href="#/cushioning" className="opacity-0.6">
                       <Text size="md" as="p">
                         Furniture cushion
                       </Text>

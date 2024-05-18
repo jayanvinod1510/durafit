@@ -26,12 +26,14 @@ import {
 import { ItemCard } from "components/ItemCard";
 
 export default function ListingpagePage({ productType }) {
+  // window.scrollTo(0, 0)
   const data = productList[productType]
   const form = useRef();
   const [isHovered, setIsHovered] = useState(Array(data.products.length).fill(false));
   let navigate = useNavigate();
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   useEffect(() => {
+    window.scrollTo(0, 0)
     const handleResize = () => {
       setInnerWidth(window.innerWidth);
     };

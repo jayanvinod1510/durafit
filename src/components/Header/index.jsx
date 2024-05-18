@@ -5,10 +5,13 @@ import SideNavBar from "components/SideNavBar";
 export default function Header({ ...props }) {
   let navigate = useNavigate();
   const handleHomeRedirection = ()=>{
+    window.scrollTo(0, 0)
     navigate(`/`)
   }
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
-
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  };
 const toggleSideNav = () => {
   setIsSideNavOpen(!isSideNavOpen);
 };
@@ -20,42 +23,42 @@ const toggleSideNav = () => {
         <div className="flex md:hidden justify-between items-center w-[70%] md:w-full gap-5">
           <ul className="flex gap-10 flex-wrap">
             <li>
-              <a href="blackedition" className="self-start opacity-0.8">
+              <a href="#/blackedition" onClick={scrollToTop} className="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Black Edition
                 </Text>
               </a>
             </li>
             <li>
-              <a href="mattress" className="self-start opacity-0.8">
+              <a href="#/mattress" onClick={scrollToTop} className="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Mattress
                 </Text>
               </a>
             </li>
             <li>
-              <a href="pillows" className="self-start opacity-0.8">
+              <a href="#/pillows" onClick={scrollToTop} className="self-start opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Pillows
                 </Text>
               </a>
             </li>
             <li>
-              <a href="cushioning" className="self-end opacity-0.8">
+              <a href="#/cushioning" onClick={scrollToTop} className="self-end opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   Cushioning
                 </Text>
               </a>
             </li>
             <li>
-              <a href="aboutus" className="self-end opacity-0.8">
+              <a href="#/aboutus" onClick={scrollToTop} className="self-end opacity-0.8">
                 <Text as="p" className="!text-blue_gray-800_a2">
                   About Us
                 </Text>
               </a>
             </li>
           </ul>
-          <a href="contactus" className="self-start opacity-0.8">
+          <a href="#/contactus" onClick={scrollToTop} className="self-start opacity-0.8">
           <Button
             size="xs"
             variant="outline"

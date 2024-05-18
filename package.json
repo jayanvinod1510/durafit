@@ -1,5 +1,6 @@
 {
   "name": "durafit",
+  "homepage":"https://durafitindia.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -20,6 +20,7 @@ export default function DetailPage() {
   };
 
   const handleEnquireRedirection = ()=>{
+    window.scrollTo(0, 0)
     navigate(`/contactus?product=${data.headerTitle}`)
   }
   const { ref: videoRef, inView: videoIsVisible } = useInView();
