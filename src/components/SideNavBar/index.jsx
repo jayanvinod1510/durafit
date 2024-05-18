@@ -5,12 +5,12 @@ const SideNavBar = ({ isOpen, onClose }) => {
     const [currentRoute, setCurrentRoute] = useState(window.location.pathname);
     const navigationItems = [
         { name: 'Home', route: '/' },
-        { name: 'Black Edition', route: '/blackedition' },
-        { name: 'Mattress', route: '/mattress' },
-        { name: 'Pillows', route: '/pillows' },
-        { name: 'Cushioning', route: '/cushioning' },
-        { name: 'About Us', route: '/aboutus' },
-        { name: 'Contact Us', route: '/contactus' },
+        { name: 'Black Edition', route: '#/blackedition' },
+        { name: 'Mattress', route: '#/mattress' },
+        { name: 'Pillows', route: '#/pillows' },
+        { name: 'Cushioning', route: '#/cushioning' },
+        { name: 'About Us', route: '#/aboutus' },
+        { name: 'Contact Us', route: '#/contactus' },
         // { name: 'FAQs', route: '/' },
     ]
     useEffect(() => {

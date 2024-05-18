@@ -17,35 +17,35 @@ const ProjectRoutes = () => {
       element: <Landingpage />,
     },
     {
-      path: "aboutus",
+      path: "/aboutus",
       element: <AboutUs />,
     },
     {
-      path: "contactus",
+      path: "/contactus",
       element: <ContactUs />,
     },
     {
-      path: "listingpage",
+      path: "/listingpage",
       element: <Listingpage/>,
     },
     {
-      path: "mattress",
+      path: "/mattress",
       element: <Listingpage productType={"Mattress"}/>,
     },
     {
-      path: "pillows",
+      path: "/pillows",
       element: <Listingpage productType={"Pillows"}/>,
     },
     {
-      path: "blackedition",
+      path: "/blackedition",
       element: <Listingpage productType={"Black Edition"}/>,
     },
     {
-      path: "details",
+      path: "/details",
       element: <Details />,
     },
     {
-      path: "cushioning",
+      path: "/cushioning",
       element: <Listingpage productType={"Cushioning"}/>,
     },
   ]);

@@ -154,7 +154,7 @@ export default function LandingpagePage() {
                     these premium mattresses redefine your sleep experience
                   </>
                 </Text>
-                <a href="/blackedition" className="opacity-0.8">
+                <a href="/#/blackedition" className="opacity-0.8">
                   <Button shape="round" className="mb-[149px] md:mb-0 md:w-full mr-[420px] mt-[15px] md:mr-0 sm:px-5 font-medium min-w-[191px]">
                     Explore more
                   </Button>
@@ -194,7 +194,7 @@ export default function LandingpagePage() {
                 </Text>
               </div>
             </div>
-            <a href="/mattress" className="opacity-0.8 md:px-5 md:bg-gray-50 md:pb-5">
+            <a href="/#/mattress" className="opacity-0.8 md:px-5 md:bg-gray-50 md:pb-5">
               <Button shape="round" className="mb-[137px] sm:px-5 mt-[15px] md:mt-0 font-medium min-w-[191px] md:mb-0 md:w-full">
                 Explore more
               </Button>
@@ -231,7 +231,7 @@ export default function LandingpagePage() {
                   </Text>
                 </div>
               </div>
-              <a href="/pillows" className="opacity-0.8 md:w-full">
+              <a href="/#/pillows" className="opacity-0.8 md:w-full">
                 <Button shape="round" className="sm:px-5 font-medium min-w-[191px] mt-[15px]  md:mb-0 md:w-full">
                   Explore more
                 </Button>
@@ -271,7 +271,7 @@ export default function LandingpagePage() {
               </div>
 
             </div>
-            <a href="/cushioning" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:backdrop-opacity-0 md:pb-5">
+            <a href="/#/cushioning" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:backdrop-opacity-0 md:pb-5">
               <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px] mt-[15px] md:mt-0 md:mb-0 md:w-full">
                 Explore more
               </Button>
@@ -354,7 +354,7 @@ export default function LandingpagePage() {
                   </Heading>
                   <RatingBar
                     value={4}
-                    isEditable={true}
+                    isEditable={false}
                     color="#d9d9d9"
                     activeColor="#fdd20d"
                     size={15}
@@ -380,7 +380,7 @@ export default function LandingpagePage() {
                     </Heading>
                     <RatingBar
                       value={4}
-                      isEditable={true}
+                      isEditable={false}
                       color="#d9d9d9"
                       activeColor="#fdd20d"
                       size={15}

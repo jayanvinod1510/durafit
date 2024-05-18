@@ -18,17 +18,17 @@ const Home = () => {
           </Link>
         </li>
         <li style={{ marginBottom: "10px" }}>
-          <Link to="/aboutus" style={{ color: "#87CEFA", textDecoration: "none" }}>
+          <Link to="/#/aboutus" style={{ color: "#87CEFA", textDecoration: "none" }}>
             AboutUs
           </Link>
         </li>
         <li style={{ marginBottom: "10px" }}>
-          <Link to="/contactus" style={{ color: "#87CEFA", textDecoration: "none" }}>
+          <Link to="/#/contactus" style={{ color: "#87CEFA", textDecoration: "none" }}>
             ContactUs
           </Link>
         </li>
         <li style={{ marginBottom: "10px" }}>
-          <Link to="/listingpage" style={{ color: "#87CEFA", textDecoration: "none" }}>
+          <Link to="/#/listingpage" style={{ color: "#87CEFA", textDecoration: "none" }}>
             Listingpage
           </Link>
         </li>
