@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {Animated} from "react-animated-css";
 
 const SideNavBar = ({ isOpen, onClose }) => {
+    const [currentRoute, setCurrentRoute] = useState(window.location.pathname);
     const navigationItems = [
         { name: 'Home', route: '/' },
-        { name: 'Black Edition', route: 'blackedition' },
-        { name: 'Mattress', route: 'mattress' },
-        { name: 'Pillows', route: 'pillows' },
-        { name: 'Cushioning', route: 'cushioning' },
-        { name: 'About Us', route: 'aboutus' },
-        { name: 'Contact Us', route: 'contactus' },
+        { name: 'Black Edition', route: '/blackedition' },
+        { name: 'Mattress', route: '/mattress' },
+        { name: 'Pillows', route: '/pillows' },
+        { name: 'Cushioning', route: '/cushioning' },
+        { name: 'About Us', route: '/aboutus' },
+        { name: 'Contact Us', route: '/contactus' },
         // { name: 'FAQs', route: '/' },
     ]
+    useEffect(() => {
+        const handleRouteChange = () => {
+            setCurrentRoute(window.location.pathname);
+        };
+
+        window.addEventListener("popstate", handleRouteChange);
+
+        return () => {
+            window.removeEventListener("popstate", handleRouteChange);
+        };
+    }, []);
+    console.log("Location",window.location.pathname)
     return (
         <Animated style={{"width": "100%","animation-delay":"300ms"}} animationIn="slideIn" animationOut="slideOut" isVisible={isOpen}>
         {/* <Animated animationIn="slideIn"  animationOut="slideOut" animationInDuration={5000} animationOutDuration={7000} animationInDelay={7000} isVisible={isOpen}> */}
@@ -46,20 +59,20 @@ const SideNavBar = ({ isOpen, onClose }) => {
           </div>
         </div> */}
 
-                <nav className="mt-[100px] mx-[30px]">
+                <nav className="mt-[100px]">
                     {navigationItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.route}
-                            className="block"
+                            className={`block my-3 ${currentRoute === item.route ? 'bg-[#F2F2F2] text-[#888888] rounded-[10px] px-[20px] mx-[10px]' : ' mx-[30px]'}`}
                         >
-                            <div className="flex items-center justify-between my-3 py-3 text-white border-[#D1D1D1] border-b">
+                            <div className={`flex items-center justify-between py-3 text-white${currentRoute === item.route ?"":" border-[#D1D1D1] border-b "}`}>
 
                                 {item.name}
 
-                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                {/* <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5.78033 4.46967C6.07322 4.76256 6.07322 5.23744 5.78033 5.53033L1.78033 9.53033C1.48744 9.82322 1.01256 9.82322 0.71967 9.53033C0.426777 9.23744 0.426777 8.76256 0.71967 8.46967L4.18934 5L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967Z" fill="#2A2A2A" />
-                                </svg>
+                                </svg> */}
 
                             </div>
                         </a>
