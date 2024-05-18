@@ -44,7 +44,7 @@ export default function LandingpagePage() {
                 <br class="md:hidden"></br>
                 <div className="h-[674px] md:h-auto relative">
                   <Img
-                    src= {innerWidth < 768?"images/up-in-the-clouds_mobile.png":"images/landing_page_main.png"}
+                    src={innerWidth < 768 ? "images/up-in-the-clouds_mobile.png" : "images/landing_page_main.png"}
                     alt="upinthe_one"
                     className="h-[674px] md:h-[750px] w-full object-cover"
                   />
@@ -62,7 +62,7 @@ export default function LandingpagePage() {
         </div>
 
         <div className="py-[70px] md:py-5">
-          <Marquee style={{ "textAlign": "center", "zIndex":0}} direction="right" autoFill={true}>
+          <Marquee style={{ "textAlign": "center", "zIndex": 0 }} direction="right" autoFill={true}>
             <div className="flex md:flex-row justify-between items-center gap-[80px] mx-[40px] md:px-5">
 
               <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
@@ -127,11 +127,18 @@ export default function LandingpagePage() {
 
 
         {/* Section 1 */}
-        <div className={(innerWidth < 768 ?"bg-[url(/public/images/mattress_mobile_1.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat":"bg-[url(/public/images/img_section_9.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat")}
+        <div className={(innerWidth < 768 ? "bg-[url(/public/images/mattress_mobile_1.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat" : "bg-[url(/public/images/img_section_9.png)] flex flex-col items-end justify-end h-[845px] md:h-auto pl-14 pr-[130px] md:h-[750px] gap-[30px] py-[130px] md:p-0 md:bg-center bg-cover bg-no-repeat")}
+          style={{
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            height: 'auto',
+            width: '100%'
+          }}
         >
-          <Animated style={{"width": "100%","animation-delay":innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
-            <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[427px] md:p-5 md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":"" }}>
-              <div ref = {eleganceRef} className="flex flex-col w-full gap-2.5">
+          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={eleganceIsVisible}>
+            <div className="flex justify-end w-[43%] md:w-full mt-[149px] md:mt-[427px] md:p-5 md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth < 768 ? "blur(10px)" : "", WebkitBackdropFilter: innerWidth < 768 ? "blur(10px)" : "", backgroundColor: innerWidth < 768 ? "rgba(255, 255, 255, 0.8)" : "" }}>
+              <div ref={eleganceRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="!text-blue_gray-100 leading-[60px]">
                   <p class="md:text-[25px]  md:!text-blue_gray-800">
                     Elegance in Every
@@ -141,9 +148,9 @@ export default function LandingpagePage() {
                 </Text>
                 <Text as="p" className="w-[98%] md:w-full !text-blue_gray-100 md:!text-gray-900_90">
                   <>
-                    Experience the epitome of comfort and style with our exclusive&nbsp;<br class = "md:hidden"/>
+                    Experience the epitome of comfort and style with our exclusive&nbsp;<br class="md:hidden" />
                     Black Edition collection. Crafted with precision and sophistication,&nbsp;
-                    <br class = "md:hidden"/>
+                    <br class="md:hidden" />
                     these premium mattresses redefine your sleep experience
                   </>
                 </Text>
@@ -158,10 +165,18 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 2 */}
-        <div className={innerWidth < 768 ?"bg-[url(/public/images/mattress_mobile_2.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat":"bg-[url(/public/images/img_section_12.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat"}>
-          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
-            <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[435px] md:p-5 md:bg-gray-50" style={{backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":""}} >
-              <div ref = {mattressRef} className="flex flex-col w-full gap-2.5">
+        <div className={innerWidth < 768 ? "bg-[url(/public/images/mattress_mobile_2.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat" : "bg-[url(/public/images/img_section_12.png)]  flex flex-col items-start justify-end h-[845px] md:h-auto pl-[130px]  md:h-[750px] pr-14 md:p-0 gap-[30px] py-[130px] md:bg-center bg-cover bg-no-repeat"}
+          style={{
+            // backgroundSize: 'cover',
+            // backgroundRepeat: 'no-repeat',
+            // backgroundPosition: 'center',
+            height: 'auto',
+            width: '100%'
+            // height: '100vh', // Set the height to the full viewport height
+          }}>
+          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={mattressIsVisible}>
+            <div className="flex w-[34%] md:w-full mt-[137px]  md:mt-[435px] md:p-5 md:bg-gray-50" style={{ backdropFilter: innerWidth < 768 ? "blur(0px)" : "", WebkitBackdropFilter: innerWidth < 768 ? "blur(10px)" : "", backgroundColor: innerWidth < 768 ? "rgba(255, 255, 255, 0.8)" : "" }} >
+              <div ref={mattressRef} className="flex flex-col w-full gap-2.5">
                 <Text size="6xl" as="p" className="w-[93%] md:w-full !text-blue_gray-800 leading-[60px]">
                   <p class="md:text-[25px]  md:!text-blue_gray-800">
                     Selling Sleep,
@@ -171,9 +186,9 @@ export default function LandingpagePage() {
                 </Text>
                 <Text as="p" className="!text-blue_gray-800 pt-5 md:pt-0 md:!text-gray-900_90">
                   <>
-                    Discover a world of tranquility and restful nights with <br class = "md:hidden"/>
-                    our exceptional mattress collection. Engineered for <br class = "md:hidden"/>
-                    supreme comfort, our mattresses ensure you wake <br class = "md:hidden"/>
+                    Discover a world of tranquility and restful nights with <br class="md:hidden" />
+                    our exceptional mattress collection. Engineered for <br class="md:hidden" />
+                    supreme comfort, our mattresses ensure you wake <br class="md:hidden" />
                     up rejuvenated every morning
                   </>
                 </Text>
@@ -188,14 +203,17 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 3 */}
-        <div className={ innerWidth<768?" bg-[url(/public/images/pillows_mobile_1.png)] flex flex-col justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:h-[750px] md:p-0 gap-[30px] rotate-[0deg] bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat":"flex flex-col justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:h-[750px] md:p-0 gap-[30px] rotate-[0deg]  bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat"} style={{
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        height: '100vh', // Set the height to the full viewport height
-      }}>
-          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
-            <div className="flex flex-col items-start md:justify-end w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[427px] md:my-0 md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{ float: "right", backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":"" }}>
+        <div className={innerWidth < 768 ? " bg-[url(/public/images/pillows_mobile_1.png)] flex flex-col justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:h-[750px] md:p-0 gap-[30px] rotate-[0deg] bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat" : "flex flex-col justify-end items-center h-[845px] md:h-auto pl-14 pr-[130px] py-[130px]  md:h-[750px] md:p-0 gap-[30px] rotate-[0deg]  bg-[url(/public/images/img_section_11.png)] md:bg-center bg-cover bg-no-repeat"} style={{
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          height: 'auto',
+          width: '100%'
+
+          // height: '100vh', // Set the height to the full viewport height
+        }}>
+          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={pillowIsVisible}>
+            <div className="flex flex-col items-start md:justify-end w-[39%] md:w-full gap-[30px] my-[149px] md:mt-[427px] md:my-0 md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{ float: "right", backdropFilter: innerWidth < 768 ? "blur(10px)" : "", WebkitBackdropFilter: innerWidth < 768 ? "blur(10px)" : "", backgroundColor: innerWidth < 768 ? "rgba(255, 255, 255, 0.8)" : "" }}>
               <div className="self-stretch">
                 <div ref={pillowRef} className="flex flex-col gap-2.5">
                   <Text size="6xl" as="p" className="w-[66%] md:w-full !text-blue_gray-800 leading-[60px]">
@@ -206,8 +224,8 @@ export default function LandingpagePage() {
                   </Text>
                   <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
                     <>
-                      Experience the softest embrace for your head and neck with <br class = "md:hidden"/>
-                      our pillow collection. Designed for ultimate relaxation, our <br class = "md:hidden"/>
+                      Experience the softest embrace for your head and neck with <br class="md:hidden" />
+                      our pillow collection. Designed for ultimate relaxation, our <br class="md:hidden" />
                       pillow provide the perfect support for a heavenly night&#39;s sleep
                     </>
                   </Text>
@@ -223,25 +241,35 @@ export default function LandingpagePage() {
         </div>
 
         {/* Section 4 */}
-        <div className={innerWidth<768?"flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/furniture_mobile.png)]  md:bg-center bg-cover bg-no-repeat":"flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/landing_page_sofa.png)]  md:bg-center bg-cover bg-no-repeat"}>
-          <Animated style={{"width": "100%","animation-delay": innerWidth < 768? "0ms":"300ms"}} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
-            <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[430px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0"style={{backdropFilter: innerWidth<768?"blur(10px)":"", WebkitBackdropFilter: innerWidth<768?"blur(10px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.8)":"" }}>
-                <div ref = {sofaRef} className="flex flex-col w-full gap-2.5">
-                  <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
-                    <p class = "md:text-[25px]  md:!text-blue_gray-800">
-                      Sofas and Chairs, <br />
-                      Reimagined Comfort
-                    </p>
-                  </Text>
-                  <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
-                    <>
-                      Upgrade your lounging experience with our furniture cushionings <br class = "md:hidden"/>
-                      collection. Transform your sofas and chairs into cozy havens of <br class = "md:hidden"/>
-                      comfort, enhancing your relaxation time at home
-                    </>
-                  </Text>
-                </div>
-              
+        <div className={innerWidth < 768 ? "flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/furniture_mobile.png)]  md:bg-center bg-cover bg-no-repeat" : "flex flex-col items-start justify-end  h-[845px] md:h-auto pl-[130px] pr-14 gap-[30px] py-[130px]  md:h-[750px] md:p-0 bg-[url(/public/images/landing_page_sofa.png)]  md:bg-center bg-cover bg-no-repeat"}
+          style={{
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            height: 'auto',
+            width: '100%'
+
+            // height: '100vh', // Set the height to the full viewport height
+          }}
+        >
+          <Animated style={{ "width": "100%", "animation-delay": innerWidth < 768 ? "0ms" : "300ms" }} animationIn="fadeIn" animationOut="fadeOut" isVisible={sofaIsVisible}>
+            <div className="flex w-[42%] md:w-full mt-[149px] md:mt-[430px] md:p-5 md:bg-gray-50 md:backdrop-opacity-0" style={{ backdropFilter: innerWidth < 768 ? "blur(10px)" : "", WebkitBackdropFilter: innerWidth < 768 ? "blur(10px)" : "", backgroundColor: innerWidth < 768 ? "rgba(255, 255, 255, 0.8)" : "" }}>
+              <div ref={sofaRef} className="flex flex-col w-full gap-2.5">
+                <Text size="6xl" as="p" className="w-[95%] md:w-full !text-blue_gray-800 leading-[60px]">
+                  <p class="md:text-[25px]  md:!text-blue_gray-800">
+                    Sofas and Chairs, <br />
+                    Reimagined Comfort
+                  </p>
+                </Text>
+                <Text as="p" className="!text-blue_gray-800 md:!text-gray-900_90">
+                  <>
+                    Upgrade your lounging experience with our furniture cushionings <br class="md:hidden" />
+                    collection. Transform your sofas and chairs into cozy havens of <br class="md:hidden" />
+                    comfort, enhancing your relaxation time at home
+                  </>
+                </Text>
+              </div>
+
             </div>
             <a href="/cushioning" className="opacity-0.8 md:w-full md:px-5 md:bg-gray-50 md:backdrop-opacity-0 md:pb-5">
               <Button shape="round" className="mb-[149px] sm:px-5 font-medium min-w-[191px] mt-[15px] md:mt-0 md:mb-0 md:w-full">
@@ -336,7 +364,7 @@ export default function LandingpagePage() {
               </div>
               <div>
                 <Text as="p" className="!text-indigo-400 leading-[22px]">
-                Great value for the price. The mattress arrived on time and was easy to set up. It's been a month, and I've never slept better.{" "}
+                  Great value for the price. The mattress arrived on time and was easy to set up. It's been a month, and I've never slept better.{" "}
                 </Text>
               </div>
             </div>
@@ -362,7 +390,7 @@ export default function LandingpagePage() {
                 </div>
                 <div>
                   <Text as="p" className="!text-indigo-400 leading-[22px]">
-                  The cooling technology in this mattress is impressive. It keeps me comfortable all night long, even in warm weather.{" "}
+                    The cooling technology in this mattress is impressive. It keeps me comfortable all night long, even in warm weather.{" "}
                   </Text>
                 </div>
               </div>
