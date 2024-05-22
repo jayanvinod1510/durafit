@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import {Animated} from "react-animated-css";
 
 const SideNavBar = ({ isOpen, onClose }) => {
-    const [currentRoute, setCurrentRoute] = useState(window.location.pathname);
+    const [currentRoute, setCurrentRoute] = useState(window.location.hash);
     const navigationItems = [
-        { name: 'Home', route: '/' },
+        { name: 'Home', route: '#/' },
         { name: 'Black Edition', route: '#/blackedition' },
         { name: 'Mattress', route: '#/mattress' },
         { name: 'Pillows', route: '#/pillows' },
@@ -15,7 +15,7 @@ const SideNavBar = ({ isOpen, onClose }) => {
     ]
     useEffect(() => {
         const handleRouteChange = () => {
-            setCurrentRoute(window.location.pathname);
+            setCurrentRoute(window.location.hash);
         };
 
         window.addEventListener("popstate", handleRouteChange);
@@ -24,7 +24,7 @@ const SideNavBar = ({ isOpen, onClose }) => {
             window.removeEventListener("popstate", handleRouteChange);
         };
     }, []);
-    console.log("Location",window.location.pathname)
+    console.log("Location", currentRoute)
     return (
         <Animated style={{"width": "100%","animation-delay":"300ms"}} animationIn="slideIn" animationOut="slideOut" isVisible={isOpen}>
         {/* <Animated animationIn="slideIn"  animationOut="slideOut" animationInDuration={5000} animationOutDuration={7000} animationInDelay={7000} isVisible={isOpen}> */}
