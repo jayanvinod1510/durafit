@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 import { Animated } from "react-animated-css";
 import { useInView } from "react-intersection-observer";
+import ReactPlayer from 'react-player'
 import { Helmet } from "react-helmet";
 import { Heading, Text, RatingBar, Img, Button } from "../../components";
 import Footer from "../../components/Footer";
@@ -123,6 +124,54 @@ export default function LandingpagePage() {
               </div>
             </div>
           </Marquee>
+        </div>
+
+        <div>
+          <div>
+            <div>
+              <div className="self-end">
+                <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
+                <br class="md:hidden"></br>
+                <div className=" md:h-auto relative">
+                  <Text
+                    size="header"
+                    as="p"
+                    className="w-max top-[8%] right-0 left-0 m-auto !text-blue_gray-800 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
+                  >
+                    Welcome to our Sleep Story
+                  </Text>
+                  <Text
+                    size="sub-header"
+                    as="p"
+                    className="w-max top-[8%] right-0 left-0 m-auto !text-blue_gray-800 text-center md:text-[30px] md:leading-normal md:px-5"
+                  >
+                    We believe sleep solves everything
+                  </Text>
+                  <Text
+                    size="sub-text"
+                    as="p"
+                    className="w-max top-[8%] right-0 left-0 py-7 md:py-3 m-auto !text-blue_gray-800 text-center md:text-[35px] md:leading-normal md:px-5"
+                  >
+                    Our story of selling a good night sleep began with a thought of providing the most&nbsp;<br class="md:hidden" />
+                    comfortable mattress to sleep on. We know after a long exhausting day anyone&nbsp;
+                    <br class="md:hidden" />
+                    could crave for the comfiest mattress and we are here to provide you with just that!
+                  </Text>
+                  <div style={{"height":"auto !important"}}>
+                    <ReactPlayer url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
+                  </div>
+                  <Text
+                    size="6xl"
+                    as="p"
+                    className="w-max top-[8%] py-7 md:py-3 right-0 left-0 m-auto !text-blue_gray-800 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
+                  >
+                    Explore from our comfiest collections
+                  </Text>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
 
