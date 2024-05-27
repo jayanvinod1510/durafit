@@ -349,10 +349,10 @@ export default function ListingpagePage({ productType }) {
         </div> */}
         <br/>
         <br/>
-        <div className="flex flex-col items-end justify-center md:justify-end h-[400px] md:h-[400px] pl-14 pr-[98px] gap-[30px] py-[98px] md:p-0 bg-[url(/public/images/img_frame_64.png)] bg-center bg-cover bg-no-repeat">
-          <div className="flex justify-end md:justify-between w-[40%] md:w-full mr-8 md:mr-0 md:px-5  md:bg-gray-50" style={{ float: "right", backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(0px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.6)":"" }}>
-            <div className="w-full">
-              <Text size="4xl" as="p" className="!text-blue_gray-400 text-right !font-medium leading-[60px] md:!text-[18px] drop-shadow-md md:text-center md:leading-normal md:pt-5"
+        <div className="flex flex-col items-start justify-center md:justify-end h-[400px] md:h-[400px] pl-14 pr-[98px] gap-[30px] pb-[138px] pt-[58px] md:p-0 bg-[url(/public/images/img_frame_64_1.png)] md:bg-[url(/public/images/img_frame_64_1_mobile_1.png)] bg-center bg-cover bg-no-repeat">
+          <div className="flex justify-end md:justify-between w-[39%] md:w-full mr-8 md:mr-0 md:px-5  md:bg-gray-50" style={{ float: "left", backdropFilter: innerWidth<768?"blur(0px)":"", WebkitBackdropFilter: innerWidth<768?"blur(0px)":"", backgroundColor: innerWidth<768?"rgba(255, 255, 255, 0.6)":"" }}>
+            <div className="w-full" style={{backgroundColor: innerWidth > 768 ? "rgba(255, 255, 255, 0.5)" : "" }}>
+              <Text size="4xl" as="p" className="!text-blue_gray-800 text-left md:pl-0 md:pt-0 pl-[15px] pt-[20px] !font-medium md:!text-[18px] drop-shadow-md md:text-center md:leading-normal md:pt-5"
                 // style={{ filter: 'style="filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0.3rem 0.1rem);' }}
               >
                 <>
@@ -361,8 +361,8 @@ export default function ListingpagePage({ productType }) {
                   updates on our new products!
                 </>
               </Text>
-              <form ref={form} className="flex self-stretch justify-end md:justify-center py-[30px] md:py-[20px]">
-                <Input type="email" size="md" shape="round" style={{ "color": "#434343" }} name="email" placeholder={`Enter your email ID here...`} className="sm:px-5 min-w-[89%] md:!pr-0 md:h-[35px] md:!text-[15px] border-none"
+              <form ref={form} className="flex self-stretch pl-[15px] md:pl-0 justify-start md:justify-center py-[15px] md:py-[20px]">
+                <Input type="email" size="md" shape="round" style={{ "color": "#434343" }} name="email" placeholder={`Enter your email ID here...`} className="sm:px-5 min-w-[97%] md:!pr-0 md:h-[35px] md:!text-[15px] border-none"
                   suffix={signUpNowSuffix}
                 />
                  <ToastContainer />

@@ -136,34 +136,35 @@ export default function LandingpagePage() {
                   <Text
                     size="header"
                     as="p"
-                    className="w-max top-[8%] right-0 left-0 m-auto !text-blue_gray-800 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
+                    className="w-max top-[8%] right-0 left-0 m-auto my-5 !text-blue_gray-800 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
                   >
                     Welcome to our Sleep Story
                   </Text>
-                  <Text
-                    size="sub-header"
-                    as="p"
-                    className="w-max top-[8%] right-0 left-0 m-auto !text-blue_gray-800 text-center md:text-[30px] md:leading-normal md:px-5"
-                  >
-                    We believe sleep solves everything
-                  </Text>
-                  <Text
-                    size="sub-text"
-                    as="p"
-                    className="w-max top-[8%] right-0 left-0 py-7 md:py-3 m-auto !text-blue_gray-800 text-center md:text-[35px] md:leading-normal md:px-5"
-                  >
-                    Our story of selling a good night sleep began with a thought of providing the most&nbsp;<br class="md:hidden" />
-                    comfortable mattress to sleep on. We know after a long exhausting day anyone&nbsp;
-                    <br class="md:hidden" />
-                    could crave for the comfiest mattress and we are here to provide you with just that!
-                  </Text>
-                  <div style={{"height":"auto !important"}}>
-                    <ReactPlayer url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
+                  <div className="flex flex-row mx-24 my-1 gap-2.5 bg-blue_gray-800 rounded-3xl">
+                    <div className="">
+                      <ReactPlayer style={{ "border-radius":"16px" }} className="rounded-3xl" url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
+                      {/* <ReactPlayer url = 'https://drive.google.com/file/d/1nzePj8UBUmpV5LCkaguI8vvKPPXBDfSi/view' playing={true} loop = {true}  width='100%'></ReactPlayer> */}
+                    </div>
+                    <div className="flex flex-col gap-2.5 w-5/12 place-content-center px-12 pr-24">
+                      <Text size="sub-header" as="p" className="!text-blue_gray-100">
+                        <p class="md:text-[25px]  md:!text-blue_gray-800">
+                          We believe sleep
+                          solves everything
+                        </p>
+                      </Text>
+                      <Text as="p" size="sub-text" className="w-[98%] md:w-full !text-blue_gray-100 md:!text-gray-900_90">
+                        <>
+                        Our story of selling a good night sleep began with a thought of providing the most&nbsp;
+                        comfortable mattress to sleep on. We know after a long exhausting day anyone&nbsp;
+                        could crave for the comfiest mattress and we are here to provide you with just that!
+                        </>
+                      </Text>
+                    </div>
                   </div>
                   <Text
                     size="6xl"
                     as="p"
-                    className="w-max top-[8%] py-7 md:py-3 right-0 left-0 m-auto !text-blue_gray-800 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
+                    className="w-max top-[8%] py-7 md:py-3 right-0 left-0 m-auto !text-blue_gray-800 bg-grey-300 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
                   >
                     Explore from our comfiest collections
                   </Text>
