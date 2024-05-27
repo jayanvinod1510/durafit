@@ -10,43 +10,43 @@ import Details from "pages/Details";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "dhiwise-dashboard", element: <Home /> },
-    { path: "*", element: <NotFound /> },
+    { path: "dhiwise-dashboard", element: <Home key={"home"}/> },
+    { path: "*", element: <NotFound key={"notfound"} /> },
     {
       path: "/",
-      element: <Landingpage />,
+      element: <Landingpage key={"landingpage"} />,
     },
     {
       path: "/aboutus",
-      element: <AboutUs />,
+      element: <AboutUs key={"aboutus"} />,
     },
     {
       path: "/contactus",
-      element: <ContactUs />,
+      element: <ContactUs key={"contactus"} />,
     },
     {
       path: "/listingpage",
-      element: <Listingpage/>,
+      element: <Listingpage key={"listing"}/>,
     },
     {
       path: "/mattress",
-      element: <Listingpage productType={"Mattress"}/>,
+      element: <Listingpage key={"mattress"} productType={"Mattress"}/>,
     },
     {
       path: "/pillows",
-      element: <Listingpage productType={"Pillows"}/>,
+      element: <Listingpage key={"pillows"} productType={"Pillows"}/>,
     },
     {
       path: "/blackedition",
-      element: <Listingpage productType={"Black Edition"}/>,
+      element: <Listingpage key={"blackedition"} productType={"Black Edition"}/>,
     },
     {
       path: "/details",
-      element: <Details />,
+      element: <Details key={"details"}/>,
     },
     {
       path: "/cushioning",
-      element: <Listingpage productType={"Cushioning"}/>,
+      element: <Listingpage key={"cushioning"} productType={"Cushioning"}/>,
     },
   ]);
 

@@ -130,7 +130,7 @@ export default function ListingpagePage({ productType }) {
           </div>
         </div>
         <div className="max-w-[1058px] items-center flex flex-col justify-center mx-auto">
-          <div className="flex flex-col items-start gap-[15px] py-2.5 md:px-5">
+          <div  className="flex flex-col items-start gap-[15px] py-2.5 md:px-5">
             <Text
               size="6xl"
               as="p"
@@ -148,7 +148,7 @@ export default function ListingpagePage({ productType }) {
           </div>
           <div className="justify-center w-full mt-[50px] items-center gap-[50px] grid-cols-[repeat(auto-fill,_minmax(504px_,_1fr))] mx-auto md:p-5 grid max-w-[1058px] md:hidden">
             {data.products.map((item, index) => (
-              <div className={"flex w-full bg-white-A700 shadow-sm rounded-[5px]"} onClick={() => handleClick(item)}
+              <div key={index} className={"flex w-full bg-white-A700 shadow-sm rounded-[5px]"} onClick={() => handleClick(item)}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
               >

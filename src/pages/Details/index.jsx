@@ -58,7 +58,7 @@ export default function DetailPage() {
                   <div className="flex md:flex-row flex-wrap w-[74%] sm:justify-center  md:w-full gap-5 md:gap-2">
                     {data.images.map((image, i)=>(
                       <div className="flex flex-col w-full bg-gray-100 rounded-[10px] h-[100px] md:h-[70px] w-[95px] md:w-[65px]"
-                      onClick={()=>handleClick(image)}
+                      onClick={()=>handleClick(image)} key={i}
                       >
                       <Img
                         src={`images/${image}`}
@@ -133,7 +133,7 @@ export default function DetailPage() {
           <div className="flex sm:flex-row sm:flex-wrap justify-between sm:justify-center items-center mt-2.5 sm:mt-0 gap-y-5 p-[70px] md:px-6 md:py-10 w-full">
             {data.features.map((feature, i) => (
 
-              <div className={`flex flex-col items-center  w-[6%] ${data.features.length%2==0?"sm:w-1/2":"sm:w-1/3"} ${i === 0 ? "md:ml-0 ml-[200px]" : ""} ${i === (data.features.length -1) ? "md:mr-0 mr-[200px]" : ""}`}>
+              <div key={i} className={`flex flex-col items-center  w-[6%] ${data.features.length%2==0?"sm:w-1/2":"sm:w-1/3"} ${i === 0 ? "md:ml-0 ml-[200px]" : ""} ${i === (data.features.length -1) ? "md:mr-0 mr-[200px]" : ""}`}>
                 <Img src={`images/${feature.image}`} alt={`image_${i}`} className={data.features.length%2==0?"w-[56%] sm:w-[40%] object-cover":"w-[56%] sm:w-[56%] object-cover"}/>
                 <a href="#" className="opacity-0.8 leading-6">
                   <Text as="p" className="!text-blue_gray-800_a2 text-center md:!text-[13px]">
