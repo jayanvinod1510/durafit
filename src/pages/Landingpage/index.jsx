@@ -62,9 +62,9 @@ export default function LandingpagePage() {
           </div>
         </div>
 
-        <div className="py-[70px] md:py-5">
+        <div className="py-[70px] md:py-5 bg-gray-100">
           <Marquee style={{ "textAlign": "center", "zIndex": 0 }} direction="right" autoFill={true}>
-            <div className="flex md:flex-row justify-between items-center gap-[80px] mx-[40px] md:px-5">
+            <div className="flex md:flex-row justify-between items-center gap-[80px] mx-[40px] md:px-5 bg-gray-100">
 
               <div className="flex flex-col items-center w-[16%] md:w-full gap-0.5">
                 <Img src="images/img_frame_19.svg" alt="image" className="h-[45px]" />
@@ -132,15 +132,32 @@ export default function LandingpagePage() {
               <div className="self-end">
                 <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
                 <br class="md:hidden"></br>
-                <div className=" md:h-auto relative">
+                <div className="md:h-auto relative md:bg-blue_gray-800">
                   <Text
                     size="header"
                     as="p"
-                    className="w-max top-[8%] right-0 left-0 m-auto my-5 !text-blue_gray-800 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
+                    className="md:hidden w-max top-[8%] right-0 left-0 m-auto my-5 !text-blue_gray-800 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
                   >
                     Welcome to our Sleep Story
                   </Text>
-                  <div className="flex flex-row mx-24 my-1 gap-2.5 bg-blue_gray-800 rounded-3xl">
+                  <Text size="sub-header" as="p" className=" hidden md:block !text-blue_gray-100 w-max top-[8%] right-0 left-0 m-auto pt-10 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-14">
+                    <p class="md:text-[30px]  md:!text-white">
+                      We believe sleep
+                      solves everything
+                    </p>
+                  </Text>
+                  <Text as="p" size="sub-text" className=" hidden md:block !text-blue_gray-100 w-max top-[8%] right-0 left-0 m-auto pt-3 pb-10 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-6">
+                    <>
+                    Our story of selling a good night sleep began with a thought of providing the most&nbsp;
+                    comfortable mattress to sleep on. We know after a long exhausting day anyone&nbsp;
+                    could crave for the comfiest mattress and we are here to provide you with just that!
+                    </>
+                  </Text>
+                  <div className="hidden md:block">
+                      <ReactPlayer style={{ "border-radius":"16px" }} className="rounded-3xl" url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
+                      {/* <ReactPlayer url = 'https://drive.google.com/file/d/1nzePj8UBUmpV5LCkaguI8vvKPPXBDfSi/view' playing={true} loop = {true}  width='100%'></ReactPlayer> */}
+                    </div>
+                  <div className=" md:hidden flex flex-row mx-24 my-1 gap-2.5 bg-blue_gray-800 rounded-3xl">
                     <div className="">
                       <ReactPlayer style={{ "border-radius":"16px" }} className="rounded-3xl" url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
                       {/* <ReactPlayer url = 'https://drive.google.com/file/d/1nzePj8UBUmpV5LCkaguI8vvKPPXBDfSi/view' playing={true} loop = {true}  width='100%'></ReactPlayer> */}
@@ -161,15 +178,16 @@ export default function LandingpagePage() {
                       </Text>
                     </div>
                   </div>
-                  <Text
+                  
+                  
+                </div>
+                <Text
                     size="6xl"
                     as="p"
                     className="w-max top-[8%] py-7 md:py-3 right-0 left-0 m-auto !text-blue_gray-800 bg-grey-300 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
                   >
                     Explore from our comfiest collections
                   </Text>
-                  
-                </div>
               </div>
             </div>
           </div>
