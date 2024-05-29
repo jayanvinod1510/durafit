@@ -24,6 +24,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import { ItemCard } from "components/ItemCard";
+import { EmailJs } from "data/fieldConstants";
 
 export default function ListingpagePage({ productType }) {
   // window.scrollTo(0, 0)
@@ -75,8 +76,8 @@ export default function ListingpagePage({ productType }) {
       console.log("Send Email") 
       console.log(form.current.email.value)
       emailjs
-      .sendForm('service_ttaemon', 'template_15z1wh9', form.current, {
-        publicKey: 'oJEkbcCZqa8ux2je1',
+      .sendForm(EmailJs.serviceName, EmailJs.subscriptionTemplate, form.current, {
+        publicKey: EmailJs.userPublicKey,
       })
       .then(
         () => {

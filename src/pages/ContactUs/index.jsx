@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 import { Text, Img, Button, TextArea, Input } from "../../components";
 import Header from "../../components/Header";
+import {EmailJs}  from '../../data/fieldConstants';
 
 export default function ContactUsPage() {
   const { search } = useLocation();
@@ -55,8 +56,8 @@ export default function ContactUsPage() {
     }
 
     emailjs
-      .sendForm('service_ttaemon', 'template_4k1wr0b', form.current, {
-        publicKey: 'oJEkbcCZqa8ux2je1',
+      .sendForm(EmailJs.serviceName, EmailJs.enquireTemplate, form.current, {
+        publicKey: EmailJs.userPublicKey,
       })
       .then(
         () => {
