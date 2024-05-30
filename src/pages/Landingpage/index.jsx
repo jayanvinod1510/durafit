@@ -143,26 +143,26 @@ export default function LandingpagePage() {
                   >
                     Welcome to our Sleep Story
                   </Text>
-                  <Text size="sub-header" ref = {videoRef} as="p" className=" hidden md:block !text-blue_gray-100 w-max top-[8%] right-0 left-0 m-auto pt-10 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-14">
+                  <Text size="sub-header"  as="p" className=" hidden md:block !text-blue_gray-100 w-max top-[8%] right-0 left-0 m-auto pt-10 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-14">
                     <p class="md:text-[30px]  md:!text-white">
                       We believe sleep
                       solves everything
                     </p>
                   </Text>
-                  <Text ref = {videoRef} as="p" size="sub-text" className=" hidden md:block !text-blue_gray-100 w-max top-[8%] right-0 left-0 m-auto pt-3 pb-10 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-6">
+                  <Text  as="p" size="sub-text" className=" hidden md:block !text-blue_gray-100 w-max top-[8%] right-0 left-0 m-auto pt-3 pb-10 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-6">
                     <>
                     Our story of selling a good night sleep began with a thought of providing the most&nbsp;
                     comfortable mattress to sleep on. We know after a long exhausting day anyone&nbsp;
                     could crave for the comfiest mattress and we are here to provide you with just that!
                     </>
                   </Text>
-                  <div className="hidden md:block" ref = {videoRef}>
-                      <ReactPlayer url = {`videos/landing_page_vide.mp4`} playing={videoIsVisible} loop = {videoIsVisible} width='100%' height='100%'></ReactPlayer>
+                  <div className="hidden md:block" >
+                      <ReactPlayer url = {`videos/landing_page_vide.mp4`} playing={true} muted={true} loop = {true} width='100%' height='100%'></ReactPlayer>
                       {/* <ReactPlayer url = 'https://drive.google.com/file/d/1nzePj8UBUmpV5LCkaguI8vvKPPXBDfSi/view' playing={true} loop = {true}  width='100%'></ReactPlayer> */}
                     </div>
-                  <div className=" md:hidden flex flex-row mx-24 my-1 gap-2.5 bg-blue_gray-800 rounded-3xl mb-5" ref = {videoRef}>
+                  <div className=" md:hidden flex flex-row mx-24 my-1 gap-2.5 bg-blue_gray-800 rounded-3xl mb-5" ref={videoRef}>
                     <div className="">
-                      <ReactPlayer className={styles.reactplayer} url = {`videos/landing_page_vide.mp4`} playing={videoIsVisible} loop = {videoIsVisible} width='100%' height='100%'></ReactPlayer>
+                      <ReactPlayer className={styles.reactplayer} url = {`videos/landing_page_vide.mp4`} playing={true} muted={true} loop = {true} width='100%' height='100%'></ReactPlayer>
                       {/* <ReactPlayer url = 'https://drive.google.com/file/d/1nzePj8UBUmpV5LCkaguI8vvKPPXBDfSi/view' playing={true} loop = {true}  width='100%'></ReactPlayer> */}
                     </div>
                     <div className="flex flex-col gap-2.5 w-8/12 place-content-center px-12 pr-24">
