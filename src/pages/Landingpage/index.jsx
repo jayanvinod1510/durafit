@@ -64,7 +64,7 @@ export default function LandingpagePage() {
           </div>
         </div>
 
-        <div className="py-[70px] md:py-5 bg-gray-100">
+        <div className="py-[70px] md:py-5" style={{"background":"#F6F7F8"}}>
           <Marquee style={{ "textAlign": "center", "zIndex": 0 }} direction="right" autoFill={true}>
             <div className="flex md:flex-row justify-between items-center gap-[80px] mx-[40px] md:px-5 bg-gray-100">
 
@@ -131,7 +131,7 @@ export default function LandingpagePage() {
         <div>
           <div>
             <div>
-              <div className="self-end">
+              <div className="self-end bg-white-A700">
                 <Header className="p-[23px] sm:p-5 bg-gray-100_cc md:bg-[#FFFFFF]" />
                 <br class="md:hidden"></br>
                 <div className="md:h-auto relative md:bg-blue_gray-800">
@@ -186,7 +186,8 @@ export default function LandingpagePage() {
                 <Text
                     size="6xl"
                     as="p"
-                    className="w-max top-[8%] py-7 md:py-3 right-0 left-0 m-auto !text-blue_gray-800 bg-grey-300 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
+                    style={{"background":"#F3F2EF"}}
+                    className="w-full top-[8%] py-7 md:py-3 right-0 left-0 !text-blue_gray-800 bg-grey-300 text-center space-x-0.5 md:text-[35px] md:leading-normal md:px-5"
                   >
                     Explore from our comfiest collections
                   </Text>
