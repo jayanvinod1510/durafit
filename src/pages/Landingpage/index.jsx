@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import { Heading, Text, RatingBar, Img, Button } from "../../components";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import styles from './index.module.css'; 
 
 export default function LandingpagePage() {
 
@@ -155,12 +156,12 @@ export default function LandingpagePage() {
                     </>
                   </Text>
                   <div className="hidden md:block">
-                      <ReactPlayer style={{ "border-radius":"16px" }} className="rounded-3xl" url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
+                      <ReactPlayer url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
                       {/* <ReactPlayer url = 'https://drive.google.com/file/d/1nzePj8UBUmpV5LCkaguI8vvKPPXBDfSi/view' playing={true} loop = {true}  width='100%'></ReactPlayer> */}
                     </div>
                   <div className=" md:hidden flex flex-row mx-24 my-1 gap-2.5 bg-blue_gray-800 rounded-3xl">
                     <div className="">
-                      <ReactPlayer style={{ "border-radius":"16px" }} className="rounded-3xl" url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
+                      <ReactPlayer className={styles.reactplayer} url = {`videos/landing_page.mov`} playing={true} loop = {true} width='100%' height='100%'></ReactPlayer>
                       {/* <ReactPlayer url = 'https://drive.google.com/file/d/1nzePj8UBUmpV5LCkaguI8vvKPPXBDfSi/view' playing={true} loop = {true}  width='100%'></ReactPlayer> */}
                     </div>
                     <div className="flex flex-col gap-2.5 w-5/12 place-content-center px-12 pr-24">
